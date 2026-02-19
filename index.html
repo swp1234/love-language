@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="meta.title">사랑의 언어 테스트 | Love Language Test - DopaBrain</title>
+  <meta name="description" data-i18n="meta.description" content="Gary Chapman의 5가지 사랑의 언어로 당신이 사랑을 표현하고 받는 방식을 발견하세요.">
+  <meta property="og:title" content="사랑의 언어 테스트 - DopaBrain">
+  <meta property="og:description" content="당신은 어떤 방식으로 사랑을 표현하고 받길 원하나요? 30개 질문으로 알아보세요.">
+  <meta property="og:image" content="https://dopabrain.com/love-language/icon-512.png">
+  <meta property="og:url" content="https://dopabrain.com/love-language/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="manifest" href="manifest.json">
+  <link rel="canonical" href="https://dopabrain.com/love-language/">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8GSWM40TV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-J8GSWM40TV');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Love Language Test",
+    "url": "https://dopabrain.com/love-language/",
+    "description": "Discover your primary love language with 30 questions based on Gary Chapman's 5 Love Languages",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "Any",
+    "offers": {"@type": "Offer", "price": "0"}
+  }
+  </script>
+  <style>
+    :root {
+      --primary: #e91e8c;
+      --primary-light: #f06292;
+      --primary-dark: #c2185b;
+      --bg: #0d0d0d;
+      --bg2: #111117;
+      --surface: rgba(255,255,255,0.05);
+      --surface2: rgba(255,255,255,0.08);
+      --text: #f0f0f0;
+      --text-muted: #aaa;
+      --border: rgba(255,255,255,0.1);
+      --border2: rgba(255,255,255,0.15);
+      --glow: rgba(233,30,140,0.3);
+      --glow2: rgba(233,30,140,0.5);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Skip link */
+    .skip-link {
+      position: absolute; top: -40px; left: 0;
+      background: var(--primary); color: #fff;
+      padding: 8px 16px; text-decoration: none;
+      z-index: 10000; border-radius: 0 0 4px 0;
+      transition: top 0.2s;
+    }
+    .skip-link:focus { top: 0; }
+
+    /* App loader */
+    #app-loader {
+      position: fixed; inset: 0; background: var(--bg);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 9999; transition: opacity 0.4s;
+    }
+    .loader-heart { font-size: 56px; animation: pulse 0.8s ease-in-out infinite; }
+    @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.25)} }
+
+    /* Layout */
+    .container { width: 100%; max-width: 640px; padding: 20px; }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 16px;
+      width: 100%;
+      max-width: 640px;
+    }
+    .app-title {
+      font-size: clamp(24px, 6vw, 38px);
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+    .app-subtitle { color: var(--text-muted); font-size: 15px; }
+
+    /* Language selector */
+    .lang-selector { position: fixed; top: 12px; right: 12px; z-index: 1000; }
+    .lang-btn {
+      background: var(--surface); border: 1px solid var(--border);
+      color: var(--text); padding: 7px 13px; border-radius: 20px;
+      cursor: pointer; font-size: 13px; backdrop-filter: blur(12px);
+      transition: border-color 0.2s;
+    }
+    .lang-btn:hover { border-color: var(--primary); }
+    .lang-dropdown {
+      display: none; position: absolute; right: 0; top: 40px;
+      background: rgba(18,18,24,0.97); border: 1px solid var(--border);
+      border-radius: 14px; padding: 8px; min-width: 150px;
+      backdrop-filter: blur(20px); z-index: 1001;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    }
+    .lang-dropdown.open { display: block; }
+    .lang-option {
+      display: block; width: 100%; padding: 8px 12px;
+      background: none; border: none; color: var(--text);
+      cursor: pointer; text-align: left; border-radius: 8px;
+      font-size: 13px; transition: background 0.15s;
+    }
+    .lang-option:hover { background: var(--surface2); }
+
+    /* Progress bar */
+    .progress-container { margin: 16px 0; }
+    .progress-bar-bg {
+      height: 6px; background: var(--border); border-radius: 3px; overflow: hidden;
+    }
+    .progress-bar {
+      height: 100%; background: linear-gradient(90deg, var(--primary), var(--primary-light));
+      border-radius: 3px; transition: width 0.5s cubic-bezier(0.4,0,0.2,1);
+      box-shadow: 0 0 12px var(--glow);
+    }
+    .progress-text { text-align: center; font-size: 13px; color: var(--text-muted); margin-top: 8px; }
+
+    /* Question card */
+    .question-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 22px; padding: 28px 24px;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      margin: 16px 0;
+    }
+    .question-number {
+      font-size: 11px; color: var(--primary); font-weight: 700;
+      margin-bottom: 12px; letter-spacing: 2px; text-transform: uppercase;
+    }
+    .question-text {
+      font-size: 17px; font-weight: 600; line-height: 1.6;
+      margin-bottom: 24px; text-align: center; color: var(--text);
+    }
+
+    /* A/B choice buttons */
+    .choice-container { display: flex; flex-direction: column; gap: 12px; }
+    .choice-btn {
+      width: 100%; padding: 18px 20px;
+      background: rgba(255,255,255,0.03); border: 2px solid var(--border);
+      border-radius: 14px; color: var(--text); cursor: pointer;
+      font-size: 15px; text-align: left; transition: all 0.2s ease;
+      display: flex; align-items: center; gap: 14px;
+      line-height: 1.5;
+    }
+    .choice-btn:hover {
+      border-color: var(--primary); background: rgba(233,30,140,0.08);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px var(--glow);
+    }
+    .choice-btn:active { transform: translateY(0); }
+    .choice-btn.selected {
+      border-color: var(--primary); background: rgba(233,30,140,0.15);
+      box-shadow: 0 0 24px var(--glow);
+    }
+    .choice-label {
+      width: 34px; height: 34px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #fff; display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 14px; flex-shrink: 0;
+    }
+    .choice-label-b {
+      background: linear-gradient(135deg, #9c27b0, #6a1b9a);
+    }
+
+    /* Navigation buttons */
+    .nav-btns { display: flex; gap: 12px; margin-top: 16px; }
+    .btn {
+      flex: 1; padding: 16px; border-radius: 14px; border: none;
+      cursor: pointer; font-size: 16px; font-weight: 700;
+      transition: all 0.2s; min-height: 52px;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: #fff; box-shadow: 0 4px 20px var(--glow);
+    }
+    .btn-primary:hover:not(:disabled) {
+      transform: translateY(-2px); box-shadow: 0 6px 28px var(--glow2);
+    }
+    .btn-primary:disabled { opacity: 0.4; cursor: not-allowed; }
+    .btn-secondary {
+      background: var(--surface); color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover:not(:disabled) { background: var(--surface2); }
+    .btn-secondary:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    /* Intro screen */
+    .intro-section { text-align: center; padding: 8px 0 24px; }
+    .intro-cards {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 12px; margin: 20px 0;
+    }
+    .intro-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 18px; padding: 20px 14px; text-align: center;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .intro-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+    .intro-card-icon { font-size: 34px; margin-bottom: 10px; }
+    .intro-card-name { font-size: 13px; font-weight: 700; margin-bottom: 4px; color: var(--text); }
+    .intro-card-desc { font-size: 11px; color: var(--text-muted); line-height: 1.5; }
+    .intro-desc {
+      color: var(--text-muted); font-size: 14px; margin-bottom: 20px;
+    }
+    .start-btn {
+      width: 100%; padding: 18px; border-radius: 16px; border: none;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: #fff; font-size: 18px; font-weight: 800;
+      cursor: pointer; box-shadow: 0 4px 28px var(--glow);
+      transition: all 0.2s; min-height: 52px; letter-spacing: 0.3px;
+    }
+    .start-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 36px var(--glow2); }
+    .start-btn:active { transform: translateY(0); }
+
+    /* Result screen */
+    #result-screen { display: none; }
+    #result-screen.active { display: block; }
+
+    .result-hero {
+      background: linear-gradient(135deg, var(--primary), #9c27b0);
+      border-radius: 24px; padding: 36px 24px; text-align: center;
+      margin: 16px 0; box-shadow: 0 8px 36px var(--glow);
+      position: relative; overflow: hidden;
+    }
+    .result-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(circle at top right, rgba(255,255,255,0.1), transparent 60%);
+    }
+    .result-icon { font-size: 72px; margin-bottom: 12px; position: relative; }
+    .result-title { font-size: 28px; font-weight: 900; color: #fff; margin-bottom: 6px; position: relative; }
+    .result-subtitle { font-size: 14px; color: rgba(255,255,255,0.8); position: relative; }
+
+    /* Score bars */
+    .score-bars { margin: 20px 0; }
+    .score-item { margin-bottom: 18px; }
+    .score-label {
+      display: flex; justify-content: space-between; margin-bottom: 7px;
+      font-size: 14px; align-items: center;
+    }
+    .score-label-left { display: flex; align-items: center; gap: 6px; font-weight: 600; }
+    .score-bar-bg { height: 10px; background: var(--border); border-radius: 5px; overflow: hidden; }
+    .score-bar-fill {
+      height: 100%; border-radius: 5px; transition: width 0.9s cubic-bezier(0.4,0,0.2,1);
+      background: linear-gradient(90deg, var(--primary), var(--primary-light));
+    }
+    .score-bar-fill.secondary { background: linear-gradient(90deg, #9c27b0, #ce93d8); }
+
+    /* Description cards */
+    .result-desc {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 18px; padding: 22px 20px; margin: 14px 0;
+      line-height: 1.75; font-size: 15px; color: var(--text);
+    }
+    .result-desc strong { color: var(--primary); }
+
+    /* Compatibility */
+    .compat-section { margin: 20px 0; }
+    .section-title {
+      font-size: 17px; font-weight: 700; margin-bottom: 12px;
+      color: var(--text);
+    }
+    .compat-item {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 14px; padding: 14px 18px; margin-bottom: 10px;
+      display: flex; gap: 12px; align-items: center;
+      font-weight: 600; font-size: 15px;
+      transition: border-color 0.2s;
+    }
+    .compat-item:hover { border-color: var(--primary); }
+
+    /* Share section */
+    .share-section { text-align: center; margin: 24px 0 16px; }
+    .share-title { font-size: 15px; font-weight: 600; margin-bottom: 14px; color: var(--text-muted); }
+    .share-btns { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .share-btn {
+      padding: 12px 22px; border-radius: 12px; border: none;
+      cursor: pointer; font-size: 14px; font-weight: 700;
+      transition: all 0.2s; min-height: 44px;
+    }
+    .share-btn:hover { transform: translateY(-2px); opacity: 0.9; }
+    .share-copy {
+      background: var(--surface); border: 1px solid var(--border);
+      color: var(--text);
+    }
+    .share-twitter { background: #1a1a1a; color: #fff; border: 1px solid #333; }
+
+    .retry-btn {
+      display: block; width: 100%; padding: 18px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: #fff; border: none; border-radius: 16px;
+      cursor: pointer; font-size: 16px; font-weight: 800;
+      margin-top: 16px; min-height: 52px;
+      transition: all 0.2s; box-shadow: 0 4px 20px var(--glow);
+    }
+    .retry-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 28px var(--glow2); }
+
+    /* Cross promo */
+    .cross-promo-section { width: 100%; margin: 20px 0; }
+
+    footer {
+      text-align: center; padding: 24px 20px;
+      color: var(--text-muted); font-size: 13px;
+      width: 100%; max-width: 640px;
+    }
+    footer a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    footer a:hover { color: var(--primary); }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in { animation: fadeInUp 0.4s ease; }
+
+    /* Accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .intro-cards { grid-template-columns: 1fr; }
+      .nav-btns { flex-direction: column; }
+      .question-card { padding: 22px 16px; }
+      header { padding: 28px 16px 12px; }
+    }
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-link" data-i18n="accessibility.skipMain">본문으로 건너뛰기</a>
+<div id="app-loader"><div class="loader-heart">💗</div></div>
+
+<div class="lang-selector">
+  <button class="lang-btn" id="langBtn" aria-label="Language / 언어">🌐 <span id="currentLang">한국어</span></button>
+  <div class="lang-dropdown" id="langDropdown" role="menu">
+    <button class="lang-option" data-lang="ko" role="menuitem">🇰🇷 한국어</button>
+    <button class="lang-option" data-lang="en" role="menuitem">🇺🇸 English</button>
+    <button class="lang-option" data-lang="zh" role="menuitem">🇨🇳 中文</button>
+    <button class="lang-option" data-lang="hi" role="menuitem">🇮🇳 हिन्दी</button>
+    <button class="lang-option" data-lang="ru" role="menuitem">🇷🇺 Русский</button>
+    <button class="lang-option" data-lang="ja" role="menuitem">🇯🇵 日本語</button>
+    <button class="lang-option" data-lang="es" role="menuitem">🇪🇸 Español</button>
+    <button class="lang-option" data-lang="pt" role="menuitem">🇧🇷 Português</button>
+    <button class="lang-option" data-lang="id" role="menuitem">🇮🇩 Indonesia</button>
+    <button class="lang-option" data-lang="tr" role="menuitem">🇹🇷 Türkçe</button>
+    <button class="lang-option" data-lang="de" role="menuitem">🇩🇪 Deutsch</button>
+    <button class="lang-option" data-lang="fr" role="menuitem">🇫🇷 Français</button>
+  </div>
+</div>
+
+<main id="main-content" style="width:100%;display:flex;flex-direction:column;align-items:center;">
+  <header>
+    <h1 class="app-title" data-i18n="app.title">💗 사랑의 언어 테스트</h1>
+    <p class="app-subtitle" data-i18n="app.subtitle">당신은 어떻게 사랑을 표현하고 받나요?</p>
+  </header>
+
+  <div class="container">
+
+    <!-- Intro screen -->
+    <section id="intro-screen" class="intro-section" aria-label="Intro">
+      <div class="intro-cards">
+        <div class="intro-card">
+          <div class="intro-card-icon">💬</div>
+          <div class="intro-card-name" data-i18n="lang.words">인정의 말</div>
+          <div class="intro-card-desc" data-i18n="lang.wordsDesc">칭찬, 감사, 사랑의 표현</div>
+        </div>
+        <div class="intro-card">
+          <div class="intro-card-icon">🛠️</div>
+          <div class="intro-card-name" data-i18n="lang.acts">봉사 행동</div>
+          <div class="intro-card-desc" data-i18n="lang.actsDesc">도움, 배려, 실질적 행동</div>
+        </div>
+        <div class="intro-card">
+          <div class="intro-card-icon">🎁</div>
+          <div class="intro-card-name" data-i18n="lang.gifts">선물</div>
+          <div class="intro-card-desc" data-i18n="lang.giftsDesc">의미 있는 선물과 깜짝 이벤트</div>
+        </div>
+        <div class="intro-card">
+          <div class="intro-card-icon">⏰</div>
+          <div class="intro-card-name" data-i18n="lang.time">함께하는 시간</div>
+          <div class="intro-card-desc" data-i18n="lang.timeDesc">집중적인 관심과 함께하기</div>
+        </div>
+        <div class="intro-card" style="grid-column:1/-1;">
+          <div class="intro-card-icon">🤗</div>
+          <div class="intro-card-name" data-i18n="lang.touch">신체 접촉</div>
+          <div class="intro-card-desc" data-i18n="lang.touchDesc">포옹, 손잡기, 스킨십</div>
+        </div>
+      </div>
+      <p class="intro-desc" data-i18n="intro.desc">30개 질문 · 약 5분 소요</p>
+      <button class="start-btn" id="startBtn" data-i18n="intro.start">테스트 시작하기 →</button>
+    </section>
+
+    <!-- Quiz screen -->
+    <section id="quiz-screen" style="display:none;" aria-label="Quiz">
+      <div class="progress-container" role="progressbar" aria-label="Progress">
+        <div class="progress-bar-bg">
+          <div class="progress-bar" id="progressBar" style="width:0%"></div>
+        </div>
+        <div class="progress-text">
+          <span id="currentQ">1</span> / <span id="totalQ">30</span>
+        </div>
+      </div>
+      <div class="question-card fade-in">
+        <div class="question-number" id="qNumber">Q 1</div>
+        <p class="question-text" id="qText"></p>
+        <div class="choice-container">
+          <button class="choice-btn" id="choiceA" onclick="selectChoice('A')" aria-pressed="false">
+            <span class="choice-label" aria-hidden="true">A</span>
+            <span id="choiceAText"></span>
+          </button>
+          <button class="choice-btn" id="choiceB" onclick="selectChoice('B')" aria-pressed="false">
+            <span class="choice-label choice-label-b" aria-hidden="true">B</span>
+            <span id="choiceBText"></span>
+          </button>
+        </div>
+      </div>
+      <div class="nav-btns">
+        <button class="btn btn-secondary" id="prevBtn" onclick="prevQuestion()" data-i18n="quiz.prev" disabled>← 이전</button>
+        <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()" data-i18n="quiz.next" disabled>다음 →</button>
+      </div>
+    </section>
+
+    <!-- Result screen -->
+    <section id="result-screen" aria-label="Result">
+      <div class="result-hero">
+        <div class="result-icon" id="resultIcon">💗</div>
+        <div class="result-title" id="resultTitle"></div>
+        <div class="result-subtitle" id="resultSubtitle"></div>
+      </div>
+      <div class="score-bars" id="scoreBars"></div>
+      <div class="result-desc" id="resultDesc"></div>
+      <div class="result-desc" id="resultAdvice"></div>
+      <div class="compat-section">
+        <div class="section-title" data-i18n="result.compatTitle">💑 궁합이 잘 맞는 언어</div>
+        <div id="compatList"></div>
+      </div>
+      <div class="share-section">
+        <div class="share-title" data-i18n="share.title">결과 공유하기</div>
+        <div class="share-btns">
+          <button class="share-btn share-copy" onclick="copyLink()" data-i18n="share.copy">🔗 링크 복사</button>
+          <button class="share-btn share-twitter" onclick="shareTwitter()" data-i18n="share.twitter">𝕏 트위터</button>
+        </div>
+      </div>
+      <button class="retry-btn" onclick="retryTest()" data-i18n="result.retry">다시 테스트하기</button>
+    </section>
+
+    <div class="cross-promo-section" id="crossPromoContainer"></div>
+  </div>
+</main>
+
+<footer>
+  <a href="/portal/">DopaBrain</a> · <a href="/portal/privacy.html">Privacy</a> · <a href="/portal/about.html">About</a>
+</footer>
+
+<script src="js/i18n.js" defer></script>
+<script>
+// ============================================================
+// QUESTIONS DATA (30 pairs)
+// al = love language for option A, bl = for option B
+// W=Words, A=Acts, G=Gifts, T=Time, P=Physical
+// ============================================================
+const QUESTIONS = [
+  {q:'q1',  a:'q1a',  b:'q1b',  al:'W', bl:'A'},
+  {q:'q2',  a:'q2a',  b:'q2b',  al:'W', bl:'A'},
+  {q:'q3',  a:'q3a',  b:'q3b',  al:'W', bl:'A'},
+  {q:'q4',  a:'q4a',  b:'q4b',  al:'W', bl:'A'},
+  {q:'q5',  a:'q5a',  b:'q5b',  al:'W', bl:'A'},
+  {q:'q6',  a:'q6a',  b:'q6b',  al:'W', bl:'A'},
+  {q:'q7',  a:'q7a',  b:'q7b',  al:'W', bl:'G'},
+  {q:'q8',  a:'q8a',  b:'q8b',  al:'W', bl:'G'},
+  {q:'q9',  a:'q9a',  b:'q9b',  al:'W', bl:'T'},
+  {q:'q10', a:'q10a', b:'q10b', al:'W', bl:'T'},
+  {q:'q11', a:'q11a', b:'q11b', al:'W', bl:'P'},
+  {q:'q12', a:'q12a', b:'q12b', al:'W', bl:'P'},
+  {q:'q13', a:'q13a', b:'q13b', al:'A', bl:'G'},
+  {q:'q14', a:'q14a', b:'q14b', al:'A', bl:'G'},
+  {q:'q15', a:'q15a', b:'q15b', al:'A', bl:'T'},
+  {q:'q16', a:'q16a', b:'q16b', al:'A', bl:'T'},
+  {q:'q17', a:'q17a', b:'q17b', al:'A', bl:'P'},
+  {q:'q18', a:'q18a', b:'q18b', al:'A', bl:'P'},
+  {q:'q19', a:'q19a', b:'q19b', al:'G', bl:'T'},
+  {q:'q20', a:'q20a', b:'q20b', al:'G', bl:'T'},
+  {q:'q21', a:'q21a', b:'q21b', al:'G', bl:'P'},
+  {q:'q22', a:'q22a', b:'q22b', al:'G', bl:'P'},
+  {q:'q23', a:'q23a', b:'q23b', al:'T', bl:'P'},
+  {q:'q24', a:'q24a', b:'q24b', al:'T', bl:'P'},
+  {q:'q25', a:'q25a', b:'q25b', al:'W', bl:'T'},
+  {q:'q26', a:'q26a', b:'q26b', al:'A', bl:'P'},
+  {q:'q27', a:'q27a', b:'q27b', al:'W', bl:'G'},
+  {q:'q28', a:'q28a', b:'q28b', al:'A', bl:'T'},
+  {q:'q29', a:'q29a', b:'q29b', al:'P', bl:'G'},
+  {q:'q30', a:'q30a', b:'q30b', al:'W', bl:'P'},
+];
+
+const LANG_INFO = {
+  W: {icon:'💬', key:'lang.words'},
+  A: {icon:'🛠️', key:'lang.acts'},
+  G: {icon:'🎁', key:'lang.gifts'},
+  T: {icon:'⏰', key:'lang.time'},
+  P: {icon:'🤗', key:'lang.touch'},
+};
+
+const COMPAT = {
+  W: ['W','T'], A: ['A','T'], G: ['G','W'], T: ['T','W'], P: ['P','A']
+};
+
+let currentQ = 0;
+let answers = new Array(30).fill(null);
+let selectedChoice = null;
+
+function t(key) {
+  return (window.i18n && window.i18n.t(key) !== key) ? window.i18n.t(key) : key;
+}
+
+function showQuestion(idx) {
+  const q = QUESTIONS[idx];
+  document.getElementById('qNumber').textContent = 'Q ' + (idx + 1);
+  document.getElementById('currentQ').textContent = idx + 1;
+  document.getElementById('qText').textContent = t(q.q);
+  document.getElementById('choiceAText').textContent = t(q.a);
+  document.getElementById('choiceBText').textContent = t(q.b);
+  document.getElementById('progressBar').style.width = (idx / QUESTIONS.length * 100) + '%';
+
+  selectedChoice = answers[idx];
+  updateChoiceUI();
+  document.getElementById('nextBtn').disabled = selectedChoice === null;
+  document.getElementById('prevBtn').disabled = idx === 0;
+}
+
+function updateChoiceUI() {
+  const btnA = document.getElementById('choiceA');
+  const btnB = document.getElementById('choiceB');
+  btnA.classList.toggle('selected', selectedChoice === 'A');
+  btnB.classList.toggle('selected', selectedChoice === 'B');
+  btnA.setAttribute('aria-pressed', selectedChoice === 'A');
+  btnB.setAttribute('aria-pressed', selectedChoice === 'B');
+}
+
+function selectChoice(c) {
+  selectedChoice = c;
+  answers[currentQ] = c;
+  updateChoiceUI();
+  document.getElementById('nextBtn').disabled = false;
+  setTimeout(() => {
+    if (currentQ < QUESTIONS.length - 1) nextQuestion();
+    else showResult();
+  }, 320);
+}
+
+function nextQuestion() {
+  if (selectedChoice === null) return;
+  if (currentQ < QUESTIONS.length - 1) {
+    currentQ++;
+    showQuestion(currentQ);
+  } else {
+    showResult();
+  }
+}
+
+function prevQuestion() {
+  if (currentQ > 0) {
+    currentQ--;
+    showQuestion(currentQ);
+  }
+}
+
+function calculateScores() {
+  const scores = {W:0, A:0, G:0, T:0, P:0};
+  QUESTIONS.forEach((q, i) => {
+    const ans = answers[i];
+    if (ans === 'A') scores[q.al]++;
+    else if (ans === 'B') scores[q.bl]++;
+  });
+  return scores;
+}
+
+function showResult() {
+  const scores = calculateScores();
+  const sorted = Object.entries(scores).sort((a,b) => b[1]-a[1]);
+  const primary = sorted[0][0];
+  const total = Object.values(scores).reduce((a,b) => a + b, 0);
+
+  const info = LANG_INFO[primary];
+  document.getElementById('resultIcon').textContent = info.icon;
+  document.getElementById('resultTitle').textContent = t(info.key);
+  document.getElementById('resultSubtitle').textContent = t('result.primaryLabel') + ' ' + t(info.key);
+
+  // Score bars
+  const barHTML = sorted.map(([lang, score], i) => {
+    const pct = total > 0 ? Math.round(score / total * 100) : 0;
+    const li = LANG_INFO[lang];
+    const fillClass = i === 0 ? 'score-bar-fill' : 'score-bar-fill secondary';
+    return `<div class="score-item">
+      <div class="score-label">
+        <span class="score-label-left">${li.icon} ${t(li.key)}</span>
+        <span>${pct}%</span>
+      </div>
+      <div class="score-bar-bg">
+        <div class="${fillClass}" style="width:0%" data-width="${pct}%"></div>
+      </div>
+    </div>`;
+  }).join('');
+  document.getElementById('scoreBars').innerHTML = barHTML;
+
+  setTimeout(() => {
+    document.querySelectorAll('.score-bar-fill').forEach(el => {
+      el.style.width = el.dataset.width;
+    });
+  }, 120);
+
+  document.getElementById('resultDesc').innerHTML =
+    `<strong>${t(info.key)}</strong><br><br>${t('desc.' + primary)}`;
+  document.getElementById('resultAdvice').innerHTML =
+    `<strong>💡 ${t('result.adviceTitle')}</strong><br><br>${t('advice.' + primary)}`;
+
+  const compatKeys = COMPAT[primary];
+  document.getElementById('compatList').innerHTML = compatKeys.map(k => {
+    const ci = LANG_INFO[k];
+    return `<div class="compat-item">${ci.icon} <span>${t(ci.key)}</span></div>`;
+  }).join('');
+
+  document.getElementById('quiz-screen').style.display = 'none';
+  const rs = document.getElementById('result-screen');
+  rs.classList.add('active');
+  rs.classList.add('fade-in');
+  document.getElementById('progressBar').style.width = '100%';
+
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'test_complete', {
+      event_category: 'love_language',
+      primary_language: primary
+    });
+  }
+}
+
+function retryTest() {
+  currentQ = 0;
+  answers = new Array(30).fill(null);
+  selectedChoice = null;
+  document.getElementById('result-screen').classList.remove('active', 'fade-in');
+  document.getElementById('quiz-screen').style.display = 'none';
+  document.getElementById('intro-screen').style.display = 'block';
+  document.getElementById('progressBar').style.width = '0%';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function copyLink() {
+  const url = window.location.href;
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(url).then(() => {
+      alert(t('share.copied'));
+    }).catch(() => { prompt('Copy:', url); });
+  } else {
+    prompt('Copy:', url);
+  }
+}
+
+function shareTwitter() {
+  const url = encodeURIComponent(window.location.href);
+  const text = encodeURIComponent(t('share.twitterText'));
+  window.open('https://twitter.com/intent/tweet?url=' + url + '&text=' + text, '_blank', 'noopener');
+}
+
+// Start button
+document.getElementById('startBtn').addEventListener('click', () => {
+  document.getElementById('intro-screen').style.display = 'none';
+  const qs = document.getElementById('quiz-screen');
+  qs.style.display = 'block';
+  qs.classList.add('fade-in');
+  showQuestion(0);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Language selector
+document.getElementById('langBtn').addEventListener('click', (e) => {
+  e.stopPropagation();
+  document.getElementById('langDropdown').classList.toggle('open');
+});
+document.querySelectorAll('.lang-option').forEach(btn => {
+  btn.addEventListener('click', async () => {
+    const lang = btn.dataset.lang;
+    if (window.i18n) {
+      await window.i18n.setLang(lang);
+      const label = btn.textContent.trim().split(' ');
+      document.getElementById('currentLang').textContent = label.slice(1).join(' ') || label[0];
+    }
+    document.getElementById('langDropdown').classList.remove('open');
+    if (document.getElementById('quiz-screen').style.display !== 'none') {
+      showQuestion(currentQ);
+    }
+  });
+});
+document.addEventListener('click', () => {
+  document.getElementById('langDropdown').classList.remove('open');
+});
+
+// App loader
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const loader = document.getElementById('app-loader');
+    if (loader) {
+      loader.style.opacity = '0';
+      setTimeout(() => loader.remove(), 400);
+    }
+  }, 500);
+});
+</script>
+<script src="/portal/js/cross-promo.js" defer></script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(() => {});
+  });
+}
+</script>
+</body>
+</html>
