@@ -28,7 +28,8 @@
   },
   "quiz": {
     "prev": "← 이전",
-    "next": "다음 →"
+    "next": "다음 →",
+    "questionPrefix": "Q"
   },
   "q1": "파트너가 당신에게 무엇을 해줄 때 가장 행복하나요?",
   "q1a": "\"정말 고마워, 사랑해\"라고 말해줄 때",
@@ -146,5 +147,9 @@
     "twitter": "𝕏 트위터",
     "copied": "링크가 복사되었습니다!",
     "twitterText": "나의 사랑의 언어 테스트 결과를 확인해보세요! #사랑의언어 #LoveLanguage #DopaBrain"
+  },
+  "footer": {
+    "privacy": "개인정보처리방침",
+    "about": "소개"
   }
 }

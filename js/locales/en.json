@@ -28,7 +28,8 @@
   },
   "quiz": {
     "prev": "← Previous",
-    "next": "Next →"
+    "next": "Next →",
+    "questionPrefix": "Q"
   },
   "q1": "What makes you happiest when your partner does it?",
   "q1a": "Saying 'I really appreciate you, I love you'",
@@ -146,5 +147,9 @@
     "twitter": "𝕏 Twitter",
     "copied": "Link copied!",
     "twitterText": "I just discovered my love language! Find out yours too. #LoveLanguage #DopaBrain"
+  },
+  "footer": {
+    "privacy": "Privacy Policy",
+    "about": "About"
   }
 }

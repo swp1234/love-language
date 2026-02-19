@@ -473,7 +473,7 @@
 </main>
 
 <footer>
-  <a href="/portal/">DopaBrain</a> · <a href="/portal/privacy.html">Privacy</a> · <a href="/portal/about.html">About</a>
+  <a href="/portal/">DopaBrain</a> · <a href="/portal/privacy.html" data-i18n="footer.privacy">Privacy</a> · <a href="/portal/about.html" data-i18n="footer.about">About</a>
 </footer>
 
 <script src="js/i18n.js" defer></script>
@@ -538,7 +538,7 @@ function t(key) {
 
 function showQuestion(idx) {
   const q = QUESTIONS[idx];
-  document.getElementById('qNumber').textContent = 'Q ' + (idx + 1);
+  document.getElementById('qNumber').textContent = (window.i18n?.t('quiz.questionPrefix') || 'Q') + ' ' + (idx + 1);
   document.getElementById('currentQ').textContent = idx + 1;
   document.getElementById('qText').textContent = t(q.q);
   document.getElementById('choiceAText').textContent = t(q.a);

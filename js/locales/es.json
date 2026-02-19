@@ -27,6 +27,7 @@
     "start": "Iniciar el Test →"
   },
   "quiz": {
+    "questionPrefix": "Q",
     "prev": "← Anterior",
     "next": "Siguiente →"
   },
@@ -146,5 +147,9 @@
     "twitter": "𝕏 Twitter",
     "copied": "¡Enlace copiado!",
     "twitterText": "Descubrí mi lenguaje del amor. ¡Descubre el tuyo también! #LenguajeDelAmor #LoveLanguage #DopaBrain"
+  },
+  "footer": {
+    "privacy": "Política de privacidad",
+    "about": "Acerca de"
   }
 }

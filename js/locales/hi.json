@@ -27,6 +27,7 @@
     "start": "परीक्षण शुरू करें →"
   },
   "quiz": {
+    "questionPrefix": "Q",
     "prev": "← पिछला",
     "next": "अगला →"
   },
@@ -146,5 +147,9 @@
     "twitter": "𝕏 ट्विटर",
     "copied": "लिंक कॉपी हो गया!",
     "twitterText": "मैंने अपनी प्रेम भाषा खोजी! आप भी अपनी खोजें। #LoveLanguage #DopaBrain"
+  },
+  "footer": {
+    "privacy": "गोपनीयता नीति",
+    "about": "परिचय"
   }
 }

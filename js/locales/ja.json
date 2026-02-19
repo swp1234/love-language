@@ -27,6 +27,7 @@
     "start": "テストを始める →"
   },
   "quiz": {
+    "questionPrefix": "Q",
     "prev": "← 前へ",
     "next": "次へ →"
   },
@@ -146,5 +147,9 @@
     "twitter": "𝕏 ツイッター",
     "copied": "リンクをコピーしました！",
     "twitterText": "私の愛の言語テスト結果を確認してみてください！#愛の言語 #LoveLanguage #DopaBrain"
+  },
+  "footer": {
+    "privacy": "プライバシーポリシー",
+    "about": "概要"
   }
 }

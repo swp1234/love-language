@@ -27,6 +27,7 @@
     "start": "Test starten →"
   },
   "quiz": {
+    "questionPrefix": "Q",
     "prev": "← Zurück",
     "next": "Weiter →"
   },
@@ -146,5 +147,9 @@
     "twitter": "𝕏 Twitter",
     "copied": "Link kopiert!",
     "twitterText": "Ich habe meine Liebessprache entdeckt! Finde deine auch heraus. #Liebessprache #LoveLanguage #DopaBrain"
+  },
+  "footer": {
+    "privacy": "Datenschutzrichtlinie",
+    "about": "Über uns"
   }
 }

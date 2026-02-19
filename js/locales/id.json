@@ -27,6 +27,7 @@
     "start": "Mulai Tes →"
   },
   "quiz": {
+    "questionPrefix": "Q",
     "prev": "← Sebelumnya",
     "next": "Berikutnya →"
   },
@@ -146,5 +147,9 @@
     "twitter": "𝕏 Twitter",
     "copied": "Tautan disalin!",
     "twitterText": "Aku menemukan bahasa cintaku! Temukan punyamu juga. #BahasaCinta #LoveLanguage #DopaBrain"
+  },
+  "footer": {
+    "privacy": "Kebijakan Privasi",
+    "about": "Tentang"
   }
 }

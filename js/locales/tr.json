@@ -27,6 +27,7 @@
     "start": "Teste Başla →"
   },
   "quiz": {
+    "questionPrefix": "Q",
     "prev": "← Önceki",
     "next": "Sonraki →"
   },
@@ -146,5 +147,9 @@
     "twitter": "𝕏 Twitter",
     "copied": "Bağlantı kopyalandı!",
     "twitterText": "Aşk dilimi keşfettim! Seninkini de keşfet. #AşkDili #LoveLanguage #DopaBrain"
+  },
+  "footer": {
+    "privacy": "Gizlilik Politikası",
+    "about": "Hakkında"
   }
 }
