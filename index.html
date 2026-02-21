@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-i18n="meta.title">사랑의 언어 테스트 | Love Language Test - DopaBrain</title>
-  <meta name="description" data-i18n="meta.description" content="Gary Chapman의 5가지 사랑의 언어로 당신이 사랑을 표현하고 받는 방식을 발견하세요.">
-  <meta property="og:title" content="사랑의 언어 테스트 - DopaBrain">
-  <meta property="og:description" content="당신은 어떤 방식으로 사랑을 표현하고 받길 원하나요? 30개 질문으로 알아보세요.">
+  <meta name="description" data-i18n="meta.description" content="8개 시나리오에서 드래그&순위 매기기로 당신의 사랑의 언어를 발견하세요.">
+  <meta property="og:title" content="Love Language Test - DopaBrain">
+  <meta property="og:description" content="Rank your priorities across 8 real-life scenarios to discover how you love.">
   <meta property="og:image" content="https://dopabrain.com/love-language/icon-512.png">
   <meta property="og:url" content="https://dopabrain.com/love-language/">
   <meta property="og:type" content="website">
@@ -27,7 +27,7 @@
     "@type": "WebApplication",
     "name": "Love Language Test",
     "url": "https://dopabrain.com/love-language/",
-    "description": "Discover your primary love language with 30 questions based on Gary Chapman's 5 Love Languages",
+    "description": "Discover your primary love language by dragging and ranking options across 8 scenarios",
     "applicationCategory": "LifestyleApplication",
     "operatingSystem": "Any",
     "offers": {"@type": "Offer", "price": "0"}
@@ -42,12 +42,14 @@
       --bg2: #111117;
       --surface: rgba(255,255,255,0.05);
       --surface2: rgba(255,255,255,0.08);
+      --surface3: rgba(255,255,255,0.12);
       --text: #f0f0f0;
       --text-muted: #aaa;
       --border: rgba(255,255,255,0.1);
       --border2: rgba(255,255,255,0.15);
       --glow: rgba(233,30,140,0.3);
       --glow2: rgba(233,30,140,0.5);
+      --radius: 16px;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -59,6 +61,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      -webkit-user-select: none;
+      user-select: none;
     }
 
     /* Skip link */
@@ -138,54 +142,157 @@
     }
     .progress-text { text-align: center; font-size: 13px; color: var(--text-muted); margin-top: 8px; }
 
-    /* Question card */
-    .question-card {
+    /* Intro screen */
+    .intro-section { text-align: center; padding: 8px 0 24px; }
+    .intro-cards {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 12px; margin: 20px 0;
+    }
+    .intro-card {
       background: var(--surface); border: 1px solid var(--border);
-      border-radius: 22px; padding: 28px 24px;
+      border-radius: 18px; padding: 20px 14px; text-align: center;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .intro-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+    .intro-card-icon { font-size: 34px; margin-bottom: 10px; }
+    .intro-card-name { font-size: 13px; font-weight: 700; margin-bottom: 4px; color: var(--text); }
+    .intro-card-desc { font-size: 11px; color: var(--text-muted); line-height: 1.5; }
+    .intro-desc { color: var(--text-muted); font-size: 14px; margin-bottom: 10px; }
+
+    .how-section {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 20px; margin-bottom: 20px;
+      text-align: left;
+    }
+    .how-title { font-size: 15px; font-weight: 700; margin-bottom: 14px; color: var(--text); text-align: center; }
+    .how-step {
+      display: flex; align-items: center; gap: 12px;
+      padding: 8px 0; font-size: 14px; color: var(--text-muted);
+    }
+    .how-num {
+      width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #fff; display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 800;
+    }
+
+    .start-btn {
+      width: 100%; padding: 18px; border-radius: 16px; border: none;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: #fff; font-size: 18px; font-weight: 800;
+      cursor: pointer; box-shadow: 0 4px 28px var(--glow);
+      transition: all 0.2s; min-height: 52px; letter-spacing: 0.3px;
+    }
+    .start-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 36px var(--glow2); }
+    .start-btn:active { transform: translateY(0); }
+
+    /* ===== Quiz: Scenario card ===== */
+    .scenario-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 22px; padding: 28px 22px 22px;
       backdrop-filter: blur(20px);
       box-shadow: 0 8px 32px rgba(0,0,0,0.4);
       margin: 16px 0;
     }
-    .question-number {
+    .scenario-header {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 14px;
+    }
+    .scenario-badge {
       font-size: 11px; color: var(--primary); font-weight: 700;
-      margin-bottom: 12px; letter-spacing: 2px; text-transform: uppercase;
+      letter-spacing: 2px; text-transform: uppercase;
     }
-    .question-text {
-      font-size: 17px; font-weight: 600; line-height: 1.6;
-      margin-bottom: 24px; text-align: center; color: var(--text);
+    .scenario-title {
+      font-size: 20px; font-weight: 800; line-height: 1.4;
+      margin-bottom: 8px; color: var(--text);
+    }
+    .scenario-prompt {
+      font-size: 15px; line-height: 1.6; color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+    .rank-instruction {
+      font-size: 12px; color: var(--text-muted); text-align: center;
+      margin-bottom: 12px; letter-spacing: 0.5px; opacity: 0.8;
     }
 
-    /* A/B choice buttons */
-    .choice-container { display: flex; flex-direction: column; gap: 12px; }
-    .choice-btn {
-      width: 100%; padding: 18px 20px;
-      background: rgba(255,255,255,0.03); border: 2px solid var(--border);
-      border-radius: 14px; color: var(--text); cursor: pointer;
-      font-size: 15px; text-align: left; transition: all 0.2s ease;
-      display: flex; align-items: center; gap: 14px;
-      line-height: 1.5;
+    /* ===== Draggable rank list ===== */
+    .rank-list {
+      list-style: none; padding: 0; margin: 0;
+      display: flex; flex-direction: column; gap: 8px;
+      position: relative;
     }
-    .choice-btn:hover {
-      border-color: var(--primary); background: rgba(233,30,140,0.08);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 16px var(--glow);
+    .rank-item {
+      display: flex; align-items: center; gap: 10px;
+      padding: 14px 12px; border-radius: 14px;
+      background: rgba(255,255,255,0.03);
+      border: 2px solid var(--border);
+      cursor: grab; touch-action: none;
+      transition: transform 0.22s cubic-bezier(0.4,0,0.2,1),
+                  box-shadow 0.22s,
+                  border-color 0.22s,
+                  background 0.22s;
+      position: relative;
+      -webkit-user-select: none;
+      user-select: none;
     }
-    .choice-btn:active { transform: translateY(0); }
-    .choice-btn.selected {
-      border-color: var(--primary); background: rgba(233,30,140,0.15);
-      box-shadow: 0 0 24px var(--glow);
+    .rank-item:hover {
+      border-color: var(--border2);
+      background: rgba(255,255,255,0.05);
     }
-    .choice-label {
-      width: 34px; height: 34px; border-radius: 50%;
+    .rank-item.dragging {
+      opacity: 0.92;
+      transform: scale(1.03);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5), 0 0 20px var(--glow);
+      border-color: var(--primary);
+      background: rgba(233,30,140,0.08);
+      z-index: 100;
+      cursor: grabbing;
+    }
+    .rank-item.drag-over-above {
+      border-top: 2px solid var(--primary);
+    }
+    .rank-item.drag-over-below {
+      border-bottom: 2px solid var(--primary);
+    }
+
+    .rank-badge {
+      width: 32px; height: 32px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 800; flex-shrink: 0;
+      background: var(--surface2); color: var(--text-muted);
+      transition: background 0.3s, color 0.3s;
+    }
+    .rank-item:nth-child(1) .rank-badge {
       background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      color: #fff; display: flex; align-items: center; justify-content: center;
-      font-weight: 800; font-size: 14px; flex-shrink: 0;
+      color: #fff;
     }
-    .choice-label-b {
-      background: linear-gradient(135deg, #9c27b0, #6a1b9a);
+    .rank-item:nth-child(2) .rank-badge {
+      background: linear-gradient(135deg, #9c27b0, #7b1fa2);
+      color: #fff;
+    }
+    .rank-item:nth-child(3) .rank-badge {
+      background: var(--surface3); color: var(--text);
     }
 
-    /* Navigation buttons */
+    .rank-icon { font-size: 22px; flex-shrink: 0; }
+    .rank-text { flex: 1; font-size: 14px; line-height: 1.45; font-weight: 500; }
+
+    .rank-arrows {
+      display: flex; flex-direction: column; gap: 2px; flex-shrink: 0;
+    }
+    .rank-arrow-btn {
+      width: 30px; height: 24px; border: none;
+      background: var(--surface2); border-radius: 6px;
+      color: var(--text-muted); cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; transition: background 0.15s, color 0.15s;
+      min-height: 0; padding: 0;
+    }
+    .rank-arrow-btn:hover { background: var(--primary); color: #fff; }
+    .rank-arrow-btn:disabled { opacity: 0.25; cursor: not-allowed; }
+    .rank-arrow-btn:disabled:hover { background: var(--surface2); color: var(--text-muted); }
+
+    /* Nav buttons */
     .nav-btns { display: flex; gap: 12px; margin-top: 16px; }
     .btn {
       flex: 1; padding: 16px; border-radius: 14px; border: none;
@@ -207,35 +314,7 @@
     .btn-secondary:hover:not(:disabled) { background: var(--surface2); }
     .btn-secondary:disabled { opacity: 0.4; cursor: not-allowed; }
 
-    /* Intro screen */
-    .intro-section { text-align: center; padding: 8px 0 24px; }
-    .intro-cards {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 12px; margin: 20px 0;
-    }
-    .intro-card {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 18px; padding: 20px 14px; text-align: center;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-    .intro-card:hover { border-color: var(--primary); transform: translateY(-2px); }
-    .intro-card-icon { font-size: 34px; margin-bottom: 10px; }
-    .intro-card-name { font-size: 13px; font-weight: 700; margin-bottom: 4px; color: var(--text); }
-    .intro-card-desc { font-size: 11px; color: var(--text-muted); line-height: 1.5; }
-    .intro-desc {
-      color: var(--text-muted); font-size: 14px; margin-bottom: 20px;
-    }
-    .start-btn {
-      width: 100%; padding: 18px; border-radius: 16px; border: none;
-      background: linear-gradient(135deg, var(--primary), var(--primary-light));
-      color: #fff; font-size: 18px; font-weight: 800;
-      cursor: pointer; box-shadow: 0 4px 28px var(--glow);
-      transition: all 0.2s; min-height: 52px; letter-spacing: 0.3px;
-    }
-    .start-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 36px var(--glow2); }
-    .start-btn:active { transform: translateY(0); }
-
-    /* Result screen */
+    /* ===== Result screen ===== */
     #result-screen { display: none; }
     #result-screen.active { display: block; }
 
@@ -250,23 +329,38 @@
       background: radial-gradient(circle at top right, rgba(255,255,255,0.1), transparent 60%);
     }
     .result-icon { font-size: 72px; margin-bottom: 12px; position: relative; }
-    .result-title { font-size: 28px; font-weight: 900; color: #fff; margin-bottom: 6px; position: relative; }
-    .result-subtitle { font-size: 14px; color: rgba(255,255,255,0.8); position: relative; }
+    .result-primary-label {
+      font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.65);
+      text-transform: uppercase; letter-spacing: 2px; margin-bottom: 6px;
+      position: relative;
+    }
+    .result-title {
+      font-size: 28px; font-weight: 900; color: #fff; margin-bottom: 8px; position: relative;
+    }
+    .result-secondary {
+      font-size: 14px; color: rgba(255,255,255,0.7); position: relative;
+    }
+    .result-secondary strong { color: rgba(255,255,255,0.9); }
 
     /* Score bars */
-    .score-bars { margin: 20px 0; }
-    .score-item { margin-bottom: 18px; }
+    .breakdown-title {
+      font-size: 17px; font-weight: 700; margin: 24px 0 14px; color: var(--text);
+    }
+    .score-bars { margin: 0 0 20px; }
+    .score-item { margin-bottom: 16px; }
     .score-label {
       display: flex; justify-content: space-between; margin-bottom: 7px;
       font-size: 14px; align-items: center;
     }
     .score-label-left { display: flex; align-items: center; gap: 6px; font-weight: 600; }
+    .score-pct { font-weight: 700; color: var(--text-muted); font-size: 13px; min-width: 42px; text-align: right; }
     .score-bar-bg { height: 10px; background: var(--border); border-radius: 5px; overflow: hidden; }
     .score-bar-fill {
       height: 100%; border-radius: 5px; transition: width 0.9s cubic-bezier(0.4,0,0.2,1);
       background: linear-gradient(90deg, var(--primary), var(--primary-light));
     }
     .score-bar-fill.secondary { background: linear-gradient(90deg, #9c27b0, #ce93d8); }
+    .score-bar-fill.tertiary { background: var(--surface3); }
 
     /* Description cards */
     .result-desc {
@@ -347,8 +441,10 @@
     @media (max-width: 480px) {
       .intro-cards { grid-template-columns: 1fr; }
       .nav-btns { flex-direction: column; }
-      .question-card { padding: 22px 16px; }
+      .scenario-card { padding: 22px 14px 18px; }
       header { padding: 28px 16px 12px; }
+      .rank-text { font-size: 13px; }
+      .rank-item { padding: 12px 10px; gap: 8px; }
     }
   </style>
 </head>
@@ -377,7 +473,7 @@
 <main id="main-content" style="width:100%;display:flex;flex-direction:column;align-items:center;">
   <header>
     <h1 class="app-title" data-i18n="app.title">💗 사랑의 언어 테스트</h1>
-    <p class="app-subtitle" data-i18n="app.subtitle">당신은 어떻게 사랑을 표현하고 받나요?</p>
+    <p class="app-subtitle" data-i18n="app.subtitle">우선순위를 정해 사랑 스타일을 발견하세요</p>
   </header>
 
   <div class="container">
@@ -411,7 +507,15 @@
           <div class="intro-card-desc" data-i18n="lang.touchDesc">포옹, 손잡기, 스킨십</div>
         </div>
       </div>
-      <p class="intro-desc" data-i18n="intro.desc">30개 질문 · 약 5분 소요</p>
+
+      <div class="how-section">
+        <div class="how-title" data-i18n="intro.howTitle">이렇게 진행돼요</div>
+        <div class="how-step"><span class="how-num">1</span><span data-i18n="intro.how1">시나리오를 읽으세요</span></div>
+        <div class="how-step"><span class="how-num">2</span><span data-i18n="intro.how2">5개 선택지를 드래그해 순서를 정하세요</span></div>
+        <div class="how-step"><span class="how-num">3</span><span data-i18n="intro.how3">1위 = 나에게 가장 중요한 것</span></div>
+      </div>
+
+      <p class="intro-desc" data-i18n="intro.desc">8개 시나리오 · 드래그로 순위 매기기 · 약 3분</p>
       <button class="start-btn" id="startBtn" data-i18n="intro.start">테스트 시작하기 →</button>
     </section>
 
@@ -422,26 +526,23 @@
           <div class="progress-bar" id="progressBar" style="width:0%"></div>
         </div>
         <div class="progress-text">
-          <span id="currentQ">1</span> / <span id="totalQ">30</span>
+          <span id="currentQ">1</span> / <span id="totalQ">8</span>
         </div>
       </div>
-      <div class="question-card fade-in">
-        <div class="question-number" id="qNumber">Q 1</div>
-        <p class="question-text" id="qText"></p>
-        <div class="choice-container">
-          <button class="choice-btn" id="choiceA" onclick="selectChoice('A')" aria-pressed="false">
-            <span class="choice-label" aria-hidden="true">A</span>
-            <span id="choiceAText"></span>
-          </button>
-          <button class="choice-btn" id="choiceB" onclick="selectChoice('B')" aria-pressed="false">
-            <span class="choice-label choice-label-b" aria-hidden="true">B</span>
-            <span id="choiceBText"></span>
-          </button>
+
+      <div class="scenario-card fade-in" id="scenarioCard">
+        <div class="scenario-header">
+          <span class="scenario-badge" id="scenarioBadge"></span>
         </div>
+        <div class="scenario-title" id="scenarioTitle"></div>
+        <p class="scenario-prompt" id="scenarioPrompt"></p>
+        <div class="rank-instruction" id="rankInstruction"></div>
+        <ul class="rank-list" id="rankList" role="list" aria-label="Rank items"></ul>
       </div>
+
       <div class="nav-btns">
-        <button class="btn btn-secondary" id="prevBtn" onclick="prevQuestion()" data-i18n="quiz.prev" disabled>← 이전</button>
-        <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()" data-i18n="quiz.next" disabled>다음 →</button>
+        <button class="btn btn-secondary" id="prevBtn" data-i18n="quiz.prev" disabled>← 이전</button>
+        <button class="btn btn-primary" id="confirmBtn" data-i18n="quiz.confirm">순위 확정</button>
       </div>
     </section>
 
@@ -449,9 +550,11 @@
     <section id="result-screen" aria-label="Result">
       <div class="result-hero">
         <div class="result-icon" id="resultIcon">💗</div>
+        <div class="result-primary-label" id="resultPrimaryLabel"></div>
         <div class="result-title" id="resultTitle"></div>
-        <div class="result-subtitle" id="resultSubtitle"></div>
+        <div class="result-secondary" id="resultSecondary"></div>
       </div>
+      <div class="breakdown-title" id="breakdownTitle"></div>
       <div class="score-bars" id="scoreBars"></div>
       <div class="result-desc" id="resultDesc"></div>
       <div class="result-desc" id="resultAdvice"></div>
@@ -480,145 +583,405 @@
 <script src="js/i18n.js" defer></script>
 <script>
 // ============================================================
-// QUESTIONS DATA (30 pairs)
-// al = love language for option A, bl = for option B
-// W=Words, A=Acts, G=Gifts, T=Time, P=Physical
+// Love Language Test — Drag-to-Rank Priority Sorting
+// 8 scenarios, 5 draggable cards each
+// Scoring: 1st=5pts, 2nd=4pts, 3rd=3pts, 4th=2pts, 5th=1pt
 // ============================================================
-const QUESTIONS = [
-  {q:'q1',  a:'q1a',  b:'q1b',  al:'W', bl:'A'},
-  {q:'q2',  a:'q2a',  b:'q2b',  al:'W', bl:'A'},
-  {q:'q3',  a:'q3a',  b:'q3b',  al:'W', bl:'A'},
-  {q:'q4',  a:'q4a',  b:'q4b',  al:'W', bl:'A'},
-  {q:'q5',  a:'q5a',  b:'q5b',  al:'W', bl:'A'},
-  {q:'q6',  a:'q6a',  b:'q6b',  al:'W', bl:'A'},
-  {q:'q7',  a:'q7a',  b:'q7b',  al:'W', bl:'G'},
-  {q:'q8',  a:'q8a',  b:'q8b',  al:'W', bl:'G'},
-  {q:'q9',  a:'q9a',  b:'q9b',  al:'W', bl:'T'},
-  {q:'q10', a:'q10a', b:'q10b', al:'W', bl:'T'},
-  {q:'q11', a:'q11a', b:'q11b', al:'W', bl:'P'},
-  {q:'q12', a:'q12a', b:'q12b', al:'W', bl:'P'},
-  {q:'q13', a:'q13a', b:'q13b', al:'A', bl:'G'},
-  {q:'q14', a:'q14a', b:'q14b', al:'A', bl:'G'},
-  {q:'q15', a:'q15a', b:'q15b', al:'A', bl:'T'},
-  {q:'q16', a:'q16a', b:'q16b', al:'A', bl:'T'},
-  {q:'q17', a:'q17a', b:'q17b', al:'A', bl:'P'},
-  {q:'q18', a:'q18a', b:'q18b', al:'A', bl:'P'},
-  {q:'q19', a:'q19a', b:'q19b', al:'G', bl:'T'},
-  {q:'q20', a:'q20a', b:'q20b', al:'G', bl:'T'},
-  {q:'q21', a:'q21a', b:'q21b', al:'G', bl:'P'},
-  {q:'q22', a:'q22a', b:'q22b', al:'G', bl:'P'},
-  {q:'q23', a:'q23a', b:'q23b', al:'T', bl:'P'},
-  {q:'q24', a:'q24a', b:'q24b', al:'T', bl:'P'},
-  {q:'q25', a:'q25a', b:'q25b', al:'W', bl:'T'},
-  {q:'q26', a:'q26a', b:'q26b', al:'A', bl:'P'},
-  {q:'q27', a:'q27a', b:'q27b', al:'W', bl:'G'},
-  {q:'q28', a:'q28a', b:'q28b', al:'A', bl:'T'},
-  {q:'q29', a:'q29a', b:'q29b', al:'P', bl:'G'},
-  {q:'q30', a:'q30a', b:'q30b', al:'W', bl:'P'},
-];
 
+const SCENARIOS = ['s1','s2','s3','s4','s5','s6','s7','s8'];
+const LANGS = ['W','A','G','T','P'];
 const LANG_INFO = {
-  W: {icon:'💬', key:'lang.words'},
-  A: {icon:'🛠️', key:'lang.acts'},
-  G: {icon:'🎁', key:'lang.gifts'},
-  T: {icon:'⏰', key:'lang.time'},
-  P: {icon:'🤗', key:'lang.touch'},
+  W: { icon: '💬', key: 'lang.words', shortKey: 'lang.wordsShort' },
+  A: { icon: '🛠️', key: 'lang.acts',  shortKey: 'lang.actsShort' },
+  G: { icon: '🎁', key: 'lang.gifts', shortKey: 'lang.giftsShort' },
+  T: { icon: '⏰', key: 'lang.time',  shortKey: 'lang.timeShort' },
+  P: { icon: '🤗', key: 'lang.touch', shortKey: 'lang.touchShort' },
 };
-
+const RANK_KEYS = ['quiz.rank1','quiz.rank2','quiz.rank3','quiz.rank4','quiz.rank5'];
+const RANK_POINTS = [5, 4, 3, 2, 1];
 const COMPAT = {
   W: ['W','T'], A: ['A','T'], G: ['G','W'], T: ['T','W'], P: ['P','A']
 };
 
-let currentQ = 0;
-let answers = new Array(30).fill(null);
-let selectedChoice = null;
+let currentScenario = 0;
+// rankings[i] = array of language codes in rank order for scenario i
+let rankings = SCENARIOS.map(() => null);
 
 function t(key) {
   return (window.i18n && window.i18n.t(key) !== key) ? window.i18n.t(key) : key;
 }
 
-function showQuestion(idx) {
-  const q = QUESTIONS[idx];
-  document.getElementById('qNumber').textContent = (window.i18n?.t('quiz.questionPrefix') || 'Q') + ' ' + (idx + 1);
+// ============================================================
+// Shuffle utility (Fisher-Yates)
+// ============================================================
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+// ============================================================
+// Render scenario
+// ============================================================
+function showScenario(idx) {
+  const sKey = SCENARIOS[idx];
+  const badge = t('quiz.scenario') + ' ' + (idx + 1);
+  document.getElementById('scenarioBadge').textContent = badge;
+  document.getElementById('scenarioTitle').textContent = t('scenarios.' + sKey + '.title');
+  document.getElementById('scenarioPrompt').textContent = t('scenarios.' + sKey + '.prompt');
+  document.getElementById('rankInstruction').textContent = t('quiz.rankInstruction');
   document.getElementById('currentQ').textContent = idx + 1;
-  document.getElementById('qText').textContent = t(q.q);
-  document.getElementById('choiceAText').textContent = t(q.a);
-  document.getElementById('choiceBText').textContent = t(q.b);
-  document.getElementById('progressBar').style.width = (idx / QUESTIONS.length * 100) + '%';
+  document.getElementById('progressBar').style.width = (idx / SCENARIOS.length * 100) + '%';
 
-  selectedChoice = answers[idx];
-  updateChoiceUI();
-  document.getElementById('nextBtn').disabled = selectedChoice === null;
+  // If user already ranked this scenario, restore; else random shuffle
+  const order = rankings[idx] || shuffle(LANGS);
+  rankings[idx] = order;
+  renderRankList(order, sKey);
+
   document.getElementById('prevBtn').disabled = idx === 0;
+  document.getElementById('confirmBtn').textContent = idx < SCENARIOS.length - 1 ? t('quiz.confirm') : t('quiz.confirm');
+
+  // Scroll to top of scenario
+  document.getElementById('scenarioCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-function updateChoiceUI() {
-  const btnA = document.getElementById('choiceA');
-  const btnB = document.getElementById('choiceB');
-  btnA.classList.toggle('selected', selectedChoice === 'A');
-  btnB.classList.toggle('selected', selectedChoice === 'B');
-  btnA.setAttribute('aria-pressed', selectedChoice === 'A');
-  btnB.setAttribute('aria-pressed', selectedChoice === 'B');
+function renderRankList(order, sKey) {
+  const list = document.getElementById('rankList');
+  list.innerHTML = '';
+  order.forEach((lang, i) => {
+    const li = document.createElement('li');
+    li.className = 'rank-item';
+    li.setAttribute('role', 'listitem');
+    li.setAttribute('data-lang', lang);
+    li.setAttribute('draggable', 'true');
+    li.innerHTML = `
+      <div class="rank-badge">${t(RANK_KEYS[i])}</div>
+      <span class="rank-icon">${LANG_INFO[lang].icon}</span>
+      <span class="rank-text">${t('scenarios.' + sKey + '.' + lang)}</span>
+      <div class="rank-arrows">
+        <button class="rank-arrow-btn" data-dir="up" aria-label="Move up" ${i === 0 ? 'disabled' : ''}>&#9650;</button>
+        <button class="rank-arrow-btn" data-dir="down" aria-label="Move down" ${i === order.length - 1 ? 'disabled' : ''}>&#9660;</button>
+      </div>
+    `;
+    list.appendChild(li);
+  });
+  setupDragHandlers();
 }
 
-function selectChoice(c) {
-  selectedChoice = c;
-  answers[currentQ] = c;
-  updateChoiceUI();
-  document.getElementById('nextBtn').disabled = false;
-  setTimeout(() => {
-    if (currentQ < QUESTIONS.length - 1) nextQuestion();
-    else showResult();
-  }, 320);
+// ============================================================
+// Arrow button handlers
+// ============================================================
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('.rank-arrow-btn');
+  if (!btn || btn.disabled) return;
+  const dir = btn.dataset.dir;
+  const item = btn.closest('.rank-item');
+  const list = document.getElementById('rankList');
+  const items = [...list.children];
+  const idx = items.indexOf(item);
+  if (dir === 'up' && idx > 0) {
+    list.insertBefore(item, items[idx - 1]);
+  } else if (dir === 'down' && idx < items.length - 1) {
+    list.insertBefore(items[idx + 1], item);
+  }
+  syncRankingFromDOM();
+  updateRankBadges();
+  updateArrowStates();
+});
+
+function syncRankingFromDOM() {
+  const items = [...document.getElementById('rankList').children];
+  rankings[currentScenario] = items.map(el => el.dataset.lang);
 }
 
-function nextQuestion() {
-  if (selectedChoice === null) return;
-  if (currentQ < QUESTIONS.length - 1) {
-    currentQ++;
-    showQuestion(currentQ);
+function updateRankBadges() {
+  const items = [...document.getElementById('rankList').children];
+  items.forEach((el, i) => {
+    el.querySelector('.rank-badge').textContent = t(RANK_KEYS[i]);
+  });
+}
+
+function updateArrowStates() {
+  const items = [...document.getElementById('rankList').children];
+  items.forEach((el, i) => {
+    const btns = el.querySelectorAll('.rank-arrow-btn');
+    btns[0].disabled = i === 0;
+    btns[1].disabled = i === items.length - 1;
+  });
+}
+
+// ============================================================
+// Drag & Drop (mouse + touch)
+// ============================================================
+let dragItem = null;
+let dragStartY = 0;
+let dragOffsetY = 0;
+let placeholder = null;
+
+function setupDragHandlers() {
+  const list = document.getElementById('rankList');
+  const items = [...list.children];
+
+  items.forEach(item => {
+    // Prevent drag on arrow buttons
+    item.addEventListener('dragstart', onDragStart);
+    item.addEventListener('touchstart', onTouchStart, { passive: false });
+  });
+
+  list.addEventListener('dragover', onDragOver);
+  list.addEventListener('drop', onDrop);
+  list.addEventListener('dragend', onDragEnd);
+}
+
+function onDragStart(e) {
+  if (e.target.closest('.rank-arrow-btn')) { e.preventDefault(); return; }
+  dragItem = e.currentTarget;
+  dragItem.classList.add('dragging');
+  e.dataTransfer.effectAllowed = 'move';
+  e.dataTransfer.setData('text/plain', '');
+}
+
+function onDragOver(e) {
+  e.preventDefault();
+  e.dataTransfer.dropEffect = 'move';
+  const list = document.getElementById('rankList');
+  const afterEl = getDragAfterElement(list, e.clientY);
+
+  // Clear all drag-over classes
+  [...list.children].forEach(c => {
+    c.classList.remove('drag-over-above', 'drag-over-below');
+  });
+
+  if (afterEl == null) {
+    if (dragItem && dragItem.parentNode === list) {
+      list.appendChild(dragItem);
+    }
+  } else {
+    if (dragItem && afterEl !== dragItem) {
+      list.insertBefore(dragItem, afterEl);
+    }
+  }
+}
+
+function onDrop(e) {
+  e.preventDefault();
+  onDragEnd();
+}
+
+function onDragEnd() {
+  if (dragItem) {
+    dragItem.classList.remove('dragging');
+    dragItem = null;
+  }
+  const list = document.getElementById('rankList');
+  [...list.children].forEach(c => {
+    c.classList.remove('drag-over-above', 'drag-over-below');
+  });
+  syncRankingFromDOM();
+  updateRankBadges();
+  updateArrowStates();
+}
+
+function getDragAfterElement(container, y) {
+  const elements = [...container.querySelectorAll('.rank-item:not(.dragging)')];
+  return elements.reduce((closest, child) => {
+    const box = child.getBoundingClientRect();
+    const offset = y - box.top - box.height / 2;
+    if (offset < 0 && offset > closest.offset) {
+      return { offset, element: child };
+    }
+    return closest;
+  }, { offset: Number.NEGATIVE_INFINITY }).element;
+}
+
+// ============================================================
+// Touch drag support
+// ============================================================
+let touchDragItem = null;
+let touchClone = null;
+let touchStartY = 0;
+let touchItemRect = null;
+let touchList = null;
+let touchScrolling = false;
+let touchMoved = false;
+
+function onTouchStart(e) {
+  if (e.target.closest('.rank-arrow-btn')) return;
+
+  const touch = e.touches[0];
+  touchDragItem = e.currentTarget;
+  touchStartY = touch.clientY;
+  touchItemRect = touchDragItem.getBoundingClientRect();
+  touchList = document.getElementById('rankList');
+  touchMoved = false;
+
+  // Long-press timer for drag activation
+  touchDragItem._longPress = setTimeout(() => {
+    activateTouchDrag(touch);
+  }, 150);
+
+  document.addEventListener('touchmove', onTouchMove, { passive: false });
+  document.addEventListener('touchend', onTouchEnd, { passive: false });
+  document.addEventListener('touchcancel', onTouchEnd, { passive: false });
+}
+
+function activateTouchDrag(touch) {
+  if (!touchDragItem) return;
+  touchMoved = true;
+  touchDragItem.classList.add('dragging');
+
+  // Create floating clone
+  touchClone = touchDragItem.cloneNode(true);
+  touchClone.style.cssText = `
+    position: fixed;
+    left: ${touchItemRect.left}px;
+    top: ${touchItemRect.top}px;
+    width: ${touchItemRect.width}px;
+    z-index: 9000;
+    pointer-events: none;
+    opacity: 0.9;
+    transform: scale(1.03);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5), 0 0 20px rgba(233,30,140,0.3);
+    border-color: var(--primary);
+    background: rgba(233,30,140,0.08);
+    border-radius: 14px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 12px;
+    border: 2px solid var(--primary);
+    color: var(--text);
+    font-family: inherit;
+  `;
+  document.body.appendChild(touchClone);
+
+  touchDragItem.style.opacity = '0.3';
+}
+
+function onTouchMove(e) {
+  if (!touchDragItem) return;
+  const touch = e.touches[0];
+  const dy = Math.abs(touch.clientY - touchStartY);
+
+  if (dy > 8 && !touchMoved) {
+    clearTimeout(touchDragItem._longPress);
+    activateTouchDrag(touch);
+  }
+
+  if (!touchMoved) return;
+  e.preventDefault();
+
+  // Move clone
+  if (touchClone) {
+    const newTop = touchItemRect.top + (touch.clientY - touchStartY);
+    touchClone.style.top = newTop + 'px';
+  }
+
+  // Determine insertion point
+  const afterEl = getDragAfterElement(touchList, touch.clientY);
+  if (afterEl == null) {
+    touchList.appendChild(touchDragItem);
+  } else if (afterEl !== touchDragItem) {
+    touchList.insertBefore(touchDragItem, afterEl);
+  }
+}
+
+function onTouchEnd(e) {
+  if (touchDragItem) {
+    clearTimeout(touchDragItem._longPress);
+    if (touchMoved) {
+      touchDragItem.classList.remove('dragging');
+      touchDragItem.style.opacity = '';
+    }
+    touchDragItem = null;
+  }
+  if (touchClone) {
+    touchClone.remove();
+    touchClone = null;
+  }
+  touchMoved = false;
+
+  document.removeEventListener('touchmove', onTouchMove);
+  document.removeEventListener('touchend', onTouchEnd);
+  document.removeEventListener('touchcancel', onTouchEnd);
+
+  syncRankingFromDOM();
+  updateRankBadges();
+  updateArrowStates();
+}
+
+// ============================================================
+// Navigation
+// ============================================================
+document.getElementById('prevBtn').addEventListener('click', () => {
+  if (currentScenario > 0) {
+    currentScenario--;
+    showScenario(currentScenario);
+  }
+});
+
+document.getElementById('confirmBtn').addEventListener('click', () => {
+  syncRankingFromDOM();
+  if (currentScenario < SCENARIOS.length - 1) {
+    currentScenario++;
+    showScenario(currentScenario);
   } else {
     showResult();
   }
-}
+});
 
-function prevQuestion() {
-  if (currentQ > 0) {
-    currentQ--;
-    showQuestion(currentQ);
-  }
-}
-
+// ============================================================
+// Scoring
+// ============================================================
 function calculateScores() {
-  const scores = {W:0, A:0, G:0, T:0, P:0};
-  QUESTIONS.forEach((q, i) => {
-    const ans = answers[i];
-    if (ans === 'A') scores[q.al]++;
-    else if (ans === 'B') scores[q.bl]++;
+  const scores = { W: 0, A: 0, G: 0, T: 0, P: 0 };
+  rankings.forEach((order) => {
+    if (!order) return;
+    order.forEach((lang, rankIdx) => {
+      scores[lang] += RANK_POINTS[rankIdx];
+    });
   });
   return scores;
 }
 
+// ============================================================
+// Result display
+// ============================================================
 function showResult() {
   const scores = calculateScores();
-  const sorted = Object.entries(scores).sort((a,b) => b[1]-a[1]);
+  const maxPossible = SCENARIOS.length * 5; // 40
+  const sorted = Object.entries(scores).sort((a, b) => b[1] - a[1]);
   const primary = sorted[0][0];
-  const total = Object.values(scores).reduce((a,b) => a + b, 0);
+  const secondary = sorted[1][0];
+  const total = Object.values(scores).reduce((a, b) => a + b, 0);
 
   const info = LANG_INFO[primary];
+  const secInfo = LANG_INFO[secondary];
+
   document.getElementById('resultIcon').textContent = info.icon;
+  document.getElementById('resultPrimaryLabel').textContent = t('result.primaryLabel');
   document.getElementById('resultTitle').textContent = t(info.key);
-  document.getElementById('resultSubtitle').textContent = t('result.primaryLabel') + ' ' + t(info.key);
+  document.getElementById('resultSecondary').innerHTML =
+    t('result.secondaryLabel') + ': <strong>' + secInfo.icon + ' ' + t(secInfo.key) + '</strong>';
+
+  // Breakdown title
+  document.getElementById('breakdownTitle').textContent = t('result.breakdown');
 
   // Score bars
   const barHTML = sorted.map(([lang, score], i) => {
-    const pct = total > 0 ? Math.round(score / total * 100) : 0;
+    const pct = maxPossible > 0 ? Math.round(score / maxPossible * 100) : 0;
     const li = LANG_INFO[lang];
-    const fillClass = i === 0 ? 'score-bar-fill' : 'score-bar-fill secondary';
+    let fillClass = 'score-bar-fill';
+    if (i === 1) fillClass += ' secondary';
+    else if (i > 1) fillClass += ' tertiary';
     return `<div class="score-item">
       <div class="score-label">
         <span class="score-label-left">${li.icon} ${t(li.key)}</span>
-        <span>${pct}%</span>
+        <span class="score-pct">${score}/${maxPossible}</span>
       </div>
       <div class="score-bar-bg">
         <div class="${fillClass}" style="width:0%" data-width="${pct}%"></div>
@@ -633,17 +996,20 @@ function showResult() {
     });
   }, 120);
 
+  // Description and advice
   document.getElementById('resultDesc').innerHTML =
-    `<strong>${t(info.key)}</strong><br><br>${t('desc.' + primary)}`;
+    '<strong>' + t(info.key) + '</strong><br><br>' + t('desc.' + primary);
   document.getElementById('resultAdvice').innerHTML =
-    `<strong>💡 ${t('result.adviceTitle')}</strong><br><br>${t('advice.' + primary)}`;
+    '<strong>' + t('result.adviceTitle') + '</strong><br><br>' + t('advice.' + primary);
 
+  // Compatibility
   const compatKeys = COMPAT[primary];
   document.getElementById('compatList').innerHTML = compatKeys.map(k => {
     const ci = LANG_INFO[k];
     return `<div class="compat-item">${ci.icon} <span>${t(ci.key)}</span></div>`;
   }).join('');
 
+  // Switch screens
   document.getElementById('quiz-screen').style.display = 'none';
   const rs = document.getElementById('result-screen');
   rs.classList.add('active');
@@ -653,15 +1019,20 @@ function showResult() {
   if (typeof gtag !== 'undefined') {
     gtag('event', 'test_complete', {
       event_category: 'love_language',
-      primary_language: primary
+      primary_language: primary,
+      secondary_language: secondary
     });
   }
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+// ============================================================
+// Retry / Share
+// ============================================================
 function retryTest() {
-  currentQ = 0;
-  answers = new Array(30).fill(null);
-  selectedChoice = null;
+  currentScenario = 0;
+  rankings = SCENARIOS.map(() => null);
   document.getElementById('result-screen').classList.remove('active', 'fade-in');
   document.getElementById('quiz-screen').style.display = 'none';
   document.getElementById('intro-screen').style.display = 'block';
@@ -686,17 +1057,23 @@ function shareTwitter() {
   window.open('https://twitter.com/intent/tweet?url=' + url + '&text=' + text, '_blank', 'noopener');
 }
 
+// ============================================================
 // Start button
+// ============================================================
 document.getElementById('startBtn').addEventListener('click', () => {
   document.getElementById('intro-screen').style.display = 'none';
   const qs = document.getElementById('quiz-screen');
   qs.style.display = 'block';
   qs.classList.add('fade-in');
-  showQuestion(0);
+  currentScenario = 0;
+  rankings = SCENARIOS.map(() => null);
+  showScenario(0);
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+// ============================================================
 // Language selector
+// ============================================================
 document.getElementById('langBtn').addEventListener('click', (e) => {
   e.stopPropagation();
   document.getElementById('langDropdown').classList.toggle('open');
@@ -710,8 +1087,9 @@ document.querySelectorAll('.lang-option').forEach(btn => {
       document.getElementById('currentLang').textContent = label.slice(1).join(' ') || label[0];
     }
     document.getElementById('langDropdown').classList.remove('open');
+    // Re-render current scenario if quiz is active
     if (document.getElementById('quiz-screen').style.display !== 'none') {
-      showQuestion(currentQ);
+      showScenario(currentScenario);
     }
   });
 });
@@ -719,7 +1097,9 @@ document.addEventListener('click', () => {
   document.getElementById('langDropdown').classList.remove('open');
 });
 
+// ============================================================
 // App loader
+// ============================================================
 window.addEventListener('load', () => {
   setTimeout(() => {
     const loader = document.getElementById('app-loader');
