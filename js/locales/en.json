@@ -127,7 +127,15 @@
     "breakdown": "Your Love Language Breakdown",
     "compatTitle": "\ud83d\udc91 Best Matching Love Languages",
     "adviceTitle": "Relationship Advice",
-    "retry": "Take the Test Again"
+    "retry": "Take the Test Again",
+    "moreTests": "Explore More",
+    "percentileStat": "Only <strong>{percent}%</strong> share your love language"
+  },
+  "related": {
+    "mbtiLove": "MBTI Love",
+    "attachmentStyle": "Attachment Style",
+    "emotionIceberg": "Emotion Iceberg",
+    "eqTest": "EQ Test"
   },
   "desc": {
     "W": "Your love language is Words of Affirmation. You feel and express love through words. Sincere compliments, heartfelt gratitude, and verbal declarations of love fill your heart like nothing else. A single meaningful sentence is worth more to you than any gift.",

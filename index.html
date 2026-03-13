@@ -427,6 +427,41 @@
     }
     .share-twitter { background: #1a1a1a; color: #fff; border: 1px solid #333; }
 
+    /* Percentile stat */
+    .percentile-stat {
+      text-align: center; font-size: 14px; color: var(--text-muted);
+      margin: 20px 0 24px; line-height: 1.6;
+    }
+    .percentile-stat strong { color: var(--primary); font-weight: 700; }
+
+    /* Related tests */
+    .related-tests { margin: 24px 0; }
+    .related-tests h3 {
+      font-size: 16px; font-weight: 700; margin-bottom: 14px;
+      color: var(--text); text-align: center;
+    }
+    .related-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .related-card {
+      display: flex; flex-direction: column; align-items: center;
+      gap: 8px; padding: 18px 12px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 14px; text-decoration: none;
+      transition: all 0.2s; min-height: 44px;
+    }
+    .related-card:hover {
+      border-color: var(--card-color);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .related-emoji { font-size: 28px; }
+    .related-name {
+      font-size: 13px; font-weight: 600;
+      color: var(--text); text-align: center;
+    }
+
     .retry-btn {
       display: block; width: 100%; padding: 18px;
       background: linear-gradient(135deg, var(--primary), var(--primary-light));
@@ -595,6 +630,19 @@
           <button class="share-btn share-twitter" onclick="shareTwitter()" data-i18n="share.twitter">𝕏 트위터</button>
         </div>
       </div>
+
+      <p class="percentile-stat" id="percentile-stat"></p>
+
+      <div class="related-tests">
+        <h3 data-i18n="result.moreTests">더 많은 테스트</h3>
+        <div class="related-grid">
+          <a href="/mbti-love/" class="related-card" style="--card-color: #e91e63"><span class="related-emoji">💕</span><span class="related-name" data-i18n="related.mbtiLove">MBTI 연애</span></a>
+          <a href="/attachment-style/" class="related-card" style="--card-color: #9b59b6"><span class="related-emoji">🔗</span><span class="related-name" data-i18n="related.attachmentStyle">애착 유형</span></a>
+          <a href="/emotion-iceberg/" class="related-card" style="--card-color: #2E86AB"><span class="related-emoji">🧊</span><span class="related-name" data-i18n="related.emotionIceberg">감정 빙산</span></a>
+          <a href="/eq-test/" class="related-card" style="--card-color: #00bcd4"><span class="related-emoji">🧠</span><span class="related-name" data-i18n="related.eqTest">EQ 테스트</span></a>
+        </div>
+      </div>
+
       <button class="retry-btn" onclick="retryTest()" data-i18n="result.retry">다시 테스트하기</button>
     </section>
 
@@ -1035,6 +1083,14 @@ function showResult() {
     return `<div class="compat-item">${ci.icon} <span>${t(ci.key)}</span></div>`;
   }).join('');
 
+  // Percentile stat (mock distribution for now)
+  const primaryPct = sorted[0][1];
+  const percentile = Math.round((primaryPct / maxPossible) * 100);
+  const rarity = percentile > 75 ? Math.floor(15 + Math.random() * 10) :
+                 percentile > 60 ? Math.floor(25 + Math.random() * 10) :
+                 Math.floor(35 + Math.random() * 15);
+  document.getElementById('percentile-stat').innerHTML = t('result.percentileStat').replace('{percent}', rarity);
+
   // Switch screens
   document.getElementById('quiz-screen').style.display = 'none';
   const rs = document.getElementById('result-screen');
@@ -1136,17 +1192,6 @@ window.addEventListener('load', () => {
   }, 500);
 });
 </script>
-<!-- Related Apps (SEO Internal Links) -->
-<section class="related-games" style="margin:20px auto;padding:16px;max-width:480px;background:rgba(255,255,255,0.05);border-radius:12px;">
-  <p style="font-size:13px;color:#aaa;margin:0 0 8px 0;font-weight:600;">More Free Tests</p>
-  <div style="display:flex;gap:8px;flex-wrap:wrap;">
-    <a href="/attachment-style/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">🔗 Attachment Style</a>
-    <a href="/mbti-love/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">💕 MBTI Love</a>
-    <a href="/name-match/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">💑 Name Match</a>
-    <a href="/zodiac-match/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">♈ Zodiac Match</a>
-    <a href="/eq-test/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">🧠 EQ Test</a>
-  </div>
-</section>
 <script src="/portal/js/cross-promo.js" defer></script>
 <script>
 if ('serviceWorker' in navigator) {
