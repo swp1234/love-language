@@ -3,62 +3,177 @@
     "title": "Test de Lenguaje del Amor | Descubre tu Estilo Amoroso - DopaBrain",
     "description": "Descubre tu lenguaje del amor arrastrando y ordenando opciones en 8 escenarios reales."
   },
-  "accessibility": { "skipMain": "Saltar al contenido principal" },
-  "app": { "title": "Test de Lenguaje del Amor", "subtitle": "Ordena por prioridad para descubrir c\u00f3mo amas" },
+  "accessibility": {
+    "skipMain": "Saltar al contenido principal"
+  },
+  "app": {
+    "title": "Test de Lenguaje del Amor",
+    "subtitle": "Ordena por prioridad para descubrir cómo amas"
+  },
   "lang": {
-    "words": "Palabras de Afirmaci\u00f3n", "wordsShort": "Palabras", "wordsDesc": "Elogios, gratitud, expresiones verbales",
-    "acts": "Actos de Servicio", "actsShort": "Servicio", "actsDesc": "Ayuda, cuidado y acciones pr\u00e1cticas",
-    "gifts": "Recibir Regalos", "giftsShort": "Regalos", "giftsDesc": "Regalos significativos y sorpresas",
-    "time": "Tiempo de Calidad", "timeShort": "Tiempo", "timeDesc": "Atenci\u00f3n plena y compa\u00f1\u00eda",
-    "touch": "Contacto F\u00edsico", "touchShort": "Contacto", "touchDesc": "Abrazos, tomarse de la mano, caricias"
+    "words": "Palabras de Afirmación",
+    "wordsShort": "Palabras",
+    "wordsDesc": "Elogios, gratitud, expresiones verbales",
+    "acts": "Actos de Servicio",
+    "actsShort": "Servicio",
+    "actsDesc": "Ayuda, cuidado y acciones prácticas",
+    "gifts": "Recibir Regalos",
+    "giftsShort": "Regalos",
+    "giftsDesc": "Regalos significativos y sorpresas",
+    "time": "Tiempo de Calidad",
+    "timeShort": "Tiempo",
+    "timeDesc": "Atención plena y compañía",
+    "touch": "Contacto Físico",
+    "touchShort": "Contacto",
+    "touchDesc": "Abrazos, tomarse de la mano, caricias"
   },
   "intro": {
-    "desc": "8 escenarios \u00b7 arrastra para ordenar \u00b7 aprox. 3 minutos",
-    "howTitle": "C\u00f3mo funciona",
+    "desc": "8 escenarios · arrastra para ordenar · aprox. 3 minutos",
+    "howTitle": "Cómo funciona",
     "how1": "Lee cada escenario",
-    "how2": "Arrastra las 5 opciones seg\u00fan tu preferencia",
-    "how3": "1\u00ba puesto = lo m\u00e1s importante para ti",
-    "start": "Iniciar el Test \u2192"
+    "how2": "Arrastra las 5 opciones según tu preferencia",
+    "how3": "1º puesto = lo más importante para ti",
+    "start": "Iniciar el Test →"
   },
   "quiz": {
-    "scenario": "Escenario", "rankInstruction": "Arrastra del m\u00e1s al menos importante",
-    "rank1": "1\u00ba", "rank2": "2\u00ba", "rank3": "3\u00ba", "rank4": "4\u00ba", "rank5": "5\u00ba",
-    "confirm": "Confirmar Orden", "prev": "\u2190 Anterior", "next": "Siguiente \u2192"
+    "scenario": "Escenario",
+    "rankInstruction": "Arrastra del más al menos importante",
+    "rank1": "1º",
+    "rank2": "2º",
+    "rank3": "3º",
+    "rank4": "4º",
+    "rank5": "5º",
+    "confirm": "Confirmar Orden",
+    "prev": "← Anterior",
+    "next": "Siguiente →"
   },
   "scenarios": {
-    "s1": { "title": "Despu\u00e9s de un d\u00eda estresante...", "prompt": "Tuviste un d\u00eda agotador. \u00bfQu\u00e9 te har\u00eda sentir m\u00e1s amado/a al llegar a casa?",
-      "W": "Escuchar \"Trabajaste muy duro hoy, estoy orgulloso/a de ti\"", "G": "Encontrar un peque\u00f1o regalo sorpresa en la mesa", "A": "Llegar a una cena caliente ya preparada", "T": "Tu pareja dejando todo para sentarse y hablar contigo", "P": "Un largo y c\u00e1lido abrazo al entrar por la puerta" },
-    "s2": { "title": "En tu cumplea\u00f1os...", "prompt": "Es tu cumplea\u00f1os. Ordena qu\u00e9 lo har\u00eda m\u00e1s especial.",
-      "W": "Una carta sentida expresando lo que significas", "G": "Un regalo cuidadosamente elegido que muestra que te conocen", "A": "Planificar y organizar todo el d\u00eda por ti", "T": "Un d\u00eda entero haciendo tus cosas favoritas juntos", "P": "Despertar entre mimos y cari\u00f1o toda la ma\u00f1ana" },
-    "s3": { "title": "En una relaci\u00f3n nueva...", "prompt": "Est\u00e1s conociendo a alguien nuevo. \u00bfQu\u00e9 te hace sentir la conexi\u00f3n m\u00e1s fuerte?",
-      "W": "Conversaciones profundas con genuina admiraci\u00f3n", "G": "Recuerdan algo que mencionaste y te sorprenden", "A": "Se esfuerzan por ayudarte con algo", "T": "Las horas vuelan juntos, sin necesidad de tel\u00e9fonos", "P": "La electricidad al tomarse de la mano por primera vez" },
-    "s4": { "title": "Cuando te sientes mal...", "prompt": "Pasas por un momento emocionalmente dif\u00edcil. \u00bfQu\u00e9 te consuela m\u00e1s?",
-      "W": "\"Conf\u00edo en ti, vas a superar esto\"", "G": "Te traen tu snack favorito de consuelo", "A": "Se hacen cargo de tus responsabilidades para que descanses", "T": "Despejan su agenda solo para estar contigo", "P": "Que te abracen en silencio hasta sentirte mejor" },
-    "s5": { "title": "Un fin de semana juntos...", "prompt": "Tienes un fin de semana libre con tu pareja. Ordena tus actividades ideales.",
-      "W": "Una larga conversaci\u00f3n sincera en un caf\u00e9 acogedor", "G": "Explorar tiendas y elegir regalos el uno para el otro", "A": "Trabajar juntos en un proyecto del hogar", "T": "Una aventura sin plan con los tel\u00e9fonos apagados", "P": "Una ma\u00f1ana perezosa en la cama, solo abraz\u00e1ndose" },
-    "s6": { "title": "C\u00f3mo muestras amor...", "prompt": "Cuando quieres mostrar que te importa alguien, \u00bfqu\u00e9 haces naturalmente?",
-      "W": "Escribir un mensaje dici\u00e9ndole lo incre\u00edble que es", "G": "Elegir un regalo atento que le quede perfecto", "A": "Ayudar con tareas o resolver un problema", "T": "Dedicar tiempo exclusivo con toda tu atenci\u00f3n", "P": "Dar un abrazo c\u00e1lido o un toque reconfortante" },
-    "s7": { "title": "Lo que m\u00e1s duele cuando falta...", "prompt": "En una relaci\u00f3n a distancia, \u00bfqu\u00e9 extra\u00f1ar\u00edas m\u00e1s?",
-      "W": "Escuchar su voz decir \"Te amo\" y \"Buenas noches\"", "G": "Recibir paquetes sorpresa por correo", "A": "Tener a alguien que maneja las cosas contigo", "T": "Los momentos cotidianos de simplemente estar en la misma habitaci\u00f3n", "P": "La cercan\u00eda f\u00edsica\u2014abrazos, tomarse de la mano, su calor" },
-    "s8": { "title": "El aniversario perfecto...", "prompt": "Imagina tu celebraci\u00f3n de aniversario ideal. Ordena lo que m\u00e1s importa.",
-      "W": "Un brindis con palabras sinceras sobre el camino juntos", "G": "Intercambiar regalos significativos y personalizados", "A": "Tu pareja organiz\u00f3 todo en secreto perfectamente", "T": "Una noche entera sin distracciones, solo ustedes dos", "P": "Bailar abrazados, tomados de la mano toda la noche" }
+    "s1": {
+      "title": "Después de un día estresante...",
+      "prompt": "Tuviste un día agotador. ¿Qué te haría sentir más amado/a al llegar a casa?",
+      "W": "Escuchar \"Trabajaste muy duro hoy, estoy orgulloso/a de ti\"",
+      "G": "Encontrar un pequeño regalo sorpresa en la mesa",
+      "A": "Llegar a una cena caliente ya preparada",
+      "T": "Tu pareja dejando todo para sentarse y hablar contigo",
+      "P": "Un largo y cálido abrazo al entrar por la puerta"
+    },
+    "s2": {
+      "title": "En tu cumpleaños...",
+      "prompt": "Es tu cumpleaños. Ordena qué lo haría más especial.",
+      "W": "Una carta sentida expresando lo que significas",
+      "G": "Un regalo cuidadosamente elegido que muestra que te conocen",
+      "A": "Planificar y organizar todo el día por ti",
+      "T": "Un día entero haciendo tus cosas favoritas juntos",
+      "P": "Despertar entre mimos y cariño toda la mañana"
+    },
+    "s3": {
+      "title": "En una relación nueva...",
+      "prompt": "Estás conociendo a alguien nuevo. ¿Qué te hace sentir la conexión más fuerte?",
+      "W": "Conversaciones profundas con genuina admiración",
+      "G": "Recuerdan algo que mencionaste y te sorprenden",
+      "A": "Se esfuerzan por ayudarte con algo",
+      "T": "Las horas vuelan juntos, sin necesidad de teléfonos",
+      "P": "La electricidad al tomarse de la mano por primera vez"
+    },
+    "s4": {
+      "title": "Cuando te sientes mal...",
+      "prompt": "Pasas por un momento emocionalmente difícil. ¿Qué te consuela más?",
+      "W": "\"Confío en ti, vas a superar esto\"",
+      "G": "Te traen tu snack favorito de consuelo",
+      "A": "Se hacen cargo de tus responsabilidades para que descanses",
+      "T": "Despejan su agenda solo para estar contigo",
+      "P": "Que te abracen en silencio hasta sentirte mejor"
+    },
+    "s5": {
+      "title": "Un fin de semana juntos...",
+      "prompt": "Tienes un fin de semana libre con tu pareja. Ordena tus actividades ideales.",
+      "W": "Una larga conversación sincera en un café acogedor",
+      "G": "Explorar tiendas y elegir regalos el uno para el otro",
+      "A": "Trabajar juntos en un proyecto del hogar",
+      "T": "Una aventura sin plan con los teléfonos apagados",
+      "P": "Una mañana perezosa en la cama, solo abrazándose"
+    },
+    "s6": {
+      "title": "Cómo muestras amor...",
+      "prompt": "Cuando quieres mostrar que te importa alguien, ¿qué haces naturalmente?",
+      "W": "Escribir un mensaje diciéndole lo increíble que es",
+      "G": "Elegir un regalo atento que le quede perfecto",
+      "A": "Ayudar con tareas o resolver un problema",
+      "T": "Dedicar tiempo exclusivo con toda tu atención",
+      "P": "Dar un abrazo cálido o un toque reconfortante"
+    },
+    "s7": {
+      "title": "Lo que más duele cuando falta...",
+      "prompt": "En una relación a distancia, ¿qué extrañarías más?",
+      "W": "Escuchar su voz decir \"Te amo\" y \"Buenas noches\"",
+      "G": "Recibir paquetes sorpresa por correo",
+      "A": "Tener a alguien que maneja las cosas contigo",
+      "T": "Los momentos cotidianos de simplemente estar en la misma habitación",
+      "P": "La cercanía física—abrazos, tomarse de la mano, su calor"
+    },
+    "s8": {
+      "title": "El aniversario perfecto...",
+      "prompt": "Imagina tu celebración de aniversario ideal. Ordena lo que más importa.",
+      "W": "Un brindis con palabras sinceras sobre el camino juntos",
+      "G": "Intercambiar regalos significativos y personalizados",
+      "A": "Tu pareja organizó todo en secreto perfectamente",
+      "T": "Una noche entera sin distracciones, solo ustedes dos",
+      "P": "Bailar abrazados, tomados de la mano toda la noche"
+    }
   },
-  "result": { "primaryLabel": "Tu Lenguaje del Amor Principal", "secondaryLabel": "Secundario", "breakdown": "Desglose de tus Lenguajes del Amor", "compatTitle": "\ud83d\udc91 Lenguajes m\u00e1s compatibles", "adviceTitle": "Consejo para la relaci\u00f3n", "retry": "Hacer el test de nuevo", "moreTests": "Explorar M\u00e1s", "percentileStat": "Solo el <strong>{percent}%</strong> comparten tu lenguaje del amor" },
-  "related": { "mbtiLove": "MBTI Amor", "attachmentStyle": "Estilo de Apego", "emotionIceberg": "Iceberg Emocional", "eqTest": "Test de EQ" },
+  "result": {
+    "primaryLabel": "Tu Lenguaje del Amor Principal",
+    "secondaryLabel": "Secundario",
+    "breakdown": "Desglose de tus Lenguajes del Amor",
+    "compatTitle": "💑 Lenguajes más compatibles",
+    "adviceTitle": "Consejo para la relación",
+    "retry": "Hacer el test de nuevo",
+    "moreTests": "Explorar Más",
+    "percentileStat": "Solo el <strong>{percent}%</strong> comparten tu lenguaje del amor"
+  },
+  "related": {
+    "mbtiLove": "MBTI Amor",
+    "attachmentStyle": "Estilo de Apego",
+    "emotionIceberg": "Iceberg Emocional",
+    "eqTest": "Test de EQ"
+  },
   "desc": {
-    "W": "Tu lenguaje del amor es las Palabras de Afirmaci\u00f3n. Sientes y expresas el amor a trav\u00e9s de las palabras. Los elogios sinceros, la gratitud y las declaraciones de amor llenan tu coraz\u00f3n como nada m\u00e1s.",
-    "A": "Tu lenguaje del amor son los Actos de Servicio. Sientes el amor m\u00e1s profundo cuando alguien hace cosas por ti. Las acciones hablan mucho m\u00e1s que las palabras.",
-    "G": "Tu lenguaje del amor es Recibir Regalos. No se trata del precio, sino de la intenci\u00f3n y el coraz\u00f3n detr\u00e1s del regalo.",
-    "T": "Tu lenguaje del amor es el Tiempo de Calidad. Para ti, el amor significa tener la atenci\u00f3n plena e indivisa de alguien.",
-    "P": "Tu lenguaje del amor es el Contacto F\u00edsico. Para ti, el amor se siente a trav\u00e9s de la piel. Un abrazo te da m\u00e1s seguridad que cualquier palabra."
+    "W": "Tu lenguaje del amor es las Palabras de Afirmación. Sientes y expresas el amor a través de las palabras. Los elogios sinceros, la gratitud y las declaraciones de amor llenan tu corazón como nada más.",
+    "A": "Tu lenguaje del amor son los Actos de Servicio. Sientes el amor más profundo cuando alguien hace cosas por ti. Las acciones hablan mucho más que las palabras.",
+    "G": "Tu lenguaje del amor es Recibir Regalos. No se trata del precio, sino de la intención y el corazón detrás del regalo.",
+    "T": "Tu lenguaje del amor es el Tiempo de Calidad. Para ti, el amor significa tener la atención plena e indivisa de alguien.",
+    "P": "Tu lenguaje del amor es el Contacto Físico. Para ti, el amor se siente a través de la piel. Un abrazo te da más seguridad que cualquier palabra."
   },
   "advice": {
-    "W": "Cu\u00e9ntale a tu pareja cu\u00e1nto significan sus palabras de elogio. Frases simples como 'gracias' y 'te amo' intercambiadas a diario transforman la relaci\u00f3n.",
-    "A": "Comunica claramente qu\u00e9 tipo de ayuda necesitas. Cuando te ayuden, expresa siempre gratitud.",
-    "G": "Dile a tu pareja que los regalos significan mucho para ti\u2014no tiene que ser caro, basta con que sea sincero.",
-    "T": "Comunica a tu pareja cu\u00e1n importante es el tiempo de calidad. Intenten minimizar el uso del tel\u00e9fono en las citas.",
-    "P": "Habla con tu pareja sobre c\u00f3mo el contacto f\u00edsico te reconforta y encuentren juntos un nivel c\u00f3modo."
+    "W": "Cuéntale a tu pareja cuánto significan sus palabras de elogio. Frases simples como 'gracias' y 'te amo' intercambiadas a diario transforman la relación.",
+    "A": "Comunica claramente qué tipo de ayuda necesitas. Cuando te ayuden, expresa siempre gratitud.",
+    "G": "Dile a tu pareja que los regalos significan mucho para ti—no tiene que ser caro, basta con que sea sincero.",
+    "T": "Comunica a tu pareja cuán importante es el tiempo de calidad. Intenten minimizar el uso del teléfono en las citas.",
+    "P": "Habla con tu pareja sobre cómo el contacto físico te reconforta y encuentren juntos un nivel cómodo."
   },
-  "share": { "title": "Compartir resultado", "copy": "\ud83d\udd17 Copiar enlace", "twitter": "\ud835\udd4f Twitter", "copied": "\u00a1Enlace copiado!", "twitterText": "Descubr\u00ed mi lenguaje del amor. \u00a1Descubre el tuyo! #LenguajeDelAmor #DopaBrain" },
-  "footer": { "privacy": "Pol\u00edtica de privacidad", "about": "Acerca de" }
+  "share": {
+    "title": "Compartir resultado",
+    "copy": "🔗 Copiar enlace",
+    "twitter": "𝕏 Twitter",
+    "copied": "¡Enlace copiado!",
+    "twitterText": "Descubrí mi lenguaje del amor. ¡Descubre el tuyo! #LenguajeDelAmor #DopaBrain"
+  },
+  "footer": {
+    "privacy": "Política de privacidad",
+    "about": "Acerca de"
+  },
+  "engage": {
+    "result1": "💬 Palabras de Afirmación -- Amor Verbal",
+    "result2": "🛠️ Actos de Servicio -- Amor en Acción",
+    "result3": "🎁 Recibir Regalos -- Sorpresas Pensadas",
+    "result4": "⏰ Tiempo de Calidad -- Atención Completa",
+    "socialProof": "2,240+ personas descubrieron su lenguaje del amor"
+  },
+  "about": {
+    "toggle": "Sobre el test de lenguaje del amor",
+    "heading1": "Cómo funciona el formato de arrastrar y ordenar",
+    "text1": "Este test presenta 8 escenarios reales, cada uno con 5 opciones de lenguaje del amor. Arrastras y ordenas cada opción de más a menos importante, obteniendo un análisis detallado con porcentajes precisos.",
+    "heading2": "Entendiendo los lenguajes del amor",
+    "text2": "El marco de los cinco lenguajes del amor del Dr. Gary Chapman explica que las personas tienen diferentes formas de expresar y recibir amor. Conocer tu lenguaje principal te ayuda a construir relaciones más fuertes."
+  }
 }

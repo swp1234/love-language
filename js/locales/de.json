@@ -1,24 +1,179 @@
 {
-  "meta": { "title": "Liebessprachen-Test | Entdecke deinen Liebesstil - DopaBrain", "description": "Entdecke deine prim\u00e4re Liebessprache durch Ziehen und Sortieren in 8 Szenarien." },
-  "accessibility": { "skipMain": "Zum Hauptinhalt springen" },
-  "app": { "title": "Liebessprachen-Test", "subtitle": "Sortiere nach Priorit\u00e4t und entdecke deinen Liebesstil" },
-  "lang": { "words": "Worte der Wertsch\u00e4tzung", "wordsShort": "Worte", "wordsDesc": "Komplimente, Dankbarkeit, Liebesworte", "acts": "Dienstleistungen", "actsShort": "Dienst", "actsDesc": "Hilfe, F\u00fcrsorge und praktische Handlungen", "gifts": "Geschenke empfangen", "giftsShort": "Geschenke", "giftsDesc": "Bedeutungsvolle Geschenke und \u00dcberraschungen", "time": "Gemeinsame Zeit", "timeShort": "Zeit", "timeDesc": "Volle Aufmerksamkeit und Zusammensein", "touch": "K\u00f6rperliche Ber\u00fchrung", "touchShort": "Ber\u00fchrung", "touchDesc": "Umarmungen, H\u00e4ndchenhalten, Z\u00e4rtlichkeit" },
-  "intro": { "desc": "8 Szenarien \u00b7 Ziehen zum Sortieren \u00b7 ca. 3 Minuten", "howTitle": "So funktioniert\u2019s", "how1": "Lies jedes Szenario", "how2": "Ziehe die 5 Optionen in deine bevorzugte Reihenfolge", "how3": "1. Platz = am wichtigsten f\u00fcr dich", "start": "Test starten \u2192" },
-  "quiz": { "scenario": "Szenario", "rankInstruction": "Vom Wichtigsten zum am wenigsten Wichtigen ziehen", "rank1": "1.", "rank2": "2.", "rank3": "3.", "rank4": "4.", "rank5": "5.", "confirm": "Reihenfolge best\u00e4tigen", "prev": "\u2190 Zur\u00fcck", "next": "Weiter \u2192" },
-  "scenarios": {
-    "s1": { "title": "Nach einem stressigen Tag...", "prompt": "Du hattest einen ersch\u00f6pfenden Tag. Was l\u00e4sst dich zu Hause am meisten geliebt f\u00fchlen?", "W": "\"Du hast heute so hart gearbeitet, ich bin stolz auf dich\" h\u00f6ren", "G": "Eine kleine \u00dcberraschung auf dem Tisch finden", "A": "Zu einem warmen Essen nach Hause kommen", "T": "Dein Partner l\u00e4sst alles stehen, um mit dir zu reden", "P": "Eine lange, warme Umarmung an der T\u00fcr" },
-    "s2": { "title": "An deinem Geburtstag...", "prompt": "Dein Geburtstag. Was macht ihn am speziellsten?", "W": "Ein herzlicher Brief dar\u00fcber, was du bedeutest", "G": "Ein sorgf\u00e4ltig ausgew\u00e4hltes Geschenk", "A": "Den ganzen Tag f\u00fcr dich planen und organisieren", "T": "Ein ganzer Tag mit Lieblingsbeschaulichkeiten zusammen", "P": "Aufwachen mit Kuscheln und Z\u00e4rtlichkeit den ganzen Morgen" },
-    "s3": { "title": "In einer neuen Beziehung...", "prompt": "Du lernst jemanden kennen. Was schafft die st\u00e4rkste Verbindung?", "W": "Tiefe Gespr\u00e4che mit ehrlicher Bewunderung", "G": "Erinnern sich an etwas und \u00fcberraschen dich", "A": "Gehen aus dem Weg, um dir zu helfen", "T": "Stunden fliegen vorbei, kein Handy n\u00f6tig", "P": "Das elektrische Gef\u00fchl beim ersten H\u00e4ndchenhalten" },
-    "s4": { "title": "Wenn es dir schlecht geht...", "prompt": "Emotional schwere Zeit. Was tr\u00f6stet am meisten?", "W": "\"Ich glaube an dich, du schaffst das\"", "G": "Deinen Lieblingssnack mitbringen", "A": "Still deine Aufgaben \u00fcbernehmen", "T": "Terminkalender freir\u00e4umen, nur um da zu sein", "P": "Schweigend halten, bis es dir besser geht" },
-    "s5": { "title": "Wochenende zusammen...", "prompt": "Freies Wochenende. Ordne ideale Aktivit\u00e4ten.", "W": "Langes, herzliches Gespr\u00e4ch im gem\u00fctlichen Caf\u00e9", "G": "Gesch\u00e4fte erkunden und Geschenke f\u00fcreinander aussuchen", "A": "Gemeinsam an einem Hausprojekt arbeiten", "T": "Ungeplantes Abenteuer mit ausgeschalteten Handys", "P": "Fauler Morgen im Bett, einfach kuscheln" },
-    "s6": { "title": "Wie du Liebe zeigst...", "prompt": "Wenn du Zuneigung zeigen willst, was tust du nat\u00fcrlicherweise?", "W": "Eine Nachricht schreiben, wie toll sie sind", "G": "Ein durchdachtes, perfekt passendes Geschenk aussuchen", "A": "Bei Aufgaben helfen oder ein Problem l\u00f6sen", "T": "Bewusst Zeit mit voller Aufmerksamkeit widmen", "P": "Eine warme Umarmung oder tr\u00f6stende Ber\u00fchrung geben" },
-    "s7": { "title": "Was am meisten fehlt...", "prompt": "Auf Distanz, was w\u00fcrdest du am meisten vermissen?", "W": "Die Stimme \"Ich liebe dich\" und \"Gute Nacht\" sagen h\u00f6ren", "G": "\u00dcberraschungspakete per Post", "A": "Jemanden haben, der Dinge mit dir zusammen regelt", "T": "Allt\u00e4gliche Momente im selben Raum", "P": "K\u00f6rperliche N\u00e4he\u2014Umarmungen, H\u00e4nde, W\u00e4rme" },
-    "s8": { "title": "Der perfekte Jahrestag...", "prompt": "Stell dir den idealen Jahrestag vor. Was ist am wichtigsten?", "W": "Ein Toast mit aufrichtigen Worten \u00fcber eure Reise", "G": "Bedeutungsvolle, personalisierte Geschenke tauschen", "A": "Partner hat heimlich alles perfekt organisiert", "T": "Ein ganzer Abend ohne Ablenkung, nur ihr zwei", "P": "Eng umschlungen tanzen, den ganzen Abend H\u00e4ndchen halten" }
+  "meta": {
+    "title": "Liebessprachen-Test | Entdecke deinen Liebesstil - DopaBrain",
+    "description": "Entdecke deine primäre Liebessprache durch Ziehen und Sortieren in 8 Szenarien."
   },
-  "result": { "primaryLabel": "Deine prim\u00e4re Liebessprache", "secondaryLabel": "Sekund\u00e4r", "breakdown": "Liebessprachen-Analyse", "compatTitle": "\ud83d\udc91 Am besten passende Liebessprachen", "adviceTitle": "Beziehungsrat", "retry": "Test erneut machen", "moreTests": "Mehr Erkunden", "percentileStat": "Nur <strong>{percent}%</strong> teilen deine Liebessprache" },
-  "related": { "mbtiLove": "MBTI Liebe", "attachmentStyle": "Bindungsstil", "emotionIceberg": "Emotions-Eisberg", "eqTest": "EQ-Test" },
-  "desc": { "W": "Deine Liebessprache sind Worte der Wertsch\u00e4tzung. Du f\u00fchlst und dr\u00fcckst Liebe durch Worte aus.", "A": "Deine Liebessprache sind Dienstleistungen. Handlungen sprechen viel lauter als Worte.", "G": "Deine Liebessprache ist Geschenke empfangen. Nicht der Preis, sondern Herz und Absicht bewegen dich.", "T": "Deine Liebessprache ist gemeinsame Zeit. Volle, ungeteilte Aufmerksamkeit bedeutet Liebe f\u00fcr dich.", "P": "Deine Liebessprache ist k\u00f6rperliche Ber\u00fchrung. Liebe wird durch die Haut gesp\u00fcrt." },
-  "advice": { "W": "Erz\u00e4hle deinem Partner ehrlich, wie wichtig Worte des Lobes f\u00fcr dich sind.", "A": "Teile klar mit, welche Hilfe du brauchst. Dr\u00fccke immer Dankbarkeit aus.", "G": "Sag, dass Geschenke viel bedeuten\u2014es muss nicht teuer sein, Hauptsache aufrichtig.", "T": "Teile mit, wie wichtig ungeteilte Zeit ist. Minimiert Handynutzung bei Dates.", "P": "Sprich dar\u00fcber, wie Ber\u00fchrung dich beruhigt und findet gemeinsam ein Komfortniveau." },
-  "share": { "title": "Ergebnis teilen", "copy": "\ud83d\udd17 Link kopieren", "twitter": "\ud835\udd4f Twitter", "copied": "Link kopiert!", "twitterText": "Ich habe meine Liebessprache entdeckt! Finde deine heraus. #Liebessprache #DopaBrain" },
-  "footer": { "privacy": "Datenschutzrichtlinie", "about": "\u00dcber uns" }
+  "accessibility": {
+    "skipMain": "Zum Hauptinhalt springen"
+  },
+  "app": {
+    "title": "Liebessprachen-Test",
+    "subtitle": "Sortiere nach Priorität und entdecke deinen Liebesstil"
+  },
+  "lang": {
+    "words": "Worte der Wertschätzung",
+    "wordsShort": "Worte",
+    "wordsDesc": "Komplimente, Dankbarkeit, Liebesworte",
+    "acts": "Dienstleistungen",
+    "actsShort": "Dienst",
+    "actsDesc": "Hilfe, Fürsorge und praktische Handlungen",
+    "gifts": "Geschenke empfangen",
+    "giftsShort": "Geschenke",
+    "giftsDesc": "Bedeutungsvolle Geschenke und Überraschungen",
+    "time": "Gemeinsame Zeit",
+    "timeShort": "Zeit",
+    "timeDesc": "Volle Aufmerksamkeit und Zusammensein",
+    "touch": "Körperliche Berührung",
+    "touchShort": "Berührung",
+    "touchDesc": "Umarmungen, Händchenhalten, Zärtlichkeit"
+  },
+  "intro": {
+    "desc": "8 Szenarien · Ziehen zum Sortieren · ca. 3 Minuten",
+    "howTitle": "So funktioniert’s",
+    "how1": "Lies jedes Szenario",
+    "how2": "Ziehe die 5 Optionen in deine bevorzugte Reihenfolge",
+    "how3": "1. Platz = am wichtigsten für dich",
+    "start": "Test starten →"
+  },
+  "quiz": {
+    "scenario": "Szenario",
+    "rankInstruction": "Vom Wichtigsten zum am wenigsten Wichtigen ziehen",
+    "rank1": "1.",
+    "rank2": "2.",
+    "rank3": "3.",
+    "rank4": "4.",
+    "rank5": "5.",
+    "confirm": "Reihenfolge bestätigen",
+    "prev": "← Zurück",
+    "next": "Weiter →"
+  },
+  "scenarios": {
+    "s1": {
+      "title": "Nach einem stressigen Tag...",
+      "prompt": "Du hattest einen erschöpfenden Tag. Was lässt dich zu Hause am meisten geliebt fühlen?",
+      "W": "\"Du hast heute so hart gearbeitet, ich bin stolz auf dich\" hören",
+      "G": "Eine kleine Überraschung auf dem Tisch finden",
+      "A": "Zu einem warmen Essen nach Hause kommen",
+      "T": "Dein Partner lässt alles stehen, um mit dir zu reden",
+      "P": "Eine lange, warme Umarmung an der Tür"
+    },
+    "s2": {
+      "title": "An deinem Geburtstag...",
+      "prompt": "Dein Geburtstag. Was macht ihn am speziellsten?",
+      "W": "Ein herzlicher Brief darüber, was du bedeutest",
+      "G": "Ein sorgfältig ausgewähltes Geschenk",
+      "A": "Den ganzen Tag für dich planen und organisieren",
+      "T": "Ein ganzer Tag mit Lieblingsbeschaulichkeiten zusammen",
+      "P": "Aufwachen mit Kuscheln und Zärtlichkeit den ganzen Morgen"
+    },
+    "s3": {
+      "title": "In einer neuen Beziehung...",
+      "prompt": "Du lernst jemanden kennen. Was schafft die stärkste Verbindung?",
+      "W": "Tiefe Gespräche mit ehrlicher Bewunderung",
+      "G": "Erinnern sich an etwas und überraschen dich",
+      "A": "Gehen aus dem Weg, um dir zu helfen",
+      "T": "Stunden fliegen vorbei, kein Handy nötig",
+      "P": "Das elektrische Gefühl beim ersten Händchenhalten"
+    },
+    "s4": {
+      "title": "Wenn es dir schlecht geht...",
+      "prompt": "Emotional schwere Zeit. Was tröstet am meisten?",
+      "W": "\"Ich glaube an dich, du schaffst das\"",
+      "G": "Deinen Lieblingssnack mitbringen",
+      "A": "Still deine Aufgaben übernehmen",
+      "T": "Terminkalender freiräumen, nur um da zu sein",
+      "P": "Schweigend halten, bis es dir besser geht"
+    },
+    "s5": {
+      "title": "Wochenende zusammen...",
+      "prompt": "Freies Wochenende. Ordne ideale Aktivitäten.",
+      "W": "Langes, herzliches Gespräch im gemütlichen Café",
+      "G": "Geschäfte erkunden und Geschenke füreinander aussuchen",
+      "A": "Gemeinsam an einem Hausprojekt arbeiten",
+      "T": "Ungeplantes Abenteuer mit ausgeschalteten Handys",
+      "P": "Fauler Morgen im Bett, einfach kuscheln"
+    },
+    "s6": {
+      "title": "Wie du Liebe zeigst...",
+      "prompt": "Wenn du Zuneigung zeigen willst, was tust du natürlicherweise?",
+      "W": "Eine Nachricht schreiben, wie toll sie sind",
+      "G": "Ein durchdachtes, perfekt passendes Geschenk aussuchen",
+      "A": "Bei Aufgaben helfen oder ein Problem lösen",
+      "T": "Bewusst Zeit mit voller Aufmerksamkeit widmen",
+      "P": "Eine warme Umarmung oder tröstende Berührung geben"
+    },
+    "s7": {
+      "title": "Was am meisten fehlt...",
+      "prompt": "Auf Distanz, was würdest du am meisten vermissen?",
+      "W": "Die Stimme \"Ich liebe dich\" und \"Gute Nacht\" sagen hören",
+      "G": "Überraschungspakete per Post",
+      "A": "Jemanden haben, der Dinge mit dir zusammen regelt",
+      "T": "Alltägliche Momente im selben Raum",
+      "P": "Körperliche Nähe—Umarmungen, Hände, Wärme"
+    },
+    "s8": {
+      "title": "Der perfekte Jahrestag...",
+      "prompt": "Stell dir den idealen Jahrestag vor. Was ist am wichtigsten?",
+      "W": "Ein Toast mit aufrichtigen Worten über eure Reise",
+      "G": "Bedeutungsvolle, personalisierte Geschenke tauschen",
+      "A": "Partner hat heimlich alles perfekt organisiert",
+      "T": "Ein ganzer Abend ohne Ablenkung, nur ihr zwei",
+      "P": "Eng umschlungen tanzen, den ganzen Abend Händchen halten"
+    }
+  },
+  "result": {
+    "primaryLabel": "Deine primäre Liebessprache",
+    "secondaryLabel": "Sekundär",
+    "breakdown": "Liebessprachen-Analyse",
+    "compatTitle": "💑 Am besten passende Liebessprachen",
+    "adviceTitle": "Beziehungsrat",
+    "retry": "Test erneut machen",
+    "moreTests": "Mehr Erkunden",
+    "percentileStat": "Nur <strong>{percent}%</strong> teilen deine Liebessprache"
+  },
+  "related": {
+    "mbtiLove": "MBTI Liebe",
+    "attachmentStyle": "Bindungsstil",
+    "emotionIceberg": "Emotions-Eisberg",
+    "eqTest": "EQ-Test"
+  },
+  "desc": {
+    "W": "Deine Liebessprache sind Worte der Wertschätzung. Du fühlst und drückst Liebe durch Worte aus.",
+    "A": "Deine Liebessprache sind Dienstleistungen. Handlungen sprechen viel lauter als Worte.",
+    "G": "Deine Liebessprache ist Geschenke empfangen. Nicht der Preis, sondern Herz und Absicht bewegen dich.",
+    "T": "Deine Liebessprache ist gemeinsame Zeit. Volle, ungeteilte Aufmerksamkeit bedeutet Liebe für dich.",
+    "P": "Deine Liebessprache ist körperliche Berührung. Liebe wird durch die Haut gespürt."
+  },
+  "advice": {
+    "W": "Erzähle deinem Partner ehrlich, wie wichtig Worte des Lobes für dich sind.",
+    "A": "Teile klar mit, welche Hilfe du brauchst. Drücke immer Dankbarkeit aus.",
+    "G": "Sag, dass Geschenke viel bedeuten—es muss nicht teuer sein, Hauptsache aufrichtig.",
+    "T": "Teile mit, wie wichtig ungeteilte Zeit ist. Minimiert Handynutzung bei Dates.",
+    "P": "Sprich darüber, wie Berührung dich beruhigt und findet gemeinsam ein Komfortniveau."
+  },
+  "share": {
+    "title": "Ergebnis teilen",
+    "copy": "🔗 Link kopieren",
+    "twitter": "𝕏 Twitter",
+    "copied": "Link kopiert!",
+    "twitterText": "Ich habe meine Liebessprache entdeckt! Finde deine heraus. #Liebessprache #DopaBrain"
+  },
+  "footer": {
+    "privacy": "Datenschutzrichtlinie",
+    "about": "Über uns"
+  },
+  "engage": {
+    "result1": "💬 Worte der Wertschätzung -- Verbale Liebe",
+    "result2": "🛠️ Dienstleistungen -- Liebe in Aktion",
+    "result3": "🎁 Geschenke empfangen -- Durchdachte Überraschungen",
+    "result4": "⏰ Gemeinsame Zeit -- Ungeteilte Aufmerksamkeit",
+    "socialProof": "2.240+ Menschen haben ihre Liebessprache entdeckt"
+  },
+  "about": {
+    "toggle": "Über den Liebessprachen-Test",
+    "heading1": "So funktioniert das Zieh-und-Sortier-Format",
+    "text1": "Dieser Test präsentiert 8 reale Szenarien, jedes mit 5 Liebessprachen-Optionen. Sie ziehen und sortieren jede Option vom Wichtigsten zum Unwichtigsten und erhalten eine detaillierte Analyse mit genauen Prozentsätzen.",
+    "heading2": "Liebessprachen verstehen",
+    "text2": "Dr. Gary Chapmans Rahmenwerk der fünf Liebessprachen erklärt, dass Menschen unterschiedliche Arten haben, Liebe auszudrücken und zu empfangen. Ihre primäre Liebessprache zu kennen hilft, stärkere Beziehungen aufzubauen."
+  }
 }

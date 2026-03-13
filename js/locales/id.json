@@ -1,24 +1,179 @@
 {
-  "meta": { "title": "Tes Bahasa Cinta | Temukan Gaya Cintamu - DopaBrain", "description": "Temukan bahasa cinta utamamu dengan menyeret dan mengurutkan pilihan di 8 skenario." },
-  "accessibility": { "skipMain": "Lewati ke konten utama" },
-  "app": { "title": "Tes Bahasa Cinta", "subtitle": "Urutkan prioritas untuk menemukan gaya cintamu" },
-  "lang": { "words": "Kata-kata Penegasan", "wordsShort": "Kata", "wordsDesc": "Pujian, terima kasih, ekspresi cinta", "acts": "Tindakan Pelayanan", "actsShort": "Layanan", "actsDesc": "Bantuan, perhatian, tindakan nyata", "gifts": "Menerima Hadiah", "giftsShort": "Hadiah", "giftsDesc": "Hadiah bermakna dan kejutan", "time": "Waktu Berkualitas", "timeShort": "Waktu", "timeDesc": "Perhatian penuh dan kebersamaan", "touch": "Sentuhan Fisik", "touchShort": "Sentuhan", "touchDesc": "Pelukan, genggaman tangan, belaian" },
-  "intro": { "desc": "8 skenario \u00b7 seret untuk mengurutkan \u00b7 sekitar 3 menit", "howTitle": "Cara kerja", "how1": "Baca setiap skenario", "how2": "Seret 5 pilihan sesuai preferensimu", "how3": "Posisi 1 = paling penting bagimu", "start": "Mulai Tes \u2192" },
-  "quiz": { "scenario": "Skenario", "rankInstruction": "Seret dari paling penting ke kurang penting", "rank1": "1", "rank2": "2", "rank3": "3", "rank4": "4", "rank5": "5", "confirm": "Konfirmasi Urutan", "prev": "\u2190 Sebelumnya", "next": "Berikutnya \u2192" },
-  "scenarios": {
-    "s1": { "title": "Setelah hari yang melelahkan...", "prompt": "Hari yang sangat melelahkan. Apa yang membuatmu merasa paling dicintai saat pulang?", "W": "Mendengar \"Kamu kerja keras banget hari ini, aku bangga\"", "G": "Menemukan hadiah kejutan kecil di meja", "A": "Pulang ke rumah dan makan malam sudah siap", "T": "Pasangan meninggalkan semua untuk duduk dan ngobrol", "P": "Pelukan panjang dan hangat saat masuk pintu" },
-    "s2": { "title": "Di hari ulang tahunmu...", "prompt": "Hari ulang tahunmu. Apa yang membuatnya paling spesial?", "W": "Surat tulus tentang betapa berartinya kamu", "G": "Hadiah yang dipilih dengan cermat yang menunjukkan mereka mengenalmu", "A": "Merencanakan dan mengorganisir seluruh hari", "T": "Seharian melakukan hal-hal favorit bersama", "P": "Bangun dengan pelukan dan kasih sayang sepanjang pagi" },
-    "s3": { "title": "Di hubungan baru...", "prompt": "Kamu sedang mengenal seseorang baru. Apa yang menciptakan koneksi terkuat?", "W": "Percakapan mendalam dengan kekaguman tulus", "G": "Mengingat sesuatu yang kamu sebut dan memberi kejutan", "A": "Berusaha keras untuk membantumu", "T": "Jam-jam berlalu bersama tanpa perlu ponsel", "P": "Sensasi listrik saat pertama kali bergandengan tangan" },
-    "s4": { "title": "Saat merasa sedih...", "prompt": "Kamu sedang melewati masa sulit. Apa yang paling menghibur?", "W": "\"Aku percaya padamu, kamu pasti bisa melewati ini\"", "G": "Membawakan camilan favoritmu", "A": "Diam-diam mengurus tanggung jawabmu agar kamu istirahat", "T": "Mengosongkan jadwal hanya untuk menemanimu", "P": "Dipeluk dalam keheningan sampai merasa lebih baik" },
-    "s5": { "title": "Akhir pekan bersama...", "prompt": "Akhir pekan bebas. Urutkan aktivitas idealmu.", "W": "Percakapan panjang dan tulus di kafe nyaman", "G": "Menjelajahi toko dan memilih hadiah satu sama lain", "A": "Bekerja sama dalam proyek rumah", "T": "Petualangan tanpa rencana dengan ponsel dimatikan", "P": "Pagi yang santai di tempat tidur, hanya berpelukan" },
-    "s6": { "title": "Cara kamu menunjukkan cinta...", "prompt": "Saat ingin menunjukkan kepedulian, apa yang kamu lakukan secara alami?", "W": "Menulis pesan tentang betapa luar biasanya mereka", "G": "Memilih hadiah yang sempurna untuk mereka", "A": "Membantu tugas atau menyelesaikan masalah", "T": "Meluangkan waktu khusus dengan perhatian penuh", "P": "Memberikan pelukan hangat atau sentuhan yang menenangkan" },
-    "s7": { "title": "Yang paling dirindukan...", "prompt": "Dalam hubungan jarak jauh, apa yang paling kamu rindukan?", "W": "Mendengar suara mereka berkata \"Aku cinta kamu\" dan \"Selamat malam\"", "G": "Menerima paket kejutan lewat pos", "A": "Punya seseorang yang mengurus hal-hal bersamamu", "T": "Momen sehari-hari hanya berada di ruangan yang sama", "P": "Kedekatan fisik\u2014pelukan, genggaman tangan, kehangatan" },
-    "s8": { "title": "Anniversary sempurna...", "prompt": "Bayangkan perayaan anniversary ideal. Apa yang paling penting?", "W": "Toast dengan kata-kata tulus tentang perjalanan bersama", "G": "Bertukar hadiah bermakna yang dipersonalisasi", "A": "Pasangan diam-diam mengatur semuanya dengan sempurna", "T": "Satu malam penuh tanpa gangguan, hanya kalian berdua", "P": "Berdansa berpelukan, bergandengan tangan sepanjang malam" }
+  "meta": {
+    "title": "Tes Bahasa Cinta | Temukan Gaya Cintamu - DopaBrain",
+    "description": "Temukan bahasa cinta utamamu dengan menyeret dan mengurutkan pilihan di 8 skenario."
   },
-  "result": { "primaryLabel": "Bahasa Cinta Utamamu", "secondaryLabel": "Sekunder", "breakdown": "Analisis Bahasa Cintamu", "compatTitle": "\ud83d\udc91 Bahasa Cinta Paling Serasi", "adviceTitle": "Saran Hubungan", "retry": "Ikuti Tes Lagi", "moreTests": "Jelajahi Lebih Lanjut", "percentileStat": "Hanya <strong>{percent}%</strong> memiliki bahasa cinta yang sama" },
-  "related": { "mbtiLove": "MBTI Cinta", "attachmentStyle": "Gaya Kelekatan", "emotionIceberg": "Gunung Es Emosi", "eqTest": "Tes EQ" },
-  "desc": { "W": "Bahasa cintamu adalah Kata-kata Penegasan. Kamu merasakan dan mengungkapkan cinta melalui kata-kata.", "A": "Bahasa cintamu adalah Tindakan Pelayanan. Kamu merasakan cinta terdalam ketika seseorang melakukan sesuatu untukmu.", "G": "Bahasa cintamu adalah Menerima Hadiah. Yang mengharukan adalah hati dan niat di balik hadiah.", "T": "Bahasa cintamu adalah Waktu Berkualitas. Bagimu, cinta berarti mendapatkan perhatian penuh seseorang.", "P": "Bahasa cintamu adalah Sentuhan Fisik. Bagimu, cinta dirasakan melalui kulit." },
-  "advice": { "W": "Ceritakan pada pasangan betapa pentingnya kata-kata pujian bagimu.", "A": "Komunikasikan dengan jelas bantuan apa yang kamu butuhkan. Selalu ungkapkan rasa terima kasih.", "G": "Beritahu pasangan bahwa hadiah berarti bagimu\u2014tidak harus mahal, yang penting tulus.", "T": "Komunikasikan betapa pentingnya waktu berkualitas. Minimalkan ponsel saat kencan.", "P": "Bicarakan betapa sentuhan fisik menenangkanmu dan temukan tingkat kontak yang nyaman." },
-  "share": { "title": "Bagikan Hasil", "copy": "\ud83d\udd17 Salin Tautan", "twitter": "\ud835\udd4f Twitter", "copied": "Tautan disalin!", "twitterText": "Aku menemukan bahasa cintaku! Temukan punyamu juga. #BahasaCinta #DopaBrain" },
-  "footer": { "privacy": "Kebijakan Privasi", "about": "Tentang" }
+  "accessibility": {
+    "skipMain": "Lewati ke konten utama"
+  },
+  "app": {
+    "title": "Tes Bahasa Cinta",
+    "subtitle": "Urutkan prioritas untuk menemukan gaya cintamu"
+  },
+  "lang": {
+    "words": "Kata-kata Penegasan",
+    "wordsShort": "Kata",
+    "wordsDesc": "Pujian, terima kasih, ekspresi cinta",
+    "acts": "Tindakan Pelayanan",
+    "actsShort": "Layanan",
+    "actsDesc": "Bantuan, perhatian, tindakan nyata",
+    "gifts": "Menerima Hadiah",
+    "giftsShort": "Hadiah",
+    "giftsDesc": "Hadiah bermakna dan kejutan",
+    "time": "Waktu Berkualitas",
+    "timeShort": "Waktu",
+    "timeDesc": "Perhatian penuh dan kebersamaan",
+    "touch": "Sentuhan Fisik",
+    "touchShort": "Sentuhan",
+    "touchDesc": "Pelukan, genggaman tangan, belaian"
+  },
+  "intro": {
+    "desc": "8 skenario · seret untuk mengurutkan · sekitar 3 menit",
+    "howTitle": "Cara kerja",
+    "how1": "Baca setiap skenario",
+    "how2": "Seret 5 pilihan sesuai preferensimu",
+    "how3": "Posisi 1 = paling penting bagimu",
+    "start": "Mulai Tes →"
+  },
+  "quiz": {
+    "scenario": "Skenario",
+    "rankInstruction": "Seret dari paling penting ke kurang penting",
+    "rank1": "1",
+    "rank2": "2",
+    "rank3": "3",
+    "rank4": "4",
+    "rank5": "5",
+    "confirm": "Konfirmasi Urutan",
+    "prev": "← Sebelumnya",
+    "next": "Berikutnya →"
+  },
+  "scenarios": {
+    "s1": {
+      "title": "Setelah hari yang melelahkan...",
+      "prompt": "Hari yang sangat melelahkan. Apa yang membuatmu merasa paling dicintai saat pulang?",
+      "W": "Mendengar \"Kamu kerja keras banget hari ini, aku bangga\"",
+      "G": "Menemukan hadiah kejutan kecil di meja",
+      "A": "Pulang ke rumah dan makan malam sudah siap",
+      "T": "Pasangan meninggalkan semua untuk duduk dan ngobrol",
+      "P": "Pelukan panjang dan hangat saat masuk pintu"
+    },
+    "s2": {
+      "title": "Di hari ulang tahunmu...",
+      "prompt": "Hari ulang tahunmu. Apa yang membuatnya paling spesial?",
+      "W": "Surat tulus tentang betapa berartinya kamu",
+      "G": "Hadiah yang dipilih dengan cermat yang menunjukkan mereka mengenalmu",
+      "A": "Merencanakan dan mengorganisir seluruh hari",
+      "T": "Seharian melakukan hal-hal favorit bersama",
+      "P": "Bangun dengan pelukan dan kasih sayang sepanjang pagi"
+    },
+    "s3": {
+      "title": "Di hubungan baru...",
+      "prompt": "Kamu sedang mengenal seseorang baru. Apa yang menciptakan koneksi terkuat?",
+      "W": "Percakapan mendalam dengan kekaguman tulus",
+      "G": "Mengingat sesuatu yang kamu sebut dan memberi kejutan",
+      "A": "Berusaha keras untuk membantumu",
+      "T": "Jam-jam berlalu bersama tanpa perlu ponsel",
+      "P": "Sensasi listrik saat pertama kali bergandengan tangan"
+    },
+    "s4": {
+      "title": "Saat merasa sedih...",
+      "prompt": "Kamu sedang melewati masa sulit. Apa yang paling menghibur?",
+      "W": "\"Aku percaya padamu, kamu pasti bisa melewati ini\"",
+      "G": "Membawakan camilan favoritmu",
+      "A": "Diam-diam mengurus tanggung jawabmu agar kamu istirahat",
+      "T": "Mengosongkan jadwal hanya untuk menemanimu",
+      "P": "Dipeluk dalam keheningan sampai merasa lebih baik"
+    },
+    "s5": {
+      "title": "Akhir pekan bersama...",
+      "prompt": "Akhir pekan bebas. Urutkan aktivitas idealmu.",
+      "W": "Percakapan panjang dan tulus di kafe nyaman",
+      "G": "Menjelajahi toko dan memilih hadiah satu sama lain",
+      "A": "Bekerja sama dalam proyek rumah",
+      "T": "Petualangan tanpa rencana dengan ponsel dimatikan",
+      "P": "Pagi yang santai di tempat tidur, hanya berpelukan"
+    },
+    "s6": {
+      "title": "Cara kamu menunjukkan cinta...",
+      "prompt": "Saat ingin menunjukkan kepedulian, apa yang kamu lakukan secara alami?",
+      "W": "Menulis pesan tentang betapa luar biasanya mereka",
+      "G": "Memilih hadiah yang sempurna untuk mereka",
+      "A": "Membantu tugas atau menyelesaikan masalah",
+      "T": "Meluangkan waktu khusus dengan perhatian penuh",
+      "P": "Memberikan pelukan hangat atau sentuhan yang menenangkan"
+    },
+    "s7": {
+      "title": "Yang paling dirindukan...",
+      "prompt": "Dalam hubungan jarak jauh, apa yang paling kamu rindukan?",
+      "W": "Mendengar suara mereka berkata \"Aku cinta kamu\" dan \"Selamat malam\"",
+      "G": "Menerima paket kejutan lewat pos",
+      "A": "Punya seseorang yang mengurus hal-hal bersamamu",
+      "T": "Momen sehari-hari hanya berada di ruangan yang sama",
+      "P": "Kedekatan fisik—pelukan, genggaman tangan, kehangatan"
+    },
+    "s8": {
+      "title": "Anniversary sempurna...",
+      "prompt": "Bayangkan perayaan anniversary ideal. Apa yang paling penting?",
+      "W": "Toast dengan kata-kata tulus tentang perjalanan bersama",
+      "G": "Bertukar hadiah bermakna yang dipersonalisasi",
+      "A": "Pasangan diam-diam mengatur semuanya dengan sempurna",
+      "T": "Satu malam penuh tanpa gangguan, hanya kalian berdua",
+      "P": "Berdansa berpelukan, bergandengan tangan sepanjang malam"
+    }
+  },
+  "result": {
+    "primaryLabel": "Bahasa Cinta Utamamu",
+    "secondaryLabel": "Sekunder",
+    "breakdown": "Analisis Bahasa Cintamu",
+    "compatTitle": "💑 Bahasa Cinta Paling Serasi",
+    "adviceTitle": "Saran Hubungan",
+    "retry": "Ikuti Tes Lagi",
+    "moreTests": "Jelajahi Lebih Lanjut",
+    "percentileStat": "Hanya <strong>{percent}%</strong> memiliki bahasa cinta yang sama"
+  },
+  "related": {
+    "mbtiLove": "MBTI Cinta",
+    "attachmentStyle": "Gaya Kelekatan",
+    "emotionIceberg": "Gunung Es Emosi",
+    "eqTest": "Tes EQ"
+  },
+  "desc": {
+    "W": "Bahasa cintamu adalah Kata-kata Penegasan. Kamu merasakan dan mengungkapkan cinta melalui kata-kata.",
+    "A": "Bahasa cintamu adalah Tindakan Pelayanan. Kamu merasakan cinta terdalam ketika seseorang melakukan sesuatu untukmu.",
+    "G": "Bahasa cintamu adalah Menerima Hadiah. Yang mengharukan adalah hati dan niat di balik hadiah.",
+    "T": "Bahasa cintamu adalah Waktu Berkualitas. Bagimu, cinta berarti mendapatkan perhatian penuh seseorang.",
+    "P": "Bahasa cintamu adalah Sentuhan Fisik. Bagimu, cinta dirasakan melalui kulit."
+  },
+  "advice": {
+    "W": "Ceritakan pada pasangan betapa pentingnya kata-kata pujian bagimu.",
+    "A": "Komunikasikan dengan jelas bantuan apa yang kamu butuhkan. Selalu ungkapkan rasa terima kasih.",
+    "G": "Beritahu pasangan bahwa hadiah berarti bagimu—tidak harus mahal, yang penting tulus.",
+    "T": "Komunikasikan betapa pentingnya waktu berkualitas. Minimalkan ponsel saat kencan.",
+    "P": "Bicarakan betapa sentuhan fisik menenangkanmu dan temukan tingkat kontak yang nyaman."
+  },
+  "share": {
+    "title": "Bagikan Hasil",
+    "copy": "🔗 Salin Tautan",
+    "twitter": "𝕏 Twitter",
+    "copied": "Tautan disalin!",
+    "twitterText": "Aku menemukan bahasa cintaku! Temukan punyamu juga. #BahasaCinta #DopaBrain"
+  },
+  "footer": {
+    "privacy": "Kebijakan Privasi",
+    "about": "Tentang"
+  },
+  "engage": {
+    "result1": "💬 Kata-kata Penegasan -- Cinta Verbal",
+    "result2": "🛠️ Tindakan Pelayanan -- Cinta dalam Aksi",
+    "result3": "🎁 Menerima Hadiah -- Kejutan Penuh Makna",
+    "result4": "⏰ Waktu Berkualitas -- Perhatian Penuh",
+    "socialProof": "2.240+ orang menemukan bahasa cinta mereka"
+  },
+  "about": {
+    "toggle": "Tentang Tes Bahasa Cinta",
+    "heading1": "Cara Kerja Format Seret dan Urutkan",
+    "text1": "Tes ini menyajikan 8 skenario kehidupan nyata, masing-masing dengan 5 opsi bahasa cinta. Anda menyeret dan mengurutkan setiap opsi dari yang paling penting ke yang paling tidak penting, mendapatkan analisis detail dengan persentase akurat.",
+    "heading2": "Memahami Bahasa Cinta",
+    "text2": "Kerangka lima bahasa cinta Dr. Gary Chapman menjelaskan bahwa orang memiliki cara berbeda untuk mengekspresikan dan menerima cinta. Mengetahui bahasa cinta utama Anda membantu membangun hubungan yang lebih kuat."
+  }
 }

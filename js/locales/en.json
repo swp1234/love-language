@@ -161,5 +161,19 @@
   "footer": {
     "privacy": "Privacy Policy",
     "about": "About"
+  },
+  "engage": {
+    "result1": "💬 Words of Affirmation -- Verbal Love",
+    "result2": "🛠️ Acts of Service -- Love in Action",
+    "result3": "🎁 Receiving Gifts -- Thoughtful Surprises",
+    "result4": "⏰ Quality Time -- Undivided Attention",
+    "socialProof": "2,240+ people discovered their love language"
+  },
+  "about": {
+    "toggle": "About the Love Language Test",
+    "heading1": "How the Drag-and-Rank Format Works",
+    "text1": "This test presents 8 real-life scenarios, each with 5 love language options. Instead of simple yes/no answers, you drag and rank each option from most to least important. This ranking format provides a nuanced breakdown of all five love language preferences with precise percentages.",
+    "heading2": "Understanding Love Languages",
+    "text2": "Dr. Gary Chapman's five love languages framework explains that people have different ways of expressing and receiving love. Knowing your primary love language helps you communicate your needs, understand your partner better, and build stronger, more fulfilling relationships."
   }
 }

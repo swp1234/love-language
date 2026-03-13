@@ -1,24 +1,179 @@
 {
-  "meta": { "title": "Test des Langages de l'Amour | D\u00e9couvrez votre style amoureux - DopaBrain", "description": "D\u00e9couvrez votre langage de l'amour en glissant et classant des options dans 8 sc\u00e9narios." },
-  "accessibility": { "skipMain": "Passer au contenu principal" },
-  "app": { "title": "Test des Langages de l'Amour", "subtitle": "Classez vos priorit\u00e9s pour d\u00e9couvrir comment vous aimez" },
-  "lang": { "words": "Paroles Valorisantes", "wordsShort": "Paroles", "wordsDesc": "Compliments, gratitude, mots d'amour", "acts": "Actes de Service", "actsShort": "Service", "actsDesc": "Aide, soin et actions pratiques", "gifts": "Recevoir des Cadeaux", "giftsShort": "Cadeaux", "giftsDesc": "Cadeaux significatifs et surprises", "time": "Moments de Qualit\u00e9", "timeShort": "Temps", "timeDesc": "Attention pleine et complicit\u00e9", "touch": "Contact Physique", "touchShort": "Contact", "touchDesc": "C\u00e2lins, tenir la main, tendresse" },
-  "intro": { "desc": "8 sc\u00e9narios \u00b7 glissez pour classer \u00b7 environ 3 minutes", "howTitle": "Comment \u00e7a marche", "how1": "Lisez chaque sc\u00e9nario", "how2": "Glissez les 5 options selon votre pr\u00e9f\u00e9rence", "how3": "1re place = le plus important pour vous", "start": "Commencer le Test \u2192" },
-  "quiz": { "scenario": "Sc\u00e9nario", "rankInstruction": "Glissez du plus au moins important", "rank1": "1er", "rank2": "2e", "rank3": "3e", "rank4": "4e", "rank5": "5e", "confirm": "Confirmer le Classement", "prev": "\u2190 Pr\u00e9c\u00e9dent", "next": "Suivant \u2192" },
-  "scenarios": {
-    "s1": { "title": "Apr\u00e8s une journ\u00e9e stressante...", "prompt": "Journ\u00e9e \u00e9puisante. Qu'est-ce qui vous ferait le plus sentir aim\u00e9(e) en rentrant?", "W": "Entendre \"Tu as tellement travaill\u00e9 aujourd'hui, je suis fier/fi\u00e8re de toi\"", "G": "Trouver un petit cadeau surprise sur la table", "A": "Rentrer et le d\u00eener est d\u00e9j\u00e0 pr\u00eat", "T": "Votre partenaire l\u00e2che tout pour s'asseoir et parler", "P": "Un long c\u00e2lin chaleureux d\u00e8s la porte" },
-    "s2": { "title": "Pour votre anniversaire...", "prompt": "C'est votre anniversaire. Qu'est-ce qui le rendrait le plus sp\u00e9cial?", "W": "Une lettre sinc\u00e8re exprimant ce que vous repr\u00e9sentez", "G": "Un cadeau choisi avec soin qui montre qu'on vous conna\u00eet", "A": "Planifier et organiser toute la journ\u00e9e pour vous", "T": "Journ\u00e9e enti\u00e8re \u00e0 faire vos activit\u00e9s pr\u00e9f\u00e9r\u00e9es ensemble", "P": "Se r\u00e9veiller dans les c\u00e2lins et la tendresse toute la matin\u00e9e" },
-    "s3": { "title": "Dans une nouvelle relation...", "prompt": "Vous apprenez \u00e0 conna\u00eetre quelqu'un. Qu'est-ce qui cr\u00e9e le lien le plus fort?", "W": "Des conversations profondes avec une admiration sinc\u00e8re", "G": "Se souvenir de quelque chose et vous surprendre", "A": "Se d\u00e9mener pour vous aider", "T": "Les heures filent ensemble, pas besoin de t\u00e9l\u00e9phone", "P": "L'\u00e9lectricit\u00e9 quand on se prend la main pour la premi\u00e8re fois" },
-    "s4": { "title": "Quand vous \u00eates triste...", "prompt": "P\u00e9riode \u00e9motionnellement difficile. Qu'est-ce qui vous console le plus?", "W": "\"J'ai confiance en toi, tu vas t'en sortir\"", "G": "Apporter votre friandise r\u00e9confortante pr\u00e9f\u00e9r\u00e9e", "A": "Prendre en charge vos responsabilit\u00e9s en silence", "T": "Lib\u00e9rer son emploi du temps juste pour \u00eatre l\u00e0", "P": "\u00catre tenu(e) en silence jusqu'\u00e0 ce que \u00e7a aille mieux" },
-    "s5": { "title": "Un week-end ensemble...", "prompt": "Week-end libre. Classez vos activit\u00e9s id\u00e9ales.", "W": "Une longue conversation sinc\u00e8re dans un caf\u00e9 cosy", "G": "Explorer des boutiques et choisir des cadeaux l'un pour l'autre", "A": "Travailler ensemble sur un projet maison", "T": "Une aventure non planifi\u00e9e, t\u00e9l\u00e9phones \u00e9teints", "P": "Grasse matin\u00e9e au lit, juste se c\u00e2liner" },
-    "s6": { "title": "Comment vous montrez l'amour...", "prompt": "Quand vous voulez montrer que vous tenez \u00e0 quelqu'un, que faites-vous naturellement?", "W": "\u00c9crire un message pour dire \u00e0 quel point cette personne est incroyable", "G": "Choisir un cadeau attentionn\u00e9 qui lui correspond parfaitement", "A": "Aider avec des t\u00e2ches ou r\u00e9soudre un probl\u00e8me", "T": "Consacrer du temps exclusif avec toute son attention", "P": "Donner un c\u00e2lin chaleureux ou un toucher r\u00e9confortant" },
-    "s7": { "title": "Ce qui manque le plus...", "prompt": "\u00c0 distance, qu'est-ce qui vous manquerait le plus?", "W": "Entendre leur voix dire \"Je t'aime\" et \"Bonne nuit\"", "G": "Recevoir des colis surprise par la poste", "A": "Avoir quelqu'un qui g\u00e8re les choses avec vous", "T": "Les moments quotidiens d'\u00eatre simplement dans la m\u00eame pi\u00e8ce", "P": "La proximit\u00e9 physique\u2014c\u00e2lins, mains, chaleur" },
-    "s8": { "title": "L'anniversaire parfait...", "prompt": "Imaginez votre c\u00e9l\u00e9bration d'anniversaire id\u00e9ale. Qu'est-ce qui compte le plus?", "W": "Un toast avec des mots sinc\u00e8res sur votre parcours ensemble", "G": "\u00c9changer des cadeaux significatifs et personnalis\u00e9s", "A": "Votre partenaire a secr\u00e8tement tout organis\u00e9 parfaitement", "T": "Une soir\u00e9e enti\u00e8re sans distractions, juste vous deux", "P": "Danser enlac\u00e9s, main dans la main toute la soir\u00e9e" }
+  "meta": {
+    "title": "Test des Langages de l'Amour | Découvrez votre style amoureux - DopaBrain",
+    "description": "Découvrez votre langage de l'amour en glissant et classant des options dans 8 scénarios."
   },
-  "result": { "primaryLabel": "Votre Langage de l'Amour Principal", "secondaryLabel": "Secondaire", "breakdown": "Analyse des Langages de l'Amour", "compatTitle": "\ud83d\udc91 Langages les plus compatibles", "adviceTitle": "Conseil pour la relation", "retry": "Refaire le test", "moreTests": "Explorer Plus", "percentileStat": "Seulement <strong>{percent}%</strong> partagent votre langage amoureux" },
-  "related": { "mbtiLove": "MBTI Amour", "attachmentStyle": "Style d'Attachement", "emotionIceberg": "Iceberg \u00c9motionnel", "eqTest": "Test EQ" },
-  "desc": { "W": "Votre langage de l'amour est les Paroles Valorisantes. Vous ressentez et exprimez l'amour par les mots.", "A": "Votre langage de l'amour est les Actes de Service. Les actes parlent bien plus fort que les mots.", "G": "Votre langage de l'amour est Recevoir des Cadeaux. Ce n'est pas le prix, mais le c\u0153ur et l'intention.", "T": "Votre langage de l'amour est les Moments de Qualit\u00e9. L'attention pleine et indivise, c'est l'amour.", "P": "Votre langage de l'amour est le Contact Physique. L'amour se ressent \u00e0 travers la peau." },
-  "advice": { "W": "Dites \u00e0 votre partenaire combien les mots d'\u00e9loge comptent. Des phrases simples quotidiennes transforment la relation.", "A": "Communiquez clairement le type d'aide dont vous avez besoin. Exprimez toujours la gratitude.", "G": "Dites que les cadeaux comptent beaucoup\u2014pas besoin d'\u00eatre cher, l'essentiel est d'\u00eatre sinc\u00e8re.", "T": "Communiquez l'importance du temps de qualit\u00e9. Minimisez le t\u00e9l\u00e9phone lors des sorties.", "P": "Parlez de combien le contact physique vous apaise et trouvez un niveau confortable ensemble." },
-  "share": { "title": "Partager le r\u00e9sultat", "copy": "\ud83d\udd17 Copier le lien", "twitter": "\ud835\udd4f Twitter", "copied": "Lien copi\u00e9 !", "twitterText": "J'ai d\u00e9couvert mon langage de l'amour ! D\u00e9couvrez le v\u00f4tre. #LangageAmour #DopaBrain" },
-  "footer": { "privacy": "Politique de confidentialit\u00e9", "about": "\u00c0 propos" }
+  "accessibility": {
+    "skipMain": "Passer au contenu principal"
+  },
+  "app": {
+    "title": "Test des Langages de l'Amour",
+    "subtitle": "Classez vos priorités pour découvrir comment vous aimez"
+  },
+  "lang": {
+    "words": "Paroles Valorisantes",
+    "wordsShort": "Paroles",
+    "wordsDesc": "Compliments, gratitude, mots d'amour",
+    "acts": "Actes de Service",
+    "actsShort": "Service",
+    "actsDesc": "Aide, soin et actions pratiques",
+    "gifts": "Recevoir des Cadeaux",
+    "giftsShort": "Cadeaux",
+    "giftsDesc": "Cadeaux significatifs et surprises",
+    "time": "Moments de Qualité",
+    "timeShort": "Temps",
+    "timeDesc": "Attention pleine et complicité",
+    "touch": "Contact Physique",
+    "touchShort": "Contact",
+    "touchDesc": "Câlins, tenir la main, tendresse"
+  },
+  "intro": {
+    "desc": "8 scénarios · glissez pour classer · environ 3 minutes",
+    "howTitle": "Comment ça marche",
+    "how1": "Lisez chaque scénario",
+    "how2": "Glissez les 5 options selon votre préférence",
+    "how3": "1re place = le plus important pour vous",
+    "start": "Commencer le Test →"
+  },
+  "quiz": {
+    "scenario": "Scénario",
+    "rankInstruction": "Glissez du plus au moins important",
+    "rank1": "1er",
+    "rank2": "2e",
+    "rank3": "3e",
+    "rank4": "4e",
+    "rank5": "5e",
+    "confirm": "Confirmer le Classement",
+    "prev": "← Précédent",
+    "next": "Suivant →"
+  },
+  "scenarios": {
+    "s1": {
+      "title": "Après une journée stressante...",
+      "prompt": "Journée épuisante. Qu'est-ce qui vous ferait le plus sentir aimé(e) en rentrant?",
+      "W": "Entendre \"Tu as tellement travaillé aujourd'hui, je suis fier/fière de toi\"",
+      "G": "Trouver un petit cadeau surprise sur la table",
+      "A": "Rentrer et le dîner est déjà prêt",
+      "T": "Votre partenaire lâche tout pour s'asseoir et parler",
+      "P": "Un long câlin chaleureux dès la porte"
+    },
+    "s2": {
+      "title": "Pour votre anniversaire...",
+      "prompt": "C'est votre anniversaire. Qu'est-ce qui le rendrait le plus spécial?",
+      "W": "Une lettre sincère exprimant ce que vous représentez",
+      "G": "Un cadeau choisi avec soin qui montre qu'on vous connaît",
+      "A": "Planifier et organiser toute la journée pour vous",
+      "T": "Journée entière à faire vos activités préférées ensemble",
+      "P": "Se réveiller dans les câlins et la tendresse toute la matinée"
+    },
+    "s3": {
+      "title": "Dans une nouvelle relation...",
+      "prompt": "Vous apprenez à connaître quelqu'un. Qu'est-ce qui crée le lien le plus fort?",
+      "W": "Des conversations profondes avec une admiration sincère",
+      "G": "Se souvenir de quelque chose et vous surprendre",
+      "A": "Se démener pour vous aider",
+      "T": "Les heures filent ensemble, pas besoin de téléphone",
+      "P": "L'électricité quand on se prend la main pour la première fois"
+    },
+    "s4": {
+      "title": "Quand vous êtes triste...",
+      "prompt": "Période émotionnellement difficile. Qu'est-ce qui vous console le plus?",
+      "W": "\"J'ai confiance en toi, tu vas t'en sortir\"",
+      "G": "Apporter votre friandise réconfortante préférée",
+      "A": "Prendre en charge vos responsabilités en silence",
+      "T": "Libérer son emploi du temps juste pour être là",
+      "P": "Être tenu(e) en silence jusqu'à ce que ça aille mieux"
+    },
+    "s5": {
+      "title": "Un week-end ensemble...",
+      "prompt": "Week-end libre. Classez vos activités idéales.",
+      "W": "Une longue conversation sincère dans un café cosy",
+      "G": "Explorer des boutiques et choisir des cadeaux l'un pour l'autre",
+      "A": "Travailler ensemble sur un projet maison",
+      "T": "Une aventure non planifiée, téléphones éteints",
+      "P": "Grasse matinée au lit, juste se câliner"
+    },
+    "s6": {
+      "title": "Comment vous montrez l'amour...",
+      "prompt": "Quand vous voulez montrer que vous tenez à quelqu'un, que faites-vous naturellement?",
+      "W": "Écrire un message pour dire à quel point cette personne est incroyable",
+      "G": "Choisir un cadeau attentionné qui lui correspond parfaitement",
+      "A": "Aider avec des tâches ou résoudre un problème",
+      "T": "Consacrer du temps exclusif avec toute son attention",
+      "P": "Donner un câlin chaleureux ou un toucher réconfortant"
+    },
+    "s7": {
+      "title": "Ce qui manque le plus...",
+      "prompt": "À distance, qu'est-ce qui vous manquerait le plus?",
+      "W": "Entendre leur voix dire \"Je t'aime\" et \"Bonne nuit\"",
+      "G": "Recevoir des colis surprise par la poste",
+      "A": "Avoir quelqu'un qui gère les choses avec vous",
+      "T": "Les moments quotidiens d'être simplement dans la même pièce",
+      "P": "La proximité physique—câlins, mains, chaleur"
+    },
+    "s8": {
+      "title": "L'anniversaire parfait...",
+      "prompt": "Imaginez votre célébration d'anniversaire idéale. Qu'est-ce qui compte le plus?",
+      "W": "Un toast avec des mots sincères sur votre parcours ensemble",
+      "G": "Échanger des cadeaux significatifs et personnalisés",
+      "A": "Votre partenaire a secrètement tout organisé parfaitement",
+      "T": "Une soirée entière sans distractions, juste vous deux",
+      "P": "Danser enlacés, main dans la main toute la soirée"
+    }
+  },
+  "result": {
+    "primaryLabel": "Votre Langage de l'Amour Principal",
+    "secondaryLabel": "Secondaire",
+    "breakdown": "Analyse des Langages de l'Amour",
+    "compatTitle": "💑 Langages les plus compatibles",
+    "adviceTitle": "Conseil pour la relation",
+    "retry": "Refaire le test",
+    "moreTests": "Explorer Plus",
+    "percentileStat": "Seulement <strong>{percent}%</strong> partagent votre langage amoureux"
+  },
+  "related": {
+    "mbtiLove": "MBTI Amour",
+    "attachmentStyle": "Style d'Attachement",
+    "emotionIceberg": "Iceberg Émotionnel",
+    "eqTest": "Test EQ"
+  },
+  "desc": {
+    "W": "Votre langage de l'amour est les Paroles Valorisantes. Vous ressentez et exprimez l'amour par les mots.",
+    "A": "Votre langage de l'amour est les Actes de Service. Les actes parlent bien plus fort que les mots.",
+    "G": "Votre langage de l'amour est Recevoir des Cadeaux. Ce n'est pas le prix, mais le cœur et l'intention.",
+    "T": "Votre langage de l'amour est les Moments de Qualité. L'attention pleine et indivise, c'est l'amour.",
+    "P": "Votre langage de l'amour est le Contact Physique. L'amour se ressent à travers la peau."
+  },
+  "advice": {
+    "W": "Dites à votre partenaire combien les mots d'éloge comptent. Des phrases simples quotidiennes transforment la relation.",
+    "A": "Communiquez clairement le type d'aide dont vous avez besoin. Exprimez toujours la gratitude.",
+    "G": "Dites que les cadeaux comptent beaucoup—pas besoin d'être cher, l'essentiel est d'être sincère.",
+    "T": "Communiquez l'importance du temps de qualité. Minimisez le téléphone lors des sorties.",
+    "P": "Parlez de combien le contact physique vous apaise et trouvez un niveau confortable ensemble."
+  },
+  "share": {
+    "title": "Partager le résultat",
+    "copy": "🔗 Copier le lien",
+    "twitter": "𝕏 Twitter",
+    "copied": "Lien copié !",
+    "twitterText": "J'ai découvert mon langage de l'amour ! Découvrez le vôtre. #LangageAmour #DopaBrain"
+  },
+  "footer": {
+    "privacy": "Politique de confidentialité",
+    "about": "À propos"
+  },
+  "engage": {
+    "result1": "💬 Paroles Valorisantes -- Amour Verbal",
+    "result2": "🛠️ Actes de Service -- L'amour en Action",
+    "result3": "🎁 Recevoir des Cadeaux -- Surprises Attentionnées",
+    "result4": "⏰ Moments de Qualité -- Attention Indivisée",
+    "socialProof": "2 240+ personnes ont découvert leur langage amoureux"
+  },
+  "about": {
+    "toggle": "À propos du test des langages de l'amour",
+    "heading1": "Comment fonctionne le format glisser-classer",
+    "text1": "Ce test présente 8 scénarios réels, chacun avec 5 options de langage amoureux. Vous glissez et classez chaque option du plus au moins important, obtenant une analyse détaillée avec des pourcentages précis.",
+    "heading2": "Comprendre les langages de l'amour",
+    "text2": "Le cadre des cinq langages de l'amour du Dr Gary Chapman explique que les gens ont différentes façons d'exprimer et de recevoir l'amour. Connaître votre langage principal vous aide à construire des relations plus fortes."
+  }
 }
