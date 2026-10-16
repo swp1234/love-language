@@ -135,7 +135,10 @@
     "mbtiLove": "MBTI Liebe",
     "attachmentStyle": "Bindungsstil",
     "emotionIceberg": "Emotions-Eisberg",
-    "eqTest": "EQ-Test"
+    "eqTest": "EQ-Test",
+    "loveFrequency": "Liebesfrequenz",
+    "redGreenFlag": "Red & Green Flags",
+    "nameMatch": "Namens-Kompatibilität"
   },
   "desc": {
     "W": "Deine Liebessprache sind Worte der Wertschätzung. Du fühlst und drückst Liebe durch Worte aus.",

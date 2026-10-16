@@ -135,7 +135,10 @@
     "mbtiLove": "MBTI恋愛",
     "attachmentStyle": "愛着スタイル",
     "emotionIceberg": "感情氷山",
-    "eqTest": "EQテスト"
+    "eqTest": "EQテスト",
+    "loveFrequency": "恋愛周波数テスト",
+    "redGreenFlag": "レッド＆グリーンフラッグ",
+    "nameMatch": "名前相性テスト"
   },
   "desc": {
     "W": "あなたの愛の言葉は「肯定の言葉」です。言葉を通じて愛を感じ、表現します。心からの称賛、感謝の言葉、愛の告白はあなたの心を満たす最も強力な方法です。",

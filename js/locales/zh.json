@@ -135,7 +135,10 @@
     "mbtiLove": "MBTI恋爱",
     "attachmentStyle": "依恋类型",
     "emotionIceberg": "情绪冰山",
-    "eqTest": "EQ测试"
+    "eqTest": "EQ测试",
+    "loveFrequency": "爱情频率测试",
+    "redGreenFlag": "红旗与绿旗测试",
+    "nameMatch": "姓名配对测试"
   },
   "desc": {
     "W": "你的爱情语言是“肯定的言辞”。你通过语言来感受和表达爱。真诚的赞美、感恩的话语和爱的表白是填满你内心最强大的方式。",

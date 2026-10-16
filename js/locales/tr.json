@@ -135,7 +135,10 @@
     "mbtiLove": "MBTI Aşk",
     "attachmentStyle": "Bağlanma Stili",
     "emotionIceberg": "Duygu Buzdağı",
-    "eqTest": "EQ Testi"
+    "eqTest": "EQ Testi",
+    "loveFrequency": "Aşk Frekansı",
+    "redGreenFlag": "Kırmızı & Yeşil Bayrak",
+    "nameMatch": "İsim Uyumu"
   },
   "desc": {
     "W": "Aşk diliniz Onaylayan Sözler. Sevgiyi kelimeler aracılığıyla hisseder ve ifade edersiniz.",

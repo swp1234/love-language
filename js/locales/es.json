@@ -135,7 +135,10 @@
     "mbtiLove": "MBTI Amor",
     "attachmentStyle": "Estilo de Apego",
     "emotionIceberg": "Iceberg Emocional",
-    "eqTest": "Test de EQ"
+    "eqTest": "Test de EQ",
+    "loveFrequency": "Frecuencia del Amor",
+    "redGreenFlag": "Banderas Rojas y Verdes",
+    "nameMatch": "Compatibilidad de Nombres"
   },
   "desc": {
     "W": "Tu lenguaje del amor es las Palabras de Afirmación. Sientes y expresas el amor a través de las palabras. Los elogios sinceros, la gratitud y las declaraciones de amor llenan tu corazón como nada más.",

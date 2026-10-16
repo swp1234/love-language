@@ -135,7 +135,10 @@
     "mbtiLove": "MBTI Cinta",
     "attachmentStyle": "Gaya Kelekatan",
     "emotionIceberg": "Gunung Es Emosi",
-    "eqTest": "Tes EQ"
+    "eqTest": "Tes EQ",
+    "loveFrequency": "Frekuensi Cinta",
+    "redGreenFlag": "Red & Green Flag",
+    "nameMatch": "Kecocokan Nama"
   },
   "desc": {
     "W": "Bahasa cintamu adalah Kata-kata Penegasan. Kamu merasakan dan mengungkapkan cinta melalui kata-kata.",

@@ -135,7 +135,10 @@
     "mbtiLove": "MBTI Amour",
     "attachmentStyle": "Style d'Attachement",
     "emotionIceberg": "Iceberg Émotionnel",
-    "eqTest": "Test EQ"
+    "eqTest": "Test EQ",
+    "loveFrequency": "Fréquence Amoureuse",
+    "redGreenFlag": "Red & Green Flags",
+    "nameMatch": "Compatibilité des Prénoms"
   },
   "desc": {
     "W": "Votre langage de l'amour est les Paroles Valorisantes. Vous ressentez et exprimez l'amour par les mots.",

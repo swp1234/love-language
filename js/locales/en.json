@@ -28,12 +28,12 @@
     "touchDesc": "Hugs, hand-holding, and affection"
   },
   "intro": {
-    "desc": "8 scenarios \u00b7 drag to rank \u00b7 about 3 minutes",
+    "desc": "8 scenarios · drag to rank · about 3 minutes",
     "howTitle": "How it works",
     "how1": "Read each scenario",
     "how2": "Drag the 5 options into your preferred order",
     "how3": "1st place = most important to you",
-    "start": "Start the Test \u2192"
+    "start": "Start the Test →"
   },
   "quiz": {
     "scenario": "Scenario",
@@ -44,8 +44,8 @@
     "rank4": "4th",
     "rank5": "5th",
     "confirm": "Confirm Ranking",
-    "prev": "\u2190 Previous",
-    "next": "Next \u2192"
+    "prev": "← Previous",
+    "next": "Next →"
   },
   "scenarios": {
     "s1": {
@@ -87,7 +87,7 @@
     "s5": {
       "title": "On a weekend together...",
       "prompt": "You have a free weekend with your partner. Rank your ideal activities.",
-      "W": "A long heartfelt conversation at a cozy caf\u00e9",
+      "W": "A long heartfelt conversation at a cozy café",
       "G": "Exploring shops and picking out gifts for each other",
       "A": "Working on a home project together as a team",
       "T": "An unplanned adventure with phones turned off",
@@ -109,7 +109,7 @@
       "G": "Receiving surprise care packages in the mail",
       "A": "Having someone who handles things together with you",
       "T": "The everyday moments of just being in the same room",
-      "P": "The physical closeness\u2014hugs, hand-holding, their warmth"
+      "P": "The physical closeness—hugs, hand-holding, their warmth"
     },
     "s8": {
       "title": "The perfect anniversary...",
@@ -125,7 +125,7 @@
     "primaryLabel": "Your Primary Love Language",
     "secondaryLabel": "Secondary",
     "breakdown": "Your Love Language Breakdown",
-    "compatTitle": "\ud83d\udc91 Best Matching Love Languages",
+    "compatTitle": "💑 Best Matching Love Languages",
     "adviceTitle": "Relationship Advice",
     "retry": "Take the Test Again",
     "moreTests": "Explore More",
@@ -135,26 +135,29 @@
     "mbtiLove": "MBTI Love",
     "attachmentStyle": "Attachment Style",
     "emotionIceberg": "Emotion Iceberg",
-    "eqTest": "EQ Test"
+    "eqTest": "EQ Test",
+    "loveFrequency": "Love Frequency",
+    "redGreenFlag": "Red & Green Flag",
+    "nameMatch": "Name Match"
   },
   "desc": {
     "W": "Your love language is Words of Affirmation. You feel and express love through words. Sincere compliments, heartfelt gratitude, and verbal declarations of love fill your heart like nothing else. A single meaningful sentence is worth more to you than any gift.",
     "A": "Your love language is Acts of Service. You feel the deepest love when someone does things for you. Actions speak far louder than words, and when your partner goes out of their way to help you, it says 'I truly love you' more powerfully than anything.",
-    "G": "Your love language is Receiving Gifts. It's not about the price tag\u2014what moves you is the heart and intention behind a gift. When your partner remembers your tastes and surprises you, you feel how truly valued you are.",
-    "T": "Your love language is Quality Time. To you, love means having someone's full, undivided attention. Putting down the phone, making eye contact, sharing heartfelt conversations\u2014these everyday moments are the highest form of love.",
+    "G": "Your love language is Receiving Gifts. It's not about the price tag—what moves you is the heart and intention behind a gift. When your partner remembers your tastes and surprises you, you feel how truly valued you are.",
+    "T": "Your love language is Quality Time. To you, love means having someone's full, undivided attention. Putting down the phone, making eye contact, sharing heartfelt conversations—these everyday moments are the highest form of love.",
     "P": "Your love language is Physical Touch. For you, love is felt through the skin. A hug, holding hands, or a gentle pat on the back gives you a far stronger sense of security and connection than words or gifts ever could."
   },
   "advice": {
     "W": "Tell your partner honestly how much their words of praise and encouragement mean to you. Simple phrases like 'thank you,' 'I love you,' and 'great job' exchanged daily can transform your relationship.",
-    "A": "Communicate clearly and specifically what kind of help you need\u2014don't expect your partner to guess. When they do help, always express gratitude and let them know how much their actions feel like love to you.",
-    "G": "Let your partner know that gifts mean a lot to you\u2014and that an inexpensive, heartfelt gift is just as meaningful as an expensive one. Cultivate the habit of noticing your partner's tastes and interests.",
+    "A": "Communicate clearly and specifically what kind of help you need—don't expect your partner to guess. When they do help, always express gratitude and let them know how much their actions feel like love to you.",
+    "G": "Let your partner know that gifts mean a lot to you—and that an inexpensive, heartfelt gift is just as meaningful as an expensive one. Cultivate the habit of noticing your partner's tastes and interests.",
     "T": "Communicate to your partner how important undivided quality time is to you. When you're on dates, try setting a rule to minimize phone use and focus on each other.",
     "P": "Talk to your partner about how much physical touch grounds and reassures you, and together find a comfort level that works for both of you."
   },
   "share": {
     "title": "Share Your Result",
-    "copy": "\ud83d\udd17 Copy Link",
-    "twitter": "\ud835\udd4f Twitter",
+    "copy": "🔗 Copy Link",
+    "twitter": "𝕏 Twitter",
     "copied": "Link copied!",
     "twitterText": "I ranked my love languages! Discover yours too. #LoveLanguage #DopaBrain"
   },
