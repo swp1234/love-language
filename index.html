@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-i18n="meta.title">Love Language Test - Free Relationship Quiz | DopaBrain</title>
   <meta name="description" data-i18n="meta.description" content="8개 시나리오에서 드래그&순위 매기기로 당신의 사랑의 언어를 발견하세요.">
-    <meta name="dateModified" content="2026-06-19">
+    <meta name="dateModified" content="2026-10-24">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:title" content="Love Language Test - Free Relationship Quiz | DopaBrain">
   <meta property="og:description" content="Rank your priorities across 8 real-life scenarios to discover how you love.">
@@ -37,7 +37,6 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-J8GSWM40TV');
-        setTimeout(function(){gtag('event','page_engage',{event_category:'love_language',engagement_time_msec:5000})},5000);
   </script>
   <script type="application/ld+json">
   {
@@ -45,24 +44,16 @@
     "@type": "WebApplication",
     "name": "Love Language Test",
     "url": "https://dopabrain.com/love-language/",
-    "description": "Discover your primary love language by dragging and ranking options across 8 scenarios",
+    "description": "Discover your primary love language across Chapman's 5 Love Languages through scenario ranking.",
     "applicationCategory": "LifestyleApplication",
     "operatingSystem": "Any",
-    "offers": {"@type": "Offer", "price": "0"}
-  ,
+    "offers": {"@type": "Offer", "price": "0"},
     "publisher": {
         "@type": "Organization",
         "name": "DopaBrain",
         "url": "https://dopabrain.com/"
-    },
-    "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.6",
-        "ratingCount": "2240",
-        "bestRating": "5",
-        "worstRating": "1"
     }
-}
+  }
   </script>
   <!-- BreadcrumbList -->
   <script type="application/ld+json">
@@ -71,43 +62,9 @@
       "@type": "BreadcrumbList",
       "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dopabrain.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Tests", "item": "https://dopabrain.com/portal/" },
+          { "@type": "ListItem", "position": 2, "name": "Tests", "item": "https://dopabrain.com/portal/tests/" },
           { "@type": "ListItem", "position": 3, "name": "Relationship Tests", "item": "https://dopabrain.com/portal/" },
           { "@type": "ListItem", "position": 4, "name": "Love Language Test", "item": "https://dopabrain.com/love-language/" }
-      ]
-  }
-  </script>
-  <!-- FAQPage -->
-  <script type="application/ld+json">
-  {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-          {
-              "@type": "Question",
-              "name": "What is a love language test?",
-              "acceptedAnswer": { "@type": "Answer", "text": "A love language test identifies how you prefer to give and receive love. Based on Dr. Gary Chapman's five love languages framework, it categorizes your primary love language as Words of Affirmation, Acts of Service, Receiving Gifts, Quality Time, or Physical Touch by analyzing how you rank priorities across real-life scenarios." }
-          },
-          {
-              "@type": "Question",
-              "name": "What are the 5 love languages?",
-              "acceptedAnswer": { "@type": "Answer", "text": "The five love languages are: Words of Affirmation (verbal expressions of love), Acts of Service (helpful actions), Receiving Gifts (thoughtful presents), Quality Time (undivided attention), and Physical Touch (hugs, hand-holding). Everyone has a primary and secondary love language that shapes how they feel most loved." }
-          },
-          {
-              "@type": "Question",
-              "name": "How does the drag-and-rank format work?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Instead of simple yes/no questions, this test presents 8 real-life scenarios. For each one, you drag and rank 5 love language options from most to least important. This ranking format reveals not just your top love language, but a complete breakdown of all five preferences with precise percentages." }
-          },
-          {
-              "@type": "Question",
-              "name": "Can your love language change over time?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Yes! Love languages can shift based on life stage, relationship experiences, and personal growth. Someone who prioritized Quality Time in their 20s might value Acts of Service more after having children. Retaking the test periodically can reveal how your love language evolves." }
-          },
-          {
-              "@type": "Question",
-              "name": "Is this love language test scientifically accurate?",
-              "acceptedAnswer": { "@type": "Answer", "text": "This test is based on Dr. Gary Chapman's popular love languages framework, which has helped millions of couples improve their relationships. While designed for entertainment and self-reflection rather than clinical diagnosis, it provides meaningful insights into your relationship preferences and communication style." }
-          }
       ]
   }
   </script>
@@ -684,9 +641,6 @@
         </div>
       </div>
 
-      <!-- Social Proof Badge -->
-      <div class="social-proof-badge" data-i18n="engage.socialProof">2,240+ people discovered their love language</div>
-
       <p class="intro-desc" data-i18n="intro.desc">8개 시나리오 · 드래그로 순위 매기기 · 약 3분</p>
       <button class="start-btn btn-pulse" id="startBtn" data-i18n="intro.start">Discover My Love Language - Free →</button>
     </section>
@@ -742,15 +696,13 @@
         </div>
       </div>
 
-      <p class="percentile-stat" id="percentile-stat"></p>
-
       <div class="related-tests">
         <h3 data-i18n="result.moreTests">더 많은 테스트</h3>
         <div class="related-grid">
-          <a href="/love-frequency/" class="related-card" style="--card-color: #e91e63"><span class="related-emoji">💓</span><span class="related-name" data-i18n="related.loveFrequency">Love Frequency</span></a>
-          <a href="/attachment-style/" class="related-card" style="--card-color: #9b59b6"><span class="related-emoji">🔗</span><span class="related-name" data-i18n="related.attachmentStyle">애착 유형</span></a>
-          <a href="/red-green-flag/" class="related-card" style="--card-color: #2E86AB"><span class="related-emoji">🚩</span><span class="related-name" data-i18n="related.redGreenFlag">Red Green Flag</span></a>
-          <a href="/name-match/" class="related-card" style="--card-color: #00bcd4"><span class="related-emoji">💕</span><span class="related-name" data-i18n="related.nameMatch">Name Match</span></a>
+          <a href="/attachment-style/" class="related-card" style="--card-color: #e879a0"><span class="related-emoji">💖</span><span class="related-name" data-i18n="related.attachmentStyle">애착 유형</span></a>
+          <a href="/stress-check/" class="related-card" style="--card-color: #f97316"><span class="related-emoji">⚡</span><span class="related-name" data-i18n="related.stressCheck">Stress Check</span></a>
+          <a href="/future-self/" class="related-card" style="--card-color: #0ea5e9"><span class="related-emoji">🔮</span><span class="related-name" data-i18n="related.futureSelf">Future Self</span></a>
+          <a href="/hsp-test/" class="related-card" style="--card-color: #7c3aed"><span class="related-emoji">🧠</span><span class="related-name" data-i18n="related.hspTest">HSP Test</span></a>
         </div>
       </div>
 
@@ -1206,14 +1158,6 @@ function showResult() {
     const ci = LANG_INFO[k];
     return `<div class="compat-item">${ci.icon} <span>${t(ci.key)}</span></div>`;
   }).join('');
-
-  // Percentile stat (mock distribution for now)
-  const primaryPct = sorted[0][1];
-  const percentile = Math.round((primaryPct / maxPossible) * 100);
-  const rarity = percentile > 75 ? Math.floor(15 + Math.random() * 10) :
-                 percentile > 60 ? Math.floor(25 + Math.random() * 10) :
-                 Math.floor(35 + Math.random() * 15);
-  document.getElementById('percentile-stat').innerHTML = t('result.percentileStat').replace('{percent}', rarity);
 
   // Switch screens
   document.getElementById('quiz-screen').style.display = 'none';
