@@ -1174,6 +1174,9 @@ function showResult() {
     });
   }
 
+  syncLocalizedLinks();
+  initRelatedTracking();
+
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -1235,6 +1238,7 @@ document.querySelectorAll('.lang-option').forEach(btn => {
       await window.i18n.setLang(lang);
       const label = btn.textContent.trim().split(' ');
       document.getElementById('currentLang').textContent = label.slice(1).join(' ') || label[0];
+      syncLocalizedLinks();
     }
     document.getElementById('langDropdown').classList.remove('open');
     // Re-render current scenario if quiz is active
@@ -1248,9 +1252,68 @@ document.addEventListener('click', () => {
 });
 
 // ============================================================
+// Localized CTA & Outbound Links
+// ============================================================
+function getActiveLanguage() {
+  if (window.i18n && typeof window.i18n.getCurrentLanguage === 'function') {
+    return window.i18n.getCurrentLanguage();
+  }
+  return 'ko';
+}
+
+function syncLocalizedLinks() {
+  const lang = getActiveLanguage();
+  try {
+    const currentUrl = new URL(window.location.href);
+    if (currentUrl.searchParams.get('lang') !== lang) {
+      currentUrl.searchParams.set('lang', lang);
+      window.history.replaceState({}, '', currentUrl.pathname + '?' + currentUrl.searchParams.toString());
+    }
+  } catch (_) {}
+
+  document.querySelectorAll('.related-grid a.related-card').forEach(link => {
+    try {
+      const u = new URL(link.getAttribute('href'), window.location.origin);
+      u.searchParams.set('lang', lang);
+      u.searchParams.set('source', 'love_language');
+      link.href = u.pathname + u.search;
+    } catch (_) {}
+  });
+
+  const footerPortal = document.querySelector('footer a[href^="/portal/"]');
+  if (footerPortal) {
+    try {
+      const u = new URL(footerPortal.getAttribute('href'), window.location.origin);
+      u.searchParams.set('lang', lang);
+      footerPortal.href = u.pathname + u.search;
+    } catch (_) {}
+  }
+}
+
+function initRelatedTracking() {
+  document.querySelectorAll('.related-grid a.related-card').forEach(link => {
+    if (link.dataset.trackedCta) return;
+    link.dataset.trackedCta = 'true';
+    link.addEventListener('click', () => {
+      if (typeof gtag !== 'undefined') {
+        const text = (link.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 40);
+        gtag('event', 'content_cta_click', {
+          link_id: 'love_lang_related_' + (link.getAttribute('href') || '').replace(/[^a-zA-Z0-9_-]/g, '_').slice(0, 30),
+          link_text: text,
+          target_url: link.href || '',
+          source_page: 'love_language'
+        });
+      }
+    });
+  });
+}
+
+// ============================================================
 // App loader
 // ============================================================
 window.addEventListener('load', () => {
+  syncLocalizedLinks();
+  initRelatedTracking();
   setTimeout(() => {
     const loader = document.getElementById('app-loader');
     if (loader) {
