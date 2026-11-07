@@ -177,6 +177,18 @@
     "heading1": "How the Drag-and-Rank Format Works",
     "text1": "This test presents 8 real-life scenarios, each with 5 love language options. Instead of simple yes/no answers, you drag and rank each option from most to least important. This ranking format provides a nuanced breakdown of all five love language preferences with precise percentages.",
     "heading2": "Understanding Love Languages",
-    "text2": "Dr. Gary Chapman's five love languages framework explains that people have different ways of expressing and receiving love. Knowing your primary love language helps you communicate your needs, understand your partner better, and build stronger, more fulfilling relationships."
+    "text2": "Dr. Gary Chapman's five love languages framework explains that people have different ways of expressing and receiving love. Knowing your primary love language helps you communicate your needs, understand your partner better, and build stronger, more fulfilling relationships.",
+    "boundary": "Educational Note: The 5 Love Languages framework is an introspective communication guide developed for relationship enrichment. It is not a clinical psychological test or diagnostic relationship assessment.",
+    "faqTitle": "Frequently Asked Questions",
+    "faq1Q": "Q: What are the 5 Love Languages?",
+    "faq1A": "A: Words of Affirmation, Quality Time, Receiving Gifts, Acts of Service, and Physical Touch represent the primary ways people emotionally convey and perceive love.",
+    "faq2Q": "Q: How does the drag-and-rank quiz model work?",
+    "faq2A": "A: Across 8 real-life scenarios, you rank all 5 actions from most to least meaningful, generating an authentic percentage profile rather than an oversimplified binary answer.",
+    "faq3Q": "Q: Can my love language change over time?",
+    "faq3A": "A: Yes. Changing life stages, parenting demands, stress levels, and relationship milestones often elevate different communication and emotional support needs.",
+    "faq4Q": "Q: Are my quiz responses or partner pairings saved?",
+    "faq4A": "A: Never. All calculations are executed locally in your browser. No relationship data or scenario selections are stored on or sent to remote servers.",
+    "reviewDate": "Editorial Review: November 2026",
+    "reviewTeam": "DopaBrain Relationship Psychology Team"
   }
 }
