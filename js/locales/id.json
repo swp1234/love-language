@@ -128,8 +128,7 @@
     "compatTitle": "💑 Bahasa Cinta Paling Serasi",
     "adviceTitle": "Saran Hubungan",
     "retry": "Ikuti Tes Lagi",
-    "moreTests": "Jelajahi Lebih Lanjut",
-    "percentileStat": "Hanya <strong>{percent}%</strong> memiliki bahasa cinta yang sama"
+    "moreTests": "Jelajahi Lebih Lanjut"
   },
   "related": {
     "mbtiLove": "MBTI Cinta",
@@ -138,7 +137,10 @@
     "eqTest": "Tes EQ",
     "loveFrequency": "Frekuensi Cinta",
     "redGreenFlag": "Red & Green Flag",
-    "nameMatch": "Kecocokan Nama"
+    "nameMatch": "Kecocokan Nama",
+    "stressCheck": "Cek Stres",
+    "futureSelf": "Diri Masa Depan",
+    "hspTest": "Tes HSP"
   },
   "desc": {
     "W": "Bahasa cintamu adalah Kata-kata Penegasan. Kamu merasakan dan mengungkapkan cinta melalui kata-kata.",
@@ -159,7 +161,8 @@
     "copy": "🔗 Salin Tautan",
     "twitter": "𝕏 Twitter",
     "copied": "Tautan disalin!",
-    "twitterText": "Aku menemukan bahasa cintaku! Temukan punyamu juga. #BahasaCinta #DopaBrain"
+    "twitterText": "Aku menemukan bahasa cintaku! Temukan punyamu juga. #BahasaCinta #DopaBrain",
+    "downloadCard": "Simpan Kartu Cerita"
   },
   "footer": {
     "privacy": "Kebijakan Privasi",
@@ -169,8 +172,7 @@
     "result1": "💬 Kata-kata Penegasan -- Cinta Verbal",
     "result2": "🛠️ Tindakan Pelayanan -- Cinta dalam Aksi",
     "result3": "🎁 Menerima Hadiah -- Kejutan Penuh Makna",
-    "result4": "⏰ Waktu Berkualitas -- Perhatian Penuh",
-    "socialProof": "2.240+ orang menemukan bahasa cinta mereka"
+    "result4": "⏰ Waktu Berkualitas -- Perhatian Penuh"
   },
   "about": {
     "toggle": "Tentang Tes Bahasa Cinta",
@@ -190,5 +192,14 @@
     "faq4A": "A: Tidak pernah. Semua kalkulasi berlangsung lokal di peramban Anda dengan privasi terjamin.",
     "reviewDate": "Tinjauan Redaksi: November 2026",
     "reviewTeam": "Tim Psikologi Hubungan DopaBrain"
+  },
+  "curated": {
+    "badge": "BACAAN RELASI & KELEKATAN",
+    "title": "Ekspresikan & Pahami Cinta Lebih Jelas",
+    "book1Title": "The 5 Love Languages",
+    "book1Desc": "Gary Chapman • Panduan praktis menyampaikan kasih sayang sesuai bahasa pasangan.",
+    "book2Title": "Hold Me Tight",
+    "book2Desc": "Dr. Sue Johnson • Terapi berfokus emosi untuk keamanan hubungan romantis.",
+    "readPill": "Lihat Buku ↗"
   }
 }

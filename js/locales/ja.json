@@ -128,8 +128,7 @@
     "compatTitle": "💑 相性の良い愛の言葉",
     "adviceTitle": "関係のアドバイス",
     "retry": "もう一度テストする",
-    "moreTests": "さらに探す",
-    "percentileStat": "参加者の<strong>{percent}%</strong>だけがあなたと同じ愛の言葉です"
+    "moreTests": "さらに探す"
   },
   "related": {
     "mbtiLove": "MBTI恋愛",
@@ -138,7 +137,10 @@
     "eqTest": "EQテスト",
     "loveFrequency": "恋愛周波数テスト",
     "redGreenFlag": "レッド＆グリーンフラッグ",
-    "nameMatch": "名前相性テスト"
+    "nameMatch": "名前相性テスト",
+    "stressCheck": "ストレス診断",
+    "futureSelf": "未来の自分診断",
+    "hspTest": "HSP診断"
   },
   "desc": {
     "W": "あなたの愛の言葉は「肯定の言葉」です。言葉を通じて愛を感じ、表現します。心からの称賛、感謝の言葉、愛の告白はあなたの心を満たす最も強力な方法です。",
@@ -159,7 +161,8 @@
     "copy": "🔗 リンクをコピー",
     "twitter": "𝕏 ツイッター",
     "copied": "リンクをコピーしました！",
-    "twitterText": "私の愛の言葉テスト結果を確認してみてください！#愛の言葉 #LoveLanguage #DopaBrain"
+    "twitterText": "私の愛の言葉テスト結果を確認してみてください！#愛の言葉 #LoveLanguage #DopaBrain",
+    "downloadCard": "カードを保存"
   },
   "footer": {
     "privacy": "プライバシーポリシー",
@@ -169,8 +172,7 @@
     "result1": "💬 肯定の言葉 -- 言葉で伝える愛",
     "result2": "🛠️ 奉仕の行為 -- 行動で示す愛",
     "result3": "🎁 贈り物 -- 心のこもったサプライズ",
-    "result4": "⏰ クオリティタイム -- 全注目の時間",
-    "socialProof": "2,240人以上が愛の言語を発見しました"
+    "result4": "⏰ クオリティタイム -- 全注目の時間"
   },
   "about": {
     "toggle": "愛の言語テストについて",
@@ -190,5 +192,14 @@
     "faq4A": "A: 一切保存されません。すべての計算はお使いの端末のブラウザ内でローカルに実行されます。",
     "reviewDate": "コンテンツ監修：2026年11月",
     "reviewTeam": "DopaBrain 関係心理学チーム"
+  },
+  "curated": {
+    "badge": "恋愛・愛着心理学書籍",
+    "title": "愛を伝える方法をさらに深く理解する",
+    "book1Title": "愛を伝える5つの方法",
+    "book1Desc": "ゲイリー・チャップマン • パートナーに届く愛情表現の実践ガイド。",
+    "book2Title": "ホールド・ミー・タイト",
+    "book2Desc": "スー・ジョンソン • 感情焦点化療法（EFT）による安心感と絆の築き方。",
+    "readPill": "書籍を見る ↗"
   }
 }

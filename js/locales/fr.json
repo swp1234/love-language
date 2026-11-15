@@ -128,8 +128,7 @@
     "compatTitle": "💑 Langages les plus compatibles",
     "adviceTitle": "Conseil pour la relation",
     "retry": "Refaire le test",
-    "moreTests": "Explorer Plus",
-    "percentileStat": "Seulement <strong>{percent}%</strong> partagent votre langage amoureux"
+    "moreTests": "Explorer Plus"
   },
   "related": {
     "mbtiLove": "MBTI Amour",
@@ -138,7 +137,10 @@
     "eqTest": "Test EQ",
     "loveFrequency": "Fréquence Amoureuse",
     "redGreenFlag": "Red & Green Flags",
-    "nameMatch": "Compatibilité des Prénoms"
+    "nameMatch": "Compatibilité des Prénoms",
+    "stressCheck": "Test de Stress",
+    "futureSelf": "Moi Futur",
+    "hspTest": "Test Hypersensibilité"
   },
   "desc": {
     "W": "Votre langage de l'amour est les Paroles Valorisantes. Vous ressentez et exprimez l'amour par les mots.",
@@ -159,7 +161,8 @@
     "copy": "🔗 Copier le lien",
     "twitter": "𝕏 Twitter",
     "copied": "Lien copié !",
-    "twitterText": "J'ai découvert mon langage de l'amour ! Découvrez le vôtre. #LangageAmour #DopaBrain"
+    "twitterText": "J'ai découvert mon langage de l'amour ! Découvrez le vôtre. #LangageAmour #DopaBrain",
+    "downloadCard": "Enregistrer la Carte"
   },
   "footer": {
     "privacy": "Politique de confidentialité",
@@ -169,8 +172,7 @@
     "result1": "💬 Paroles Valorisantes -- Amour Verbal",
     "result2": "🛠️ Actes de Service -- L'amour en Action",
     "result3": "🎁 Recevoir des Cadeaux -- Surprises Attentionnées",
-    "result4": "⏰ Moments de Qualité -- Attention Indivisée",
-    "socialProof": "2 240+ personnes ont découvert leur langage amoureux"
+    "result4": "⏰ Moments de Qualité -- Attention Indivisée"
   },
   "about": {
     "toggle": "À propos du test des langages de l'amour",
@@ -190,5 +192,14 @@
     "faq4A": "A: Non, jamais. Toutes les données sont traitées exclusivement dans votre navigateur sans transfert externe.",
     "reviewDate": "Revue Éditoriale : Novembre 2026",
     "reviewTeam": "Équipe Psychologie Relationnelle DopaBrain"
+  },
+  "curated": {
+    "badge": "LECTURES COUPLE & ATTACHEMENT",
+    "title": "Mieux Exprimer et Comprendre l’Amour",
+    "book1Title": "Les 5 Langages de l’amour",
+    "book1Desc": "Gary Chapman • Exprimer son affection dans le langage que votre partenaire ressent.",
+    "book2Title": "Serre-moi fort (Hold Me Tight)",
+    "book2Desc": "Dre Sue Johnson • Thérapie centrée sur les émotions pour un lien sécurisant.",
+    "readPill": "Voir le Livre ↗"
   }
 }

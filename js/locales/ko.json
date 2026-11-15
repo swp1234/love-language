@@ -128,8 +128,7 @@
     "compatTitle": "💑 궁합이 잘 맞는 언어",
     "adviceTitle": "관계 조언",
     "retry": "다시 테스트하기",
-    "moreTests": "더 많은 테스트",
-    "percentileStat": "참가자의 <strong>{percent}%</strong>만이 당신과 같은 사랑 언어입니다"
+    "moreTests": "더 많은 테스트"
   },
   "related": {
     "mbtiLove": "MBTI 연애",
@@ -138,7 +137,10 @@
     "eqTest": "EQ 테스트",
     "loveFrequency": "사랑 주파수 테스트",
     "redGreenFlag": "레드 & 그린 플래그",
-    "nameMatch": "이름 궁합 테스트"
+    "nameMatch": "이름 궁합 테스트",
+    "stressCheck": "스트레스 체크",
+    "futureSelf": "미래의 나 테스트",
+    "hspTest": "HSP 민감성 테스트"
   },
   "desc": {
     "W": "당신의 사랑의 언어는 '인정의 말'입니다. 당신은 말을 통해 사랑을 느끼고 표현합니다. 파트너의 진심 어린 칭찬, 감사 표현, 사랑 고백은 당신의 마음을 가득 채우는 가장 강력한 방법입니다.",
@@ -159,7 +161,8 @@
     "copy": "🔗 링크 복사",
     "twitter": "𝕏 트위터",
     "copied": "링크가 복사되었습니다!",
-    "twitterText": "나의 사랑의 언어 순위를 매겼어요! 당신도 확인해보세요. #사랑의언어 #LoveLanguage #DopaBrain"
+    "twitterText": "나의 사랑의 언어 순위를 매겼어요! 당신도 확인해보세요. #사랑의언어 #LoveLanguage #DopaBrain",
+    "downloadCard": "스토리 카드 저장"
   },
   "footer": {
     "privacy": "개인정보처리방침",
@@ -169,8 +172,7 @@
     "result1": "💬 인정의 말 -- 언어적 사랑",
     "result2": "🛠️ 봉사 행동 -- 행동으로 보여주는 사랑",
     "result3": "🎁 선물 -- 마음을 담은 깜짝 선물",
-    "result4": "⏰ 함께하는 시간 -- 온전한 관심",
-    "socialProof": "2,240명 이상이 사랑의 언어를 발견했어요"
+    "result4": "⏰ 함께하는 시간 -- 온전한 관심"
   },
   "about": {
     "toggle": "사랑의 언어 테스트 소개",
@@ -190,5 +192,14 @@
     "faq4A": "A: 절대 저장되지 않습니다. 모든 슬라이더와 랭킹 계산은 브라우저 내부에서만 즉시 처리되며 외부 서버로 전송되지 않습니다.",
     "reviewDate": "콘텐츠 검수: 2026년 11월",
     "reviewTeam": "DopaBrain 관계심리학 연구팀"
+  },
+  "curated": {
+    "badge": "연애·애착 심리 추천 도서",
+    "title": "사랑의 언어를 더 깊이 이해하고 전달하기",
+    "book1Title": "5가지 사랑의 언어 (The 5 Love Languages)",
+    "book1Desc": "게리 채프먼 • 상대방이 진심으로 사랑을 느끼는 방식으로 표현하는 실천 가이드.",
+    "book2Title": "안아줘요 (Hold Me Tight)",
+    "book2Desc": "수 존슨 • 정서중심 부부치료(EFT) 기반의 깊은 애착과 신뢰 대화법.",
+    "readPill": "도서 보기 ↗"
   }
 }

@@ -128,8 +128,7 @@
     "compatTitle": "💑 Best Matching Love Languages",
     "adviceTitle": "Relationship Advice",
     "retry": "Take the Test Again",
-    "moreTests": "Explore More",
-    "percentileStat": "Only <strong>{percent}%</strong> share your love language"
+    "moreTests": "Explore More"
   },
   "related": {
     "mbtiLove": "MBTI Love",
@@ -138,7 +137,10 @@
     "eqTest": "EQ Test",
     "loveFrequency": "Love Frequency",
     "redGreenFlag": "Red & Green Flag",
-    "nameMatch": "Name Match"
+    "nameMatch": "Name Match",
+    "stressCheck": "Stress Check",
+    "futureSelf": "Future Self",
+    "hspTest": "HSP Test"
   },
   "desc": {
     "W": "Your love language is Words of Affirmation. You feel and express love through words. Sincere compliments, heartfelt gratitude, and verbal declarations of love fill your heart like nothing else. A single meaningful sentence is worth more to you than any gift.",
@@ -159,7 +161,8 @@
     "copy": "🔗 Copy Link",
     "twitter": "𝕏 Twitter",
     "copied": "Link copied!",
-    "twitterText": "I ranked my love languages! Discover yours too. #LoveLanguage #DopaBrain"
+    "twitterText": "I ranked my love languages! Discover yours too. #LoveLanguage #DopaBrain",
+    "downloadCard": "Save Story Card"
   },
   "footer": {
     "privacy": "Privacy Policy",
@@ -169,8 +172,7 @@
     "result1": "💬 Words of Affirmation -- Verbal Love",
     "result2": "🛠️ Acts of Service -- Love in Action",
     "result3": "🎁 Receiving Gifts -- Thoughtful Surprises",
-    "result4": "⏰ Quality Time -- Undivided Attention",
-    "socialProof": "2,240+ people discovered their love language"
+    "result4": "⏰ Quality Time -- Undivided Attention"
   },
   "about": {
     "toggle": "About the Love Language Test",
@@ -190,5 +192,14 @@
     "faq4A": "A: Never. All calculations are executed locally in your browser. No relationship data or scenario selections are stored on or sent to remote servers.",
     "reviewDate": "Editorial Review: November 2026",
     "reviewTeam": "DopaBrain Relationship Psychology Team"
+  },
+  "curated": {
+    "badge": "RELATIONSHIP & ATTACHMENT READING",
+    "title": "Speak & Understand Love More Clearly",
+    "book1Title": "The 5 Love Languages",
+    "book1Desc": "Gary Chapman • Practical guide to expressing devotion in the way your partner feels it.",
+    "book2Title": "Hold Me Tight",
+    "book2Desc": "Dr. Sue Johnson • Emotionally Focused Therapy for deeper romantic security.",
+    "readPill": "View Book ↗"
   }
 }

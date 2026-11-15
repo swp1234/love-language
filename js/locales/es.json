@@ -128,8 +128,7 @@
     "compatTitle": "💑 Lenguajes más compatibles",
     "adviceTitle": "Consejo para la relación",
     "retry": "Hacer el test de nuevo",
-    "moreTests": "Explorar Más",
-    "percentileStat": "Solo el <strong>{percent}%</strong> comparten tu lenguaje del amor"
+    "moreTests": "Explorar Más"
   },
   "related": {
     "mbtiLove": "MBTI Amor",
@@ -138,7 +137,10 @@
     "eqTest": "Test de EQ",
     "loveFrequency": "Frecuencia del Amor",
     "redGreenFlag": "Banderas Rojas y Verdes",
-    "nameMatch": "Compatibilidad de Nombres"
+    "nameMatch": "Compatibilidad de Nombres",
+    "stressCheck": "Test de Estrés",
+    "futureSelf": "Yo Futuro",
+    "hspTest": "Test PAS (HSP)"
   },
   "desc": {
     "W": "Tu lenguaje del amor es las Palabras de Afirmación. Sientes y expresas el amor a través de las palabras. Los elogios sinceros, la gratitud y las declaraciones de amor llenan tu corazón como nada más.",
@@ -159,7 +161,8 @@
     "copy": "🔗 Copiar enlace",
     "twitter": "𝕏 Twitter",
     "copied": "¡Enlace copiado!",
-    "twitterText": "Descubrí mi lenguaje del amor. ¡Descubre el tuyo! #LenguajeDelAmor #DopaBrain"
+    "twitterText": "Descubrí mi lenguaje del amor. ¡Descubre el tuyo! #LenguajeDelAmor #DopaBrain",
+    "downloadCard": "Guardar Tarjeta"
   },
   "footer": {
     "privacy": "Política de privacidad",
@@ -169,8 +172,7 @@
     "result1": "💬 Palabras de Afirmación -- Amor Verbal",
     "result2": "🛠️ Actos de Servicio -- Amor en Acción",
     "result3": "🎁 Recibir Regalos -- Sorpresas Pensadas",
-    "result4": "⏰ Tiempo de Calidad -- Atención Completa",
-    "socialProof": "2,240+ personas descubrieron su lenguaje del amor"
+    "result4": "⏰ Tiempo de Calidad -- Atención Completa"
   },
   "about": {
     "toggle": "Sobre el test de lenguaje del amor",
@@ -190,5 +192,14 @@
     "faq4A": "A: Jamás. Todas las operaciones se realizan exclusivamente de manera local en su navegador.",
     "reviewDate": "Revisión Editorial: Noviembre 2026",
     "reviewTeam": "Equipo de Psicología Relacional DopaBrain"
+  },
+  "curated": {
+    "badge": "LECTURAS SOBRE RELACIONES Y APEGO",
+    "title": "Expresa y Comprende el Amor con Claridad",
+    "book1Title": "Los 5 lenguajes del amor",
+    "book1Desc": "Gary Chapman • Guía práctica para expresar cariño como tu pareja lo siente.",
+    "book2Title": "Abrázame fuerte (Hold Me Tight)",
+    "book2Desc": "Dra. Sue Johnson • Terapia focalizada en las emociones para relaciones seguras.",
+    "readPill": "Ver Libro ↗"
   }
 }

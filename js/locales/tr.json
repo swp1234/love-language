@@ -128,8 +128,7 @@
     "compatTitle": "💑 En Uyumlu Aşk Dilleri",
     "adviceTitle": "İlişki Tavsiyesi",
     "retry": "Testi Tekrar Yap",
-    "moreTests": "Daha Fazlasını Keşfedin",
-    "percentileStat": "Sadece <strong>{percent}%</strong>’i senin aşk dilini paylaşıyor"
+    "moreTests": "Daha Fazlasını Keşfedin"
   },
   "related": {
     "mbtiLove": "MBTI Aşk",
@@ -138,7 +137,10 @@
     "eqTest": "EQ Testi",
     "loveFrequency": "Aşk Frekansı",
     "redGreenFlag": "Kırmızı & Yeşil Bayrak",
-    "nameMatch": "İsim Uyumu"
+    "nameMatch": "İsim Uyumu",
+    "stressCheck": "Stres Kontrolü",
+    "futureSelf": "Gelecekteki Sen",
+    "hspTest": "HSP Testi"
   },
   "desc": {
     "W": "Aşk diliniz Onaylayan Sözler. Sevgiyi kelimeler aracılığıyla hisseder ve ifade edersiniz.",
@@ -159,7 +161,8 @@
     "copy": "🔗 Bağlantıyı Kopyala",
     "twitter": "𝕏 Twitter",
     "copied": "Bağlantı kopyalandı!",
-    "twitterText": "Aşk dilimi keşfettim! Sen de keşfet. #AşkDili #DopaBrain"
+    "twitterText": "Aşk dilimi keşfettim! Sen de keşfet. #AşkDili #DopaBrain",
+    "downloadCard": "Hikaye Kartını Kaydet"
   },
   "footer": {
     "privacy": "Gizlilik Politikası",
@@ -169,8 +172,7 @@
     "result1": "💬 Onaylayan Sözler -- Sözlü Sevgi",
     "result2": "🛠️ Hizmet Eylemleri -- Eylemde Sevgi",
     "result3": "🎁 Hediye Almak -- Düşünceli Sürprizler",
-    "result4": "⏰ Kaliteli Zaman -- Tam Dikkat",
-    "socialProof": "2.240+ kişi aşk dilini keşfetti"
+    "result4": "⏰ Kaliteli Zaman -- Tam Dikkat"
   },
   "about": {
     "toggle": "Aşk Dili Testi Hakkında",
@@ -190,5 +192,14 @@
     "faq4A": "A: Kesinlikle hayır. Tüm hesaplamalar güvenle sadece tarayıcınızda yerel olarak yapılır.",
     "reviewDate": "Editöryal İnceleme: Kasım 2026",
     "reviewTeam": "DopaBrain İlişki Psikolojisi Ekibi"
+  },
+  "curated": {
+    "badge": "İLİŞKİ & BAĞLANMA OKUMALARI",
+    "title": "Sevgiyi Daha Net İfade Edin ve Anlayın",
+    "book1Title": "Beş Sevgi Dili (The 5 Love Languages)",
+    "book1Desc": "Gary Chapman • Sevgiyi partnerinizin gerçekten hissettiği dille ifade etme rehberi.",
+    "book2Title": "Bana Sıkı Sarıl (Hold Me Tight)",
+    "book2Desc": "Dr. Sue Johnson • Güvenli duygusal bağ kurmak için duygu odaklı iletişim.",
+    "readPill": "Kitabı Gör ↗"
   }
 }

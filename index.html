@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-i18n="meta.title">Love Language Test - Free Relationship Quiz | DopaBrain</title>
   <meta name="description" data-i18n="meta.description" content="8개 시나리오에서 드래그&순위 매기기로 당신의 사랑의 언어를 발견하세요.">
-    <meta name="dateModified" content="2026-11-07">
+    <meta name="dateModified" content="2026-11-15">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:title" content="Love Language Test - Free Relationship Quiz | DopaBrain">
   <meta property="og:description" content="Rank your priorities across 8 real-life scenarios to discover how you love.">
@@ -437,13 +437,58 @@
       color: var(--text);
     }
     .share-twitter { background: #1a1a1a; color: #fff; border: 1px solid #333; }
-
-    /* Percentile stat */
-    .percentile-stat {
-      text-align: center; font-size: 14px; color: var(--text-muted);
-      margin: 20px 0 24px; line-height: 1.6;
+    .share-download { background: linear-gradient(135deg, var(--primary), #9c27b0); color: #fff; }
+    .curated-resources-card {
+      margin: 22px 0;
+      padding: 16px;
+      background: var(--surface);
+      border: 1px solid rgba(233, 30, 140, 0.28);
+      border-radius: 16px;
+      text-align: left;
     }
-    .percentile-stat strong { color: var(--primary); font-weight: 700; }
+    .curated-header { margin-bottom: 12px; }
+    .curated-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--primary-light);
+      margin-bottom: 4px;
+    }
+    .curated-title { margin: 0; font-size: 15px; font-weight: 700; color: var(--text); }
+    .curated-grid { display: flex; flex-direction: column; gap: 10px; }
+    .curated-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 48px;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .curated-item:hover { transform: translateY(-1px); border-color: var(--primary); }
+    .curated-icon { font-size: 22px; flex-shrink: 0; }
+    .curated-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+    .curated-info strong { font-size: 13px; color: var(--text); }
+    .curated-info span { font-size: 12px; color: var(--text-muted); line-height: 1.4; }
+    .curated-ext-pill {
+      flex-shrink: 0;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: rgba(233, 30, 140, 0.16);
+      color: var(--primary-light);
+      white-space: nowrap;
+    }
+    [data-theme="light"] .curated-resources-card { background: rgba(248, 250, 252, 0.94); border-color: rgba(233, 30, 140, 0.24); }
+    [data-theme="light"] .curated-item { background: #fff; border-color: rgba(15, 23, 42, 0.1); }
+    [data-theme="light"] .curated-badge, [data-theme="light"] .curated-ext-pill { color: #be185d; }
 
     /* Related tests */
     .related-tests { margin: 24px 0; }
@@ -732,8 +777,34 @@
       <div class="share-section">
         <div class="share-title" data-i18n="share.title">결과 공유하기</div>
         <div class="share-btns">
+          <button class="share-btn share-download" id="downloadCardBtn" onclick="downloadStoryCard()" data-i18n="share.downloadCard">Save Story Card</button>
           <button class="share-btn share-copy" onclick="copyLink()" data-i18n="share.copy">🔗 링크 복사</button>
           <button class="share-btn share-twitter" onclick="shareTwitter()" data-i18n="share.twitter">𝕏 트위터</button>
+        </div>
+      </div>
+
+      <div class="curated-resources-card" id="curated-resources-card">
+        <div class="curated-header">
+          <span class="curated-badge" data-i18n="curated.badge">RELATIONSHIP &amp; ATTACHMENT READING</span>
+          <h3 class="curated-title" data-i18n="curated.title">Speak &amp; Understand Love More Clearly</h3>
+        </div>
+        <div class="curated-grid">
+          <a href="https://www.amazon.com/dp/080241270X?tag=dopabrain-20" target="_blank" rel="noopener noreferrer nofollow" class="curated-item" data-curated-key="fiveLoveLanguages">
+            <span class="curated-icon" aria-hidden="true">💬</span>
+            <div class="curated-info">
+              <strong data-i18n="curated.book1Title">The 5 Love Languages</strong>
+              <span data-i18n="curated.book1Desc">Gary Chapman • Practical guide to expressing devotion in the way your partner feels it.</span>
+            </div>
+            <span class="curated-ext-pill" data-i18n="curated.readPill">View Book ↗</span>
+          </a>
+          <a href="https://www.amazon.com/dp/031611300X?tag=dopabrain-20" target="_blank" rel="noopener noreferrer nofollow" class="curated-item" data-curated-key="holdMeTight">
+            <span class="curated-icon" aria-hidden="true">💞</span>
+            <div class="curated-info">
+              <strong data-i18n="curated.book2Title">Hold Me Tight</strong>
+              <span data-i18n="curated.book2Desc">Dr. Sue Johnson • Emotionally Focused Therapy for deeper romantic security.</span>
+            </div>
+            <span class="curated-ext-pill" data-i18n="curated.readPill">View Book ↗</span>
+          </a>
         </div>
       </div>
 
@@ -756,7 +827,7 @@
 
 <!-- About Section -->
 <section class="about-section collapsible-section" id="about-section">
-  <details>
+  <details open>
     <summary data-i18n="about.toggle">About the Love Language Test</summary>
     <div class="about-content">
       <h2 data-i18n="about.heading1">How the Drag-and-Rank Format Works</h2>
@@ -1232,22 +1303,27 @@ function showResult() {
   rs.classList.add('fade-in');
   document.getElementById('progressBar').style.width = '100%';
 
+  window._loveLangLast = { primary, secondary, primaryLabel: t(info.key), desc: t('desc.' + primary) };
+
   if (typeof gtag !== 'undefined') {
     gtag('event', 'test_complete', {
+      app_name: 'love-language',
       event_category: 'love_language',
+      result_type: primary,
       primary_language: primary,
       secondary_language: secondary
     });
   }
 
   syncLocalizedLinks();
+  updateCuratedResources();
   initRelatedTracking();
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // ============================================================
-// Retry / Share
+// Retry / Share / Story Card
 // ============================================================
 function retryTest() {
   currentScenario = 0;
@@ -1259,8 +1335,13 @@ function retryTest() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+function getShareUrl() {
+  const lang = getActiveLanguage();
+  return 'https://dopabrain.com/love-language/?lang=' + encodeURIComponent(lang) + '&utm_source=share';
+}
+
 function copyLink() {
-  const url = window.location.href;
+  const url = getShareUrl();
   if (navigator.clipboard) {
     navigator.clipboard.writeText(url).then(() => {
       alert(t('share.copied'));
@@ -1268,12 +1349,122 @@ function copyLink() {
   } else {
     prompt('Copy:', url);
   }
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'share', { app_name: 'love-language', share_channel: 'copy_link' });
+  }
 }
 
 function shareTwitter() {
-  const url = encodeURIComponent(window.location.href);
+  const url = encodeURIComponent(getShareUrl());
   const text = encodeURIComponent(t('share.twitterText'));
   window.open('https://twitter.com/intent/tweet?url=' + url + '&text=' + text, '_blank', 'noopener');
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'share', { app_name: 'love-language', share_channel: 'twitter' });
+  }
+}
+
+function downloadStoryCard() {
+  const state = window._loveLangLast;
+  if (!state) return;
+  const info = LANG_INFO[state.primary] || { icon: '💗' };
+  const canvas = document.createElement('canvas');
+  canvas.width = 1080;
+  canvas.height = 1920;
+  const ctx = canvas.getContext('2d');
+  const grad = ctx.createLinearGradient(0, 0, 1080, 1920);
+  grad.addColorStop(0, '#190617');
+  grad.addColorStop(0.55, '#2d0b33');
+  grad.addColorStop(1, '#09090b');
+  ctx.fillStyle = grad;
+  ctx.fillRect(0, 0, 1080, 1920);
+
+  ctx.fillStyle = 'rgba(233, 30, 140, 0.16)';
+  ctx.beginPath();
+  ctx.arc(540, 520, 320, 0, Math.PI * 2);
+  ctx.fill();
+
+  ctx.fillStyle = '#f472b6';
+  ctx.font = 'bold 34px sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('DOPABRAIN · LOVE LANGUAGE PROFILE', 540, 210);
+
+  ctx.font = '150px sans-serif';
+  ctx.fillText(info.icon || '💗', 540, 560);
+
+  ctx.fillStyle = '#ffffff';
+  ctx.font = 'bold 56px sans-serif';
+  ctx.fillText(t(info.key), 540, 740);
+
+  ctx.fillStyle = '#e2e8f0';
+  ctx.font = '32px sans-serif';
+  const words = (t('desc.' + state.primary) || '').split(' ');
+  let line = '', y = 840;
+  words.forEach((word) => {
+    const test = line ? (line + ' ' + word) : word;
+    if (ctx.measureText(test).width > 860) {
+      ctx.fillText(line, 540, y);
+      line = word;
+      y += 48;
+    } else {
+      line = test;
+    }
+  });
+  if (line) ctx.fillText(line, 540, y);
+
+  ctx.fillStyle = '#94a3b8';
+  ctx.font = 'bold 30px sans-serif';
+  ctx.fillText('dopabrain.com/love-language/', 540, 1760);
+
+  try {
+    const link = document.createElement('a');
+    link.download = 'love-language-' + state.primary + '.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  } catch (e) {}
+
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'save_image', {
+      app_name: 'love-language',
+      result_type: state.primary,
+      save_surface: 'result_story_1080x1920'
+    });
+  }
+}
+
+function updateCuratedResources() {
+  const container = document.getElementById('curated-resources-card');
+  if (!container) return;
+  const lang = getActiveLanguage();
+  const stores = { de: 'www.amazon.de', fr: 'www.amazon.fr', es: 'www.amazon.es', ja: 'www.amazon.co.jp', ko: 'www.amazon.com' };
+  const host = stores[lang] || 'www.amazon.com';
+  const urls = {
+    fiveLoveLanguages: `https://${host}/dp/080241270X?tag=dopabrain-20`,
+    holdMeTight: `https://${host}/dp/031611300X?tag=dopabrain-20`
+  };
+  container.querySelectorAll('.curated-item').forEach((link) => {
+    const key = link.getAttribute('data-curated-key');
+    if (urls[key]) link.setAttribute('href', urls[key]);
+    if (!link.dataset.trackedCurated) {
+      link.dataset.trackedCurated = 'true';
+      link.addEventListener('click', () => {
+        const currentLang = getActiveLanguage();
+        const dest = link.getAttribute('href');
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'curated_resource_click', {
+            app_name: 'love-language',
+            resource_key: key,
+            content_locale: currentLang,
+            cta_surface: 'curated_resources'
+          });
+          gtag('event', 'content_cta_click', {
+            cta_type: 'curated_book',
+            destination: dest,
+            source: 'love_language'
+          });
+        }
+      });
+    }
+  });
 }
 
 // ============================================================
@@ -1287,6 +1478,9 @@ document.getElementById('startBtn').addEventListener('click', () => {
   currentScenario = 0;
   rankings = SCENARIOS.map(() => null);
   showScenario(0);
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'test_start', { app_name: 'love-language', content_type: 'love_language_ranking' });
+  }
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
@@ -1305,6 +1499,7 @@ document.querySelectorAll('.lang-option').forEach(btn => {
       const label = btn.textContent.trim().split(' ');
       document.getElementById('currentLang').textContent = label.slice(1).join(' ') || label[0];
       syncLocalizedLinks();
+      updateCuratedResources();
     }
     document.getElementById('langDropdown').classList.remove('open');
     // Re-render current scenario if quiz is active

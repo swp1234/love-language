@@ -128,8 +128,7 @@
     "compatTitle": "💑 Linguagens mais compatíveis",
     "adviceTitle": "Conselho para o relacionamento",
     "retry": "Fazer o teste novamente",
-    "moreTests": "Explorar Mais",
-    "percentileStat": "Apenas <strong>{percent}%</strong> compartilham sua linguagem do amor"
+    "moreTests": "Explorar Mais"
   },
   "related": {
     "mbtiLove": "MBTI Amor",
@@ -138,7 +137,10 @@
     "eqTest": "Teste de EQ",
     "loveFrequency": "Frequência do Amor",
     "redGreenFlag": "Red & Green Flags",
-    "nameMatch": "Compatibilidade de Nomes"
+    "nameMatch": "Compatibilidade de Nomes",
+    "stressCheck": "Teste de Estresse",
+    "futureSelf": "Eu do Futuro",
+    "hspTest": "Teste HSP"
   },
   "desc": {
     "W": "Sua linguagem do amor são as Palavras de Afirmação. Você sente e expressa amor por meio das palavras.",
@@ -159,7 +161,8 @@
     "copy": "🔗 Copiar link",
     "twitter": "𝕏 Twitter",
     "copied": "Link copiado!",
-    "twitterText": "Descobri minha linguagem do amor! Descubra a sua. #LinguagemDoAmor #DopaBrain"
+    "twitterText": "Descobri minha linguagem do amor! Descubra a sua. #LinguagemDoAmor #DopaBrain",
+    "downloadCard": "Salvar Card"
   },
   "footer": {
     "privacy": "Política de privacidade",
@@ -169,8 +172,7 @@
     "result1": "💬 Palavras de Afirmação -- Amor Verbal",
     "result2": "🛠️ Atos de Serviço -- Amor em Ação",
     "result3": "🎁 Receber Presentes -- Surpresas Pensadas",
-    "result4": "⏰ Tempo de Qualidade -- Atenção Completa",
-    "socialProof": "2.240+ pessoas descobriram sua linguagem do amor"
+    "result4": "⏰ Tempo de Qualidade -- Atenção Completa"
   },
   "about": {
     "toggle": "Sobre o teste de linguagem do amor",
@@ -190,5 +192,14 @@
     "faq4A": "A: De forma alguma. Todos os cálculos ocorrem localmente no seu dispositivo.",
     "reviewDate": "Revisão Editorial: Novembro 2026",
     "reviewTeam": "Equipe de Psicologia de Relacionamentos DopaBrain"
+  },
+  "curated": {
+    "badge": "LEITURAS SOBRE RELACIONAMENTO",
+    "title": "Comunique e Compreenda o Amor Melhor",
+    "book1Title": "As 5 Linguagens do Amor",
+    "book1Desc": "Gary Chapman • Guia prático para demonstrar afeto na linguagem do seu par.",
+    "book2Title": "Abraça-me Forte (Hold Me Tight)",
+    "book2Desc": "Dra. Sue Johnson • Vínculos emocionais seguros baseados em pesquisa.",
+    "readPill": "Ver Livro ↗"
   }
 }

@@ -128,8 +128,7 @@
     "compatTitle": "💑 最匹配的爱情语言",
     "adviceTitle": "关系建议",
     "retry": "重新测试",
-    "moreTests": "探索更多",
-    "percentileStat": "仅 <strong>{percent}%</strong> 拥有你的爱情语言"
+    "moreTests": "探索更多"
   },
   "related": {
     "mbtiLove": "MBTI恋爱",
@@ -138,7 +137,10 @@
     "eqTest": "EQ测试",
     "loveFrequency": "爱情频率测试",
     "redGreenFlag": "红旗与绿旗测试",
-    "nameMatch": "姓名配对测试"
+    "nameMatch": "姓名配对测试",
+    "stressCheck": "压力检测",
+    "futureSelf": "未来的自己测试",
+    "hspTest": "HSP高敏测试"
   },
   "desc": {
     "W": "你的爱情语言是“肯定的言辞”。你通过语言来感受和表达爱。真诚的赞美、感恩的话语和爱的表白是填满你内心最强大的方式。",
@@ -159,7 +161,8 @@
     "copy": "🔗 复制链接",
     "twitter": "𝕏 推特",
     "copied": "链接已复制！",
-    "twitterText": "我发现了我的爱情语言！快来看看你的是什么吧。#爱情语言 #LoveLanguage #DopaBrain"
+    "twitterText": "我发现了我的爱情语言！快来看看你的是什么吧。#爱情语言 #LoveLanguage #DopaBrain",
+    "downloadCard": "保存分享图卡"
   },
   "footer": {
     "privacy": "隐私政策",
@@ -169,8 +172,7 @@
     "result1": "💬 肯定的话语 -- 语言的爱",
     "result2": "🛠️ 服务行为 -- 行动中的爱",
     "result3": "🎁 接受礼物 -- 贴心的惊喜",
-    "result4": "⏰ 高品质时间 -- 专注的陪伴",
-    "socialProof": "2,240+人已发现他们的爱情语言"
+    "result4": "⏰ 高品质时间 -- 专注的陪伴"
   },
   "about": {
     "toggle": "关于爱情语言测试",
@@ -190,5 +192,14 @@
     "faq4A": "A: 绝不。所有排序分析都在本地浏览器中完成，不会收集或发送至任何远程服务器。",
     "reviewDate": "内容审阅：2026年11月",
     "reviewTeam": "DopaBrain 亲密关系心理团队"
+  },
+  "curated": {
+    "badge": "亲密关系推荐书单",
+    "title": "更清晰地表达与理解爱",
+    "book1Title": "爱的五种语言",
+    "book1Desc": "盖瑞·查普曼 • 用伴侣真正能感受到的方式表达爱意。",
+    "book2Title": "抱紧我 (Hold Me Tight)",
+    "book2Desc": "苏·约翰逊 • 基于情绪取向疗法的亲密安全感对话指南。",
+    "readPill": "查看图书 ↗"
   }
 }

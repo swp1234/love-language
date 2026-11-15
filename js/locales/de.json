@@ -128,8 +128,7 @@
     "compatTitle": "💑 Am besten passende Liebessprachen",
     "adviceTitle": "Beziehungsrat",
     "retry": "Test erneut machen",
-    "moreTests": "Mehr Erkunden",
-    "percentileStat": "Nur <strong>{percent}%</strong> teilen deine Liebessprache"
+    "moreTests": "Mehr Erkunden"
   },
   "related": {
     "mbtiLove": "MBTI Liebe",
@@ -138,7 +137,10 @@
     "eqTest": "EQ-Test",
     "loveFrequency": "Liebesfrequenz",
     "redGreenFlag": "Red & Green Flags",
-    "nameMatch": "Namens-Kompatibilität"
+    "nameMatch": "Namens-Kompatibilität",
+    "stressCheck": "Stress-Check",
+    "futureSelf": "Zukunfts-Ich",
+    "hspTest": "HSP-Test"
   },
   "desc": {
     "W": "Deine Liebessprache sind Worte der Wertschätzung. Du fühlst und drückst Liebe durch Worte aus.",
@@ -159,7 +161,8 @@
     "copy": "🔗 Link kopieren",
     "twitter": "𝕏 Twitter",
     "copied": "Link kopiert!",
-    "twitterText": "Ich habe meine Liebessprache entdeckt! Finde deine heraus. #Liebessprache #DopaBrain"
+    "twitterText": "Ich habe meine Liebessprache entdeckt! Finde deine heraus. #Liebessprache #DopaBrain",
+    "downloadCard": "Story-Karte speichern"
   },
   "footer": {
     "privacy": "Datenschutzrichtlinie",
@@ -169,8 +172,7 @@
     "result1": "💬 Worte der Wertschätzung -- Verbale Liebe",
     "result2": "🛠️ Dienstleistungen -- Liebe in Aktion",
     "result3": "🎁 Geschenke empfangen -- Durchdachte Überraschungen",
-    "result4": "⏰ Gemeinsame Zeit -- Ungeteilte Aufmerksamkeit",
-    "socialProof": "2.240+ Menschen haben ihre Liebessprache entdeckt"
+    "result4": "⏰ Gemeinsame Zeit -- Ungeteilte Aufmerksamkeit"
   },
   "about": {
     "toggle": "Über den Liebessprachen-Test",
@@ -190,5 +192,14 @@
     "faq4A": "A: Niemals. Die Auswertung läuft vollständig lokal in Ihrem Webbrowser ab.",
     "reviewDate": "Redaktionelle Prüfung: November 2026",
     "reviewTeam": "DopaBrain Beziehungspsychologie-Team"
+  },
+  "curated": {
+    "badge": "BEZIEHUNGS- & BINDUNGSPSYCHOLOGIE",
+    "title": "Liebe klarer ausdrücken & verstehen",
+    "book1Title": "Die 5 Sprachen der Liebe",
+    "book1Desc": "Gary Chapman • Zuneigung so zeigen, wie sie beim Gegenüber wirklich ankommt.",
+    "book2Title": "Halt mich fest (Hold Me Tight)",
+    "book2Desc": "Dr. Sue Johnson • Emotionsfokussierte Paartherapie für tiefe Verbundenheit.",
+    "readPill": "Buch ansehen ↗"
   }
 }
