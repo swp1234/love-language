@@ -201,5 +201,11 @@
     "book2Title": "Hold Me Tight",
     "book2Desc": "Dr. Sue Johnson • Emotionally Focused Therapy for deeper romantic security.",
     "readPill": "View Book ↗"
+  },
+  "nextStep": {
+    "label": "Recommended Next Step",
+    "title": "Attachment Style Reflection",
+    "desc": "See how your relationship signals connect to your core attachment pattern in 10 scenarios.",
+    "cta": "Check Attachment Style →"
   }
 }

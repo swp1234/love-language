@@ -201,5 +201,11 @@
     "book2Title": "Hold Me Tight",
     "book2Desc": "Dr. Sue Johnson • Terapi berfokus emosi untuk keamanan hubungan romantis.",
     "readPill": "Lihat Buku ↗"
+  },
+  "nextStep": {
+    "label": "Langkah Berikutnya",
+    "title": "Tes Gaya Keterikatan",
+    "desc": "Lihat bagaimana pola hubunganmu terhubung dengan gaya keterikatan dalam 10 skenario.",
+    "cta": "Cek Gaya Keterikatan →"
   }
 }

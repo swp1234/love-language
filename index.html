@@ -607,6 +607,73 @@
     .about-content { padding: 0 18px 18px; }
     .about-content h2 { font-size: 16px; color: var(--primary); margin: 16px 0 8px; }
     .about-content p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+  
+/* ===== Next-Step Hero Funnel Card ===== */
+.next-step-card {
+  margin: 22px 0;
+  padding: 20px 18px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.16), rgba(14, 165, 233, 0.1));
+  border: 1px solid rgba(167, 139, 250, 0.38);
+  text-align: left;
+  box-sizing: border-box;
+}
+.next-step-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #a78bfa;
+  margin: 0 0 10px;
+}
+.next-step-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.next-step-emoji {
+  font-size: 1.75rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.next-step-content {
+  min-width: 0;
+  flex: 1;
+}
+.next-step-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+.next-step-desc {
+  font-size: 0.88rem;
+  line-height: 1.45;
+  opacity: 0.85;
+  margin: 0;
+}
+.next-step-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ec4899, #7c3aed);
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  touch-action: manipulation;
+  box-sizing: border-box;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.next-step-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.35);
+}
+
   </style>
     <!-- Schema.org - FAQPage -->
     <script type="application/ld+json">
@@ -808,7 +875,19 @@
         </div>
       </div>
 
-      <div class="related-tests">
+                          <div class="next-step-card" id="nextStepCard">
+                        <p class="next-step-label" data-i18n="nextStep.label">Recommended Next Step</p>
+                        <div class="next-step-main">
+                            <span class="next-step-emoji" aria-hidden="true">💞</span>
+                            <div class="next-step-content">
+                                <h4 class="next-step-title" data-i18n="nextStep.title">Attachment Style Reflection</h4>
+                                <p class="next-step-desc" data-i18n="nextStep.desc">See how your relationship signals connect to your core attachment pattern in 10 scenarios.</p>
+                            </div>
+                        </div>
+                        <a href="/attachment-style/?lang=en&amp;start=1&amp;source=love_language_result" class="next-step-cta" id="nextStepCta" data-i18n="nextStep.cta">Check Attachment Style →</a>
+                    </div>
+
+                    <div class="related-tests">
         <h3 data-i18n="result.moreTests">더 많은 테스트</h3>
         <div class="related-grid">
           <a href="/attachment-style/" class="related-card" style="--card-color: #e879a0"><span class="related-emoji">💖</span><span class="related-name" data-i18n="related.attachmentStyle">애착 유형</span></a>
@@ -1592,5 +1671,35 @@ if ('serviceWorker' in navigator) {
   });
 }
 </script>
+
+    <script>
+      (function () {
+        var cta = document.getElementById('nextStepCta');
+        if (!cta) return;
+        function syncHref() {
+          var lang = (window.i18n && (window.i18n.currentLang || (typeof window.i18n.getCurrentLanguage === 'function' && window.i18n.getCurrentLanguage())))
+            || new URLSearchParams(window.location.search).get('lang')
+            || document.documentElement.lang
+            || 'en';
+          try {
+            var u = new URL(cta.getAttribute('href'), window.location.origin);
+            u.searchParams.set('lang', lang);
+            u.searchParams.set('source', 'love_language_result');
+            cta.setAttribute('href', u.pathname + u.search);
+          } catch (e) {}
+        }
+        syncHref();
+        cta.addEventListener('click', function () {
+          syncHref();
+          if (typeof gtag === 'function') {
+            gtag('event', 'content_cta_click', {
+              cta_surface: 'next_step_hero',
+              destination: cta.getAttribute('href'),
+              source: 'love_language_result'
+            });
+          }
+        });
+      })();
+    </script>
 </body>
 </html>

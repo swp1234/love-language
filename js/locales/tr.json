@@ -201,5 +201,11 @@
     "book2Title": "Bana Sıkı Sarıl (Hold Me Tight)",
     "book2Desc": "Dr. Sue Johnson • Güvenli duygusal bağ kurmak için duygu odaklı iletişim.",
     "readPill": "Kitabı Gör ↗"
+  },
+  "nextStep": {
+    "label": "Önerilen Sonraki Adım",
+    "title": "Bağlanma Stili Testi",
+    "desc": "10 ilişki senaryosuyla yakınlık ve sınır kalıplarını keşfet.",
+    "cta": "Bağlanma Testini Başlat →"
   }
 }

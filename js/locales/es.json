@@ -201,5 +201,11 @@
     "book2Title": "Abrázame fuerte (Hold Me Tight)",
     "book2Desc": "Dra. Sue Johnson • Terapia focalizada en las emociones para relaciones seguras.",
     "readPill": "Ver Libro ↗"
+  },
+  "nextStep": {
+    "label": "Siguiente paso recomendado",
+    "title": "Test de Estilo de Apego",
+    "desc": "Descubre cómo se conectan tus señales afectivas con tu patrón de apego en 10 escenarios.",
+    "cta": "Hacer Test de Apego →"
   }
 }

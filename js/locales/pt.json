@@ -201,5 +201,11 @@
     "book2Title": "Abraça-me Forte (Hold Me Tight)",
     "book2Desc": "Dra. Sue Johnson • Vínculos emocionais seguros baseados em pesquisa.",
     "readPill": "Ver Livro ↗"
+  },
+  "nextStep": {
+    "label": "Próximo passo recomendado",
+    "title": "Teste de Estilo de Apego",
+    "desc": "Veja em 10 cenários como seus sinais afetivos refletem seu padrão de apego.",
+    "cta": "Fazer Teste de Apego →"
   }
 }

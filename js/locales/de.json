@@ -201,5 +201,11 @@
     "book2Title": "Halt mich fest (Hold Me Tight)",
     "book2Desc": "Dr. Sue Johnson • Emotionsfokussierte Paartherapie für tiefe Verbundenheit.",
     "readPill": "Buch ansehen ↗"
+  },
+  "nextStep": {
+    "label": "Empfohlener nächster Schritt",
+    "title": "Bindungsstil-Reflexion",
+    "desc": "Sieh in 10 Beziehungsszenarien, wie dein Bindungsmuster Nähe und Grenzen prägt.",
+    "cta": "Bindungstest starten →"
   }
 }

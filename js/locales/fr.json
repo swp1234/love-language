@@ -201,5 +201,11 @@
     "book2Title": "Serre-moi fort (Hold Me Tight)",
     "book2Desc": "Dre Sue Johnson • Thérapie centrée sur les émotions pour un lien sécurisant.",
     "readPill": "Voir le Livre ↗"
+  },
+  "nextStep": {
+    "label": "Prochaine étape recommandée",
+    "title": "Test de Style d’Attachement",
+    "desc": "Explorez votre dynamique relationnelle à travers 10 scénarios concrets.",
+    "cta": "Tester mon attachement →"
   }
 }
